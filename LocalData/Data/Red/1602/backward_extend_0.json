@@ -1,0 +1,591 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2016-03-10T12:04:03Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "relation",
+  "id": 4066937,
+  "timestamp": "2016-01-20T15:18:07Z",
+  "version": 5,
+  "changeset": 36703153,
+  "user": "Kagami",
+  "uid": 189328,
+  "members": [
+    {
+      "type": "way",
+      "ref": 159315419,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 297757243,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 259871043,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 250710097,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 319713269,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 24430152,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 279369085,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 107538204,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 250710093,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 298812489,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 250710100,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 298812493,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 38367679,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 108037210,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 286847309,
+      "role": ""
+    },
+    {
+      "type": "node",
+      "ref": 2559842597,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2559842642,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2559842599,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2140074802,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2901313803,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2787576057,
+      "role": "platform"
+    },
+    {
+      "type": "node",
+      "ref": 2787645627,
+      "role": "platform"
+    }
+  ],
+  "tags": {
+    "from": "火車南站",
+    "name": "紅2(延駛台南站_返程)",
+    "public_transport:version": "2",
+    "ref": "紅2",
+    "route": "bus",
+    "to": "台南站",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 24430152,
+  "bounds": {
+    "minlat": 22.9927171,
+    "minlon": 120.2044921,
+    "maxlat": 22.9927658,
+    "maxlon": 120.2045083
+  },
+  "nodes": [
+    265510104,
+    1268711592
+  ],
+  "geometry": [
+    { "lat": 22.9927658, "lon": 120.2045083 },
+    { "lat": 22.9927171, "lon": 120.2044921 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "junction": "roundabout",
+    "name": "民生綠園",
+    "name:en": "Minsheng Roundabout",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 38367679,
+  "bounds": {
+    "minlat": 22.9904619,
+    "minlon": 120.1976984,
+    "maxlat": 22.9917391,
+    "maxlon": 120.1981574
+  },
+  "nodes": [
+    1708122871,
+    506230547,
+    1721204757,
+    256013460
+  ],
+  "geometry": [
+    { "lat": 22.9917391, "lon": 120.1981574 },
+    { "lat": 22.9912442, "lon": 120.1979678 },
+    { "lat": 22.9908547, "lon": 120.1978378 },
+    { "lat": 22.9904619, "lon": 120.1976984 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "西門路二段",
+    "name:en": "Ximen Rd. Sec. 2",
+    "name:zh": "西門路二段",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 107538204,
+  "bounds": {
+    "minlat": 22.9919249,
+    "minlon": 120.2027083,
+    "maxlat": 22.9924616,
+    "maxlon": 120.2045009
+  },
+  "nodes": [
+    1268711618,
+    1731482042,
+    1731482037,
+    265766623
+  ],
+  "geometry": [
+    { "lat": 22.9924616, "lon": 120.2045009 },
+    { "lat": 22.9922957, "lon": 120.2039421 },
+    { "lat": 22.9921517, "lon": 120.2034581 },
+    { "lat": 22.9919249, "lon": 120.2027083 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "中正路",
+    "name:en": "Zhongzheng Rd.",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 108037210,
+  "bounds": {
+    "minlat": 22.9873981,
+    "minlon": 120.1974011,
+    "maxlat": 22.9904619,
+    "maxlon": 120.1976984
+  },
+  "nodes": [
+    256013460,
+    1240287603,
+    1721204710,
+    1240288365,
+    1715898291,
+    1240288732,
+    1240286728,
+    2135725800,
+    1240288218
+  ],
+  "geometry": [
+    { "lat": 22.9904619, "lon": 120.1976984 },
+    { "lat": 22.9902122, "lon": 120.1976135 },
+    { "lat": 22.9899507, "lon": 120.1975198 },
+    { "lat": 22.9897782, "lon": 120.1974780 },
+    { "lat": 22.9894769, "lon": 120.1974500 },
+    { "lat": 22.9894176, "lon": 120.1974404 },
+    { "lat": 22.9890191, "lon": 120.1974251 },
+    { "lat": 22.9884971, "lon": 120.1974011 },
+    { "lat": 22.9873981, "lon": 120.1974281 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "西門路一段",
+    "name:en": "Section 1 , Simen Road",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 159315419,
+  "bounds": {
+    "minlat": 22.9948010,
+    "minlon": 120.2083714,
+    "maxlat": 22.9968838,
+    "maxlon": 120.2115406
+  },
+  "nodes": [
+    864831431,
+    1984323495,
+    2139974418,
+    1714206079,
+    1723707684,
+    2627949203
+  ],
+  "geometry": [
+    { "lat": 22.9968838, "lon": 120.2115406 },
+    { "lat": 22.9968127, "lon": 120.2114710 },
+    { "lat": 22.9957104, "lon": 120.2097734 },
+    { "lat": 22.9956564, "lon": 120.2096910 },
+    { "lat": 22.9950939, "lon": 120.2088002 },
+    { "lat": 22.9948010, "lon": 120.2083714 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "中山路",
+    "name:en": "Jungshan Rd.",
+    "oneway": "yes",
+    "ref": "20",
+    "ref:en": "Provincial Highway 20",
+    "ref:zh": "台20線"
+  }
+},
+{
+  "type": "way",
+  "id": 250710093,
+  "bounds": {
+    "minlat": 22.9919249,
+    "minlon": 120.1986223,
+    "maxlat": 22.9927940,
+    "maxlon": 120.2027083
+  },
+  "nodes": [
+    265766623,
+    1235793463,
+    2140063100,
+    2140063101,
+    1235793378
+  ],
+  "geometry": [
+    { "lat": 22.9919249, "lon": 120.2027083 },
+    { "lat": 22.9923434, "lon": 120.2008145 },
+    { "lat": 22.9926371, "lon": 120.1993854 },
+    { "lat": 22.9926962, "lon": 120.1990983 },
+    { "lat": 22.9927940, "lon": 120.1986223 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "中正路",
+    "name:en": "Zhongzheng Rd.",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 250710097,
+  "bounds": {
+    "minlat": 22.9928570,
+    "minlon": 120.2051415,
+    "maxlat": 22.9930522,
+    "maxlon": 120.2054184
+  },
+  "nodes": [
+    1714206071,
+    265766621,
+    265766622
+  ],
+  "geometry": [
+    { "lat": 22.9928570, "lon": 120.2054184 },
+    { "lat": 22.9929771, "lon": 120.2052986 },
+    { "lat": 22.9930522, "lon": 120.2051415 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "junction": "roundabout",
+    "name": "民生綠園",
+    "name:en": "Minsheng Roundabout",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 250710100,
+  "bounds": {
+    "minlat": 22.9927379,
+    "minlon": 120.1985180,
+    "maxlat": 22.9928182,
+    "maxlon": 120.1985352
+  },
+  "nodes": [
+    1711045592,
+    1711045589
+  ],
+  "geometry": [
+    { "lat": 22.9928182, "lon": 120.1985352 },
+    { "lat": 22.9927379, "lon": 120.1985180 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "西門路二段",
+    "name:en": "Ximen Rd. Sec. 2",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 259871043,
+  "bounds": {
+    "minlat": 22.9928570,
+    "minlon": 120.2054184,
+    "maxlat": 22.9936749,
+    "maxlon": 120.2066549
+  },
+  "nodes": [
+    2653355424,
+    1714206071
+  ],
+  "geometry": [
+    { "lat": 22.9936749, "lon": 120.2066549 },
+    { "lat": 22.9928570, "lon": 120.2054184 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "中山路",
+    "name:en": "Jungshan Rd.",
+    "oneway": "yes",
+    "ref": "20",
+    "ref:en": "Provincial Highway 20",
+    "ref:zh": "台20線"
+  }
+},
+{
+  "type": "way",
+  "id": 279369085,
+  "bounds": {
+    "minlat": 22.9924616,
+    "minlon": 120.2044773,
+    "maxlat": 22.9927171,
+    "maxlon": 120.2045009
+  },
+  "nodes": [
+    1268711592,
+    265510106,
+    1268711618
+  ],
+  "geometry": [
+    { "lat": 22.9927171, "lon": 120.2044921 },
+    { "lat": 22.9925888, "lon": 120.2044773 },
+    { "lat": 22.9924616, "lon": 120.2045009 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "junction": "roundabout",
+    "name": "民生綠園",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 286847309,
+  "bounds": {
+    "minlat": 22.9814590,
+    "minlon": 120.1974281,
+    "maxlat": 22.9873981,
+    "maxlon": 120.1975199
+  },
+  "nodes": [
+    1240288218,
+    2134973135,
+    2532198014,
+    1240286939,
+    3639277581,
+    1713753712,
+    1721204658,
+    1721204654,
+    1721204645,
+    1240288029,
+    1721204631,
+    3764997466,
+    1240287373,
+    2134973086,
+    1240288457
+  ],
+  "geometry": [
+    { "lat": 22.9873981, "lon": 120.1974281 },
+    { "lat": 22.9869728, "lon": 120.1974416 },
+    { "lat": 22.9866035, "lon": 120.1974500 },
+    { "lat": 22.9863555, "lon": 120.1974598 },
+    { "lat": 22.9859873, "lon": 120.1974666 },
+    { "lat": 22.9851195, "lon": 120.1974826 },
+    { "lat": 22.9847807, "lon": 120.1974902 },
+    { "lat": 22.9846002, "lon": 120.1974934 },
+    { "lat": 22.9843359, "lon": 120.1974954 },
+    { "lat": 22.9838738, "lon": 120.1975025 },
+    { "lat": 22.9835879, "lon": 120.1975028 },
+    { "lat": 22.9831897, "lon": 120.1975059 },
+    { "lat": 22.9826382, "lon": 120.1975102 },
+    { "lat": 22.9819392, "lon": 120.1975199 },
+    { "lat": 22.9814590, "lon": 120.1975149 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "西門路一段",
+    "name:en": "Section 1 , Simen Road",
+    "oneway": "yes",
+    "sidewalk": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 297757243,
+  "bounds": {
+    "minlat": 22.9936749,
+    "minlon": 120.2066549,
+    "maxlat": 22.9948010,
+    "maxlon": 120.2083714
+  },
+  "nodes": [
+    2627949203,
+    1730293441,
+    2653355424
+  ],
+  "geometry": [
+    { "lat": 22.9948010, "lon": 120.2083714 },
+    { "lat": 22.9940090, "lon": 120.2071493 },
+    { "lat": 22.9936749, "lon": 120.2066549 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "中山路",
+    "name:en": "Jungshan Rd.",
+    "oneway": "yes",
+    "ref": "20",
+    "ref:en": "Provincial Highway 20",
+    "ref:zh": "台20線"
+  }
+},
+{
+  "type": "way",
+  "id": 298812489,
+  "bounds": {
+    "minlat": 22.9927940,
+    "minlon": 120.1985352,
+    "maxlat": 22.9928182,
+    "maxlon": 120.1986223
+  },
+  "nodes": [
+    1235793378,
+    1711045592
+  ],
+  "geometry": [
+    { "lat": 22.9927940, "lon": 120.1986223 },
+    { "lat": 22.9928182, "lon": 120.1985352 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "中正路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 298812493,
+  "bounds": {
+    "minlat": 22.9917391,
+    "minlon": 120.1981574,
+    "maxlat": 22.9927379,
+    "maxlon": 120.1985180
+  },
+  "nodes": [
+    1711045589,
+    1708122871
+  ],
+  "geometry": [
+    { "lat": 22.9927379, "lon": 120.1985180 },
+    { "lat": 22.9917391, "lon": 120.1981574 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "西門路二段",
+    "name:en": "Ximen Rd. Sec. 2",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 319713269,
+  "bounds": {
+    "minlat": 22.9927658,
+    "minlon": 120.2045083,
+    "maxlat": 22.9930740,
+    "maxlon": 120.2051415
+  },
+  "nodes": [
+    265766622,
+    265510101,
+    2140943020,
+    265510102,
+    265510103,
+    265510104
+  ],
+  "geometry": [
+    { "lat": 22.9930522, "lon": 120.2051415 },
+    { "lat": 22.9930740, "lon": 120.2049881 },
+    { "lat": 22.9930524, "lon": 120.2048348 },
+    { "lat": 22.9929894, "lon": 120.2046956 },
+    { "lat": 22.9928908, "lon": 120.2045833 },
+    { "lat": 22.9927658, "lon": 120.2045083 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "junction": "roundabout",
+    "name": "民生綠園",
+    "name:en": "Minsheng Roundabout",
+    "oneway": "yes"
+  }
+}
+
+  ]
+}

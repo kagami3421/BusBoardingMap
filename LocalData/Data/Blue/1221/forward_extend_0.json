@@ -1,0 +1,137 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2016-03-10T11:56:03Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "relation",
+  "id": 4079269,
+  "timestamp": "2016-01-20T15:18:46Z",
+  "version": 2,
+  "changeset": 36703153,
+  "user": "Kagami",
+  "uid": 189328,
+  "members": [
+    {
+      "type": "way",
+      "ref": 148560386,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 305851132,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 305851129,
+      "role": ""
+    },
+    {
+      "type": "node",
+      "ref": 3105379070,
+      "role": "platform"
+    }
+  ],
+  "tags": {
+    "from": "佳里榮民之家",
+    "name": "藍21(繞駛佳里榮民之家_往程)",
+    "public_transport:version": "2",
+    "ref": "藍21",
+    "route": "bus",
+    "to": "佳里榮民之家",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 148560386,
+  "bounds": {
+    "minlat": 23.0988027,
+    "minlon": 120.1162660,
+    "maxlat": 23.1021960,
+    "maxlon": 120.1163155
+  },
+  "nodes": [
+    1698378700,
+    1698378749,
+    1698378799,
+    1698378904,
+    1698378924,
+    1700832470,
+    1616476675
+  ],
+  "geometry": [
+    { "lat": 23.0988027, "lon": 120.1163155 },
+    { "lat": 23.0992758, "lon": 120.1163086 },
+    { "lat": 23.0996828, "lon": 120.1163027 },
+    { "lat": 23.1002339, "lon": 120.1162947 },
+    { "lat": 23.1004367, "lon": 120.1162917 },
+    { "lat": 23.1008975, "lon": 120.1162850 },
+    { "lat": 23.1021960, "lon": 120.1162660 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "ref": "南39"
+  }
+},
+{
+  "type": "way",
+  "id": 305851129,
+  "bounds": {
+    "minlat": 23.1023214,
+    "minlon": 120.1239365,
+    "maxlat": 23.1048268,
+    "maxlon": 120.1239518
+  },
+  "nodes": [
+    1615393983,
+    1700832566,
+    1615393910
+  ],
+  "geometry": [
+    { "lat": 23.1023214, "lon": 120.1239518 },
+    { "lat": 23.1043912, "lon": 120.1239419 },
+    { "lat": 23.1048268, "lon": 120.1239365 }
+  ],
+  "tags": {
+    "highway": "unclassified"
+  }
+},
+{
+  "type": "way",
+  "id": 305851132,
+  "bounds": {
+    "minlat": 23.1021960,
+    "minlon": 120.1162660,
+    "maxlat": 23.1023214,
+    "maxlon": 120.1239518
+  },
+  "nodes": [
+    1616476675,
+    1700832482,
+    1609782722,
+    1700832487,
+    1616476676,
+    1615393983
+  ],
+  "geometry": [
+    { "lat": 23.1021960, "lon": 120.1162660 },
+    { "lat": 23.1022214, "lon": 120.1175778 },
+    { "lat": 23.1022432, "lon": 120.1187030 },
+    { "lat": 23.1022544, "lon": 120.1195302 },
+    { "lat": 23.1022625, "lon": 120.1201271 },
+    { "lat": 23.1023214, "lon": 120.1239518 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "ref": "南38"
+  }
+}
+
+  ]
+}

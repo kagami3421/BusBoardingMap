@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>Bus Boarding Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- build:css:dist css/MainPage.min.css -->
+  <link rel="stylesheet" href="MainPage.css" />
+  <!-- /build -->
+
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
+
 <body>
-  <section id = "map">
-    <section id = "RName"></section>
-    <section class = "Capacity">
-      <section id="count"></section>
-      <section class="measure"></section>
-    </section>
-    <input id="MonthSlide" type="range" min="0" max="12" step="1" />
-    <section class="colour"></section>
-  </section>
+  <section id="map"></section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="bower_components\async\dist\async.min.js"></script>
+
+  <!-- build:js:dist scripts/MainPage.min.js -->
+  <script src="MainPage.js"></script>
+  <!-- /build -->
+
+  <script src="//localhost:35729/livereload.js"></script>
 </body>
+
 </html>

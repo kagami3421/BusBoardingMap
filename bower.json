@@ -1,0 +1,28 @@
+{
+  "name": "BusBoardingMap",
+  "description": "View bus boarding capacity map",
+  "main": "MainPage.min.js",
+  "authors": [
+    "Kagami"
+  ],
+  "license": "GPL-2.0",
+  "keywords": [
+    "bus",
+    "map"
+  ],
+  "moduleType": [],
+  "homepage": "https://github.com/kagami3421/BusBoardingMap",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12",
+    "leafet": "^0.7.7",
+    "jquery": "^2.2.1"
+  }
+}
