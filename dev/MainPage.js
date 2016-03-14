@@ -6,36 +6,51 @@ var MainPageVars = {
   Attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   BaseMapUrl: 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
   BaseMap: undefined,
-  RouteCategoryList: undefined,
   MainProcess: undefined
 };
 
-(function() {
+$(function() {
   MainPageVars.BaseMap = L.map('map').setView([23.1852, 120.4287], 11);
 
   L.tileLayer(MainPageVars.BaseMapUrl, {
     attribution: MainPageVars.Attribution
   }).addTo(MainPageVars.BaseMap);
 
-  $.getJSON('LocalData/Config.json', function(data) {
-    MainPageVars.MainProcess = new L.BusMain.RoutesController(data, DoneEvent);
-  });
+  MainPageVars.MainProcess = L.BusMain.mainprocess();
+});
 
-  function DoneEvent() {
-    MainPageVars.MainProcess.SetDirection('forward');
-    MainPageVars.MainProcess.SetDate({
-      Year: '104',
-      Month: 'Total'
-    });
-    MainPageVars.MainProcess.ApplyToMap();
-  }
-})();
+L.BusMain.mainprocess = function () {
+    return new L.BusMain.MainProcessor();
+};
 
-L.BusMain.BusMainProcess = L.Class.extend({
+L.BusMain.MainProcessor = L.Class.extend({
   initialize: function() {
+    this._RouteController = undefined;
 
+    this._InitData();
+  },
+
+  _InitData : function () {
+
+    var _Class = this;
+
+    $.getJSON('LocalData/Config.json', function(data) {
+      _Class._RouteController = L.BusMain.routeControl(data, function() {
+        console.log(_Class);
+        _Class._RouteController.SetDirection('forward');
+        _Class._RouteController.SetDate({
+          Year: '104',
+          Month: 'Total'
+        });
+        _Class._RouteController.ApplyToMap();
+      });
+    });
   }
 });
+
+L.BusMain.routeControl = function (ConfigJson, CallbackFunction) {
+    return new L.BusMain.RoutesController(ConfigJson, CallbackFunction);
+};
 
 L.BusMain.RoutesController = L.Class.extend({
   initialize: function(ConfigJson, CallbackFunction) {
@@ -100,7 +115,6 @@ L.BusMain.RoutesController = L.Class.extend({
       ],
       function(err, result) {
         if (result !== null) {
-
           DoneCallBack();
         }
       });
@@ -174,7 +188,7 @@ L.BusMain.RoutesController = L.Class.extend({
         if (err !== undefined) {
           var Forwards = results[1].concat(results[2]);
           var Backwards = results[3].concat(results[4]);
-          var EachLayer = new L.BusMain.RouteLayer(Forwards, Backwards, results[0], ConfigData);
+          var EachLayer = L.BusMain.routeLayer(Forwards, Backwards, results[0], ConfigData);
           DoneCallBack(EachLayer);
         }
       });
@@ -216,6 +230,10 @@ L.BusMain.RoutesController = L.Class.extend({
   }
 });
 
+L.BusMain.routeLayer = function (ForwardSource, BackwardSource, CapaJson, RangeJson) {
+    return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson);
+};
+
 L.BusMain.RouteLayer = L.FeatureGroup.extend({
   initialize: function(ForwardSource, BackwardSource, CapaJson, RangeJson) {
 
@@ -231,7 +249,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   SetDirection: function(strDir) {
     this.clearLayers();
 
-    console.log(this.ForwardPolylines);
+    //console.log(this.ForwardPolylines);
 
     if (strDir === 'forward') {
       for (var i = 0; i < this.ForwardPolylines.length; i++) {
@@ -290,12 +308,14 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
 
     if (Capacity[TargetDate.Year] === undefined) {
       result = this._GetZeroCapacityColour(ColourRange);
-    } else {
+    }
+    else {
       var CurrentCapacity = Capacity[TargetDate.Year][TargetDate.Month];
 
       if (CurrentCapacity === 0) {
         result = this._GetZeroCapacityColour(ColourRange);
-      } else {
+      }
+      else {
         for (var i = 0; i < ColourRange.length; i++) {
           if (CurrentCapacity < ColourRange[i].MaxCapacity && CurrentCapacity > ColourRange[i].MinCapacity) {
             result = {
