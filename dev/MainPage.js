@@ -36,15 +36,23 @@ L.BusMain.MainProcessor = L.Class.extend({
 
     $.getJSON('LocalData/Config.json', function(data) {
       _Class._RouteController = L.BusMain.routeControl(data, function() {
-        console.log(_Class);
         _Class._RouteController.SetDirection('forward');
         _Class._RouteController.SetDate({
           Year: '104',
           Month: 'Total'
         });
         _Class._RouteController.ApplyToMap();
+
+        _Class._InitControls(data);
       });
     });
+  },
+
+  _InitControls : function (Config) {
+
+    var _Legend = L.BusMainControl.legend(Config.CapacityRange);
+
+    MainPageVars.BaseMap.addControl(_Legend);
   }
 });
 

@@ -11,7 +11,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'scripts/MainPage.min.js': ['dev/MainPage.js']
+          'scripts/MainPage.min.js': ['dev/MainPage.js'],
+          'scripts/MainPageControl.min.js': ['dev/MainPageControl.js']
         }
       }
     },
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      add_banner: {
+      dist: {
         files: {
           'css/MainPage.min.css': ['dev/MainPage.css']
         }
