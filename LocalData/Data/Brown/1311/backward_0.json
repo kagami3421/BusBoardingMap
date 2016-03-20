@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:16:02Z",
+    "timestamp_osm_base": "2016-03-18T14:35:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,9 +10,9 @@
 {
   "type": "relation",
   "id": 4032927,
-  "timestamp": "2016-01-20T15:17:41Z",
-  "version": 4,
-  "changeset": 36703153,
+  "timestamp": "2016-03-13T12:20:29Z",
+  "version": 5,
+  "changeset": 37798995,
   "user": "Kagami",
   "uid": 189328,
   "members": [
@@ -79,6 +79,26 @@
     {
       "type": "way",
       "ref": 138950113,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396400952,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396400953,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396399736,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396399735,
       "role": ""
     },
     {
@@ -895,6 +915,114 @@
   "tags": {
     "highway": "primary",
     "name": "中央公路",
+    "oneway": "yes",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
+  }
+},
+{
+  "type": "way",
+  "id": 396399735,
+  "bounds": {
+    "minlat": 23.2482175,
+    "minlon": 120.1942908,
+    "maxlat": 23.2483207,
+    "maxlon": 120.1945532
+  },
+  "nodes": [
+    1589122438,
+    3992048212
+  ],
+  "geometry": [
+    { "lat": 23.2483207, "lon": 120.1945532 },
+    { "lat": 23.2482175, "lon": 120.1942908 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "oneway": "yes",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
+  }
+},
+{
+  "type": "way",
+  "id": 396399736,
+  "bounds": {
+    "minlat": 23.2483207,
+    "minlon": 120.1945532,
+    "maxlat": 23.2491900,
+    "maxlon": 120.1984463
+  },
+  "nodes": [
+    1589122423,
+    1589122425,
+    3073095934,
+    1589122438
+  ],
+  "geometry": [
+    { "lat": 23.2491900, "lon": 120.1984463 },
+    { "lat": 23.2490357, "lon": 120.1976877 },
+    { "lat": 23.2487435, "lon": 120.1963923 },
+    { "lat": 23.2483207, "lon": 120.1945532 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "oneway": "yes",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
+  }
+},
+{
+  "type": "way",
+  "id": 396400952,
+  "bounds": {
+    "minlat": 23.2492621,
+    "minlon": 120.1987842,
+    "maxlat": 23.2493704,
+    "maxlon": 120.1995800
+  },
+  "nodes": [
+    1195188899,
+    2500694254
+  ],
+  "geometry": [
+    { "lat": 23.2493704, "lon": 120.1995800 },
+    { "lat": 23.2492621, "lon": 120.1987842 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "oneway": "yes",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
+  }
+},
+{
+  "type": "way",
+  "id": 396400953,
+  "bounds": {
+    "minlat": 23.2491900,
+    "minlon": 120.1984463,
+    "maxlat": 23.2492621,
+    "maxlon": 120.1987842
+  },
+  "nodes": [
+    2500694254,
+    1589122423
+  ],
+  "geometry": [
+    { "lat": 23.2492621, "lon": 120.1987842 },
+    { "lat": 23.2491900, "lon": 120.1984463 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
     "oneway": "yes",
     "ref": "19",
     "ref:en": "Provincial Highway 19",

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:11:02Z",
+    "timestamp_osm_base": "2016-03-20T04:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,9 +10,9 @@
 {
   "type": "relation",
   "id": 3967349,
-  "timestamp": "2016-01-20T15:16:59Z",
-  "version": 4,
-  "changeset": 36703153,
+  "timestamp": "2016-03-13T12:52:22Z",
+  "version": 5,
+  "changeset": 37799479,
   "user": "Kagami",
   "uid": 189328,
   "members": [
@@ -108,6 +108,11 @@
     },
     {
       "type": "way",
+      "ref": 403461375,
+      "role": ""
+    },
+    {
+      "type": "way",
       "ref": 148896769,
       "role": ""
     },
@@ -153,9 +158,8 @@
     { "lat": 23.0680530, "lon": 120.2230238 }
   ],
   "tags": {
-    "highway": "service",
-    "name": "長和路二段12巷121弄",
-    "service": "alley"
+    "highway": "residential",
+    "name": "長和路二段12巷121弄"
   }
 },
 {
@@ -163,13 +167,11 @@
   "id": 148896769,
   "bounds": {
     "minlat": 23.0557182,
-    "minlon": 120.2281552,
-    "maxlat": 23.0625425,
+    "minlon": 120.2295042,
+    "maxlat": 23.0611949,
     "maxlon": 120.2351625
   },
   "nodes": [
-    1619559709,
-    1643593159,
     1619559885,
     1619560001,
     1619559671,
@@ -178,8 +180,6 @@
     1619559654
   ],
   "geometry": [
-    { "lat": 23.0625425, "lon": 120.2281552 },
-    { "lat": 23.0623686, "lon": 120.2282428 },
     { "lat": 23.0611949, "lon": 120.2295042 },
     { "lat": 23.0611122, "lon": 120.2295881 },
     { "lat": 23.0599896, "lon": 120.2307012 },
@@ -233,9 +233,8 @@
     { "lat": 23.0697538, "lon": 120.2217330 }
   ],
   "tags": {
-    "highway": "service",
-    "name": "長和路二段12巷277弄",
-    "service": "alley"
+    "highway": "residential",
+    "name": "長和路二段12巷277弄"
   }
 },
 {
@@ -262,9 +261,8 @@
     { "lat": 23.0657793, "lon": 120.2216216 }
   ],
   "tags": {
-    "highway": "service",
-    "name": "長和路二段140巷",
-    "service": "alley"
+    "highway": "residential",
+    "name": "長和路二段140巷"
   }
 },
 {
@@ -498,6 +496,31 @@
   "tags": {
     "highway": "tertiary",
     "name": "長和路二段"
+  }
+},
+{
+  "type": "way",
+  "id": 403461375,
+  "bounds": {
+    "minlat": 23.0611949,
+    "minlon": 120.2281552,
+    "maxlat": 23.0625425,
+    "maxlon": 120.2295042
+  },
+  "nodes": [
+    1619559709,
+    1643593159,
+    1619559885
+  ],
+  "geometry": [
+    { "lat": 23.0625425, "lon": 120.2281552 },
+    { "lat": 23.0623686, "lon": 120.2282428 },
+    { "lat": 23.0611949, "lon": 120.2295042 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "長和路一段",
+    "oneway": "yes"
   }
 }
 

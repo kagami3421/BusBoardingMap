@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:09:02Z",
+    "timestamp_osm_base": "2016-03-20T04:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,9 +10,9 @@
 {
   "type": "relation",
   "id": 3366796,
-  "timestamp": "2016-01-20T15:17:07Z",
-  "version": 23,
-  "changeset": 36703153,
+  "timestamp": "2016-03-12T06:42:52Z",
+  "version": 24,
+  "changeset": 37777769,
   "user": "Kagami",
   "uid": 189328,
   "members": [
@@ -423,11 +423,6 @@
     },
     {
       "type": "way",
-      "ref": 108037207,
-      "role": ""
-    },
-    {
-      "type": "way",
       "ref": 274022861,
       "role": ""
     },
@@ -564,8 +559,8 @@
   "bounds": {
     "minlat": 22.9672663,
     "minlon": 120.1901167,
-    "maxlat": 22.9750600,
-    "maxlon": 120.1909682
+    "maxlat": 22.9753108,
+    "maxlon": 120.1910001
   },
   "nodes": [
     2788043271,
@@ -586,11 +581,12 @@
     3136243995,
     1240286726,
     3139496829,
-    1240288581
+    1240288581,
+    1240287088
   ],
   "geometry": [
     { "lat": 22.9672663, "lon": 120.1901167 },
-    { "lat": 22.9673340, "lon": 120.1901595 },
+    { "lat": 22.9673278, "lon": 120.1901568 },
     { "lat": 22.9673611, "lon": 120.1901568 },
     { "lat": 22.9680679, "lon": 120.1902386 },
     { "lat": 22.9685011, "lon": 120.1902824 },
@@ -607,15 +603,18 @@
     { "lat": 22.9744195, "lon": 120.1909000 },
     { "lat": 22.9748461, "lon": 120.1909396 },
     { "lat": 22.9748982, "lon": 120.1909451 },
-    { "lat": 22.9750600, "lon": 120.1909682 }
+    { "lat": 22.9750600, "lon": 120.1909682 },
+    { "lat": 22.9753108, "lon": 120.1910001 }
   ],
   "tags": {
     "highway": "primary",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -748,10 +747,13 @@
   ],
   "tags": {
     "highway": "primary",
+    "lanes": "4",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -924,10 +926,13 @@
   ],
   "tags": {
     "highway": "primary",
+    "lanes": "4",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -950,36 +955,13 @@
   "tags": {
     "bridge": "yes",
     "highway": "primary",
+    "lanes": "4",
     "name": "日新橋",
+    "name:en": "RihSin Bridge",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
-  }
-},
-{
-  "type": "way",
-  "id": 108037207,
-  "bounds": {
-    "minlat": 22.9750600,
-    "minlon": 120.1909682,
-    "maxlat": 22.9753108,
-    "maxlon": 120.1910001
-  },
-  "nodes": [
-    1240288581,
-    1240287088
-  ],
-  "geometry": [
-    { "lat": 22.9750600, "lon": 120.1909682 },
-    { "lat": 22.9753108, "lon": 120.1910001 }
-  ],
-  "tags": {
-    "highway": "primary",
-    "name": "金華路二段",
-    "oneway": "yes",
-    "ref": "17甲",
-    "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "both"
   }
 },
 {
@@ -1577,6 +1559,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
+    "name:en": "SinSing Road",
     "oneway": "yes",
     "sidewalk": "no"
   }
@@ -1625,6 +1608,7 @@
   "tags": {
     "highway": "primary",
     "name": "明興路",
+    "name:en": "MingSing Road",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
@@ -1868,6 +1852,7 @@
   "tags": {
     "highway": "primary",
     "name": "明興路",
+    "name:en": "MingSing Road",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",

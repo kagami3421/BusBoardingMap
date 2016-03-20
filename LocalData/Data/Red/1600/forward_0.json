@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:03:02Z",
+    "timestamp_osm_base": "2016-03-20T05:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -758,6 +758,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes"
   }
 },
@@ -920,7 +921,8 @@
   "tags": {
     "bridge": "yes",
     "highway": "tertiary",
-    "name": "至善橋"
+    "name": "至善橋",
+    "name:en": "JhiShan Bridge"
   }
 },
 {
@@ -1020,7 +1022,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "永成路三段"
+    "name": "永成路三段",
+    "name:en": "Section 3 , YongCheng Road"
   }
 },
 {
@@ -1348,7 +1351,9 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
-    "oneway": "yes"
+    "name:en": "Section 2 , JhongHua South Road",
+    "oneway": "yes",
+    "sidewalk": "right"
   }
 },
 {
@@ -1375,6 +1380,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "濱南路",
+    "name:en": "BinNan Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",
@@ -1604,7 +1610,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "永成路三段",
-    "name:en": "Section 3 , YongChen Road",
+    "name:en": "Section 3 , YongCheng Road",
     "sidewalk": "no"
   }
 },
@@ -1889,6 +1895,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }
@@ -2201,6 +2208,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "中華西路一段",
+    "name:en": "Section 1 , JhongHua West Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",
@@ -2325,8 +2333,8 @@
   "bounds": {
     "minlat": 22.9611506,
     "minlon": 120.1892119,
-    "maxlat": 22.9622446,
-    "maxlon": 120.1953688
+    "maxlat": 22.9622619,
+    "maxlon": 120.1954064
   },
   "nodes": [
     1958100789,
@@ -2350,11 +2358,12 @@
     { "lat": 22.9614264, "lon": 120.1910870 },
     { "lat": 22.9617244, "lon": 120.1925821 },
     { "lat": 22.9619877, "lon": 120.1940076 },
-    { "lat": 22.9622446, "lon": 120.1953688 }
+    { "lat": 22.9622619, "lon": 120.1954064 }
   ],
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes"
   }
 },
@@ -2378,6 +2387,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }
@@ -2386,10 +2396,10 @@
   "type": "way",
   "id": 293962390,
   "bounds": {
-    "minlat": 22.9622446,
+    "minlat": 22.9622619,
     "minlon": 120.1953518,
     "maxlat": 22.9623621,
-    "maxlon": 120.1953688
+    "maxlon": 120.1954064
   },
   "nodes": [
     1240287286,
@@ -2397,11 +2407,12 @@
   ],
   "geometry": [
     { "lat": 22.9623621, "lon": 120.1953518 },
-    { "lat": 22.9622446, "lon": 120.1953688 }
+    { "lat": 22.9622619, "lon": 120.1954064 }
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "永成路三段"
+    "name": "永成路三段",
+    "name:en": "Section 3 , YongCheng Road"
   }
 },
 {
@@ -2584,6 +2595,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }

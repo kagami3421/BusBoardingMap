@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:09:02Z",
+    "timestamp_osm_base": "2016-03-20T04:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -711,10 +711,13 @@
   ],
   "tags": {
     "highway": "primary",
+    "lanes": "4",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -810,10 +813,13 @@
   ],
   "tags": {
     "highway": "primary",
+    "lanes": "4",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -836,10 +842,13 @@
   "tags": {
     "bridge": "yes",
     "highway": "primary",
+    "lanes": "4",
     "name": "日新橋",
+    "name:en": "RihSin Bridge",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "both"
   }
 },
 {
@@ -922,10 +931,12 @@
   "tags": {
     "highway": "primary",
     "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -1037,6 +1048,7 @@
   "tags": {
     "highway": "primary",
     "name": "明興路",
+    "name:en": "MingSing Road",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
@@ -1515,6 +1527,7 @@
   "tags": {
     "highway": "primary",
     "name": "明興路",
+    "name:en": "MingSing Road",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
@@ -1542,11 +1555,13 @@
   ],
   "tags": {
     "highway": "primary",
-    "name": "金華路二段",
+    "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -1902,6 +1917,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
+    "name:en": "SinSing Road",
     "oneway": "yes",
     "sidewalk": "no"
   }

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:12:02Z",
+    "timestamp_osm_base": "2016-03-18T14:27:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -95,7 +95,9 @@
   "tags": {
     "highway": "tertiary",
     "name": "清水路",
-    "oneway": "yes"
+    "name:en": "CingShuei Road",
+    "oneway": "yes",
+    "sidewalk": "right"
   }
 },
 {
@@ -118,7 +120,9 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
-    "oneway": "yes"
+    "name:en": "Section 2 , JhongHua South Road",
+    "oneway": "yes",
+    "sidewalk": "right"
   }
 },
 {

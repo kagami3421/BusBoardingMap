@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:17:02Z",
+    "timestamp_osm_base": "2016-03-18T14:36:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -743,7 +743,7 @@
   "bounds": {
     "minlat": 22.9811610,
     "minlon": 120.2036510,
-    "maxlat": 22.9814146,
+    "maxlat": 22.9814085,
     "maxlon": 120.2120924
   },
   "nodes": [
@@ -761,8 +761,6 @@
     296968191,
     1728849189,
     265766493,
-    2179796313,
-    1721204615,
     265510130
   ],
   "geometry": [
@@ -778,10 +776,8 @@
     { "lat": 22.9813124, "lon": 120.2074400 },
     { "lat": 22.9813207, "lon": 120.2070893 },
     { "lat": 22.9813224, "lon": 120.2070297 },
-    { "lat": 22.9814035, "lon": 120.2061469 },
-    { "lat": 22.9814146, "lon": 120.2054597 },
-    { "lat": 22.9814141, "lon": 120.2053163 },
-    { "lat": 22.9814116, "lon": 120.2045791 },
+    { "lat": 22.9813763, "lon": 120.2061415 },
+    { "lat": 22.9813800, "lon": 120.2054517 },
     { "lat": 22.9814085, "lon": 120.2036510 }
   ],
   "tags": {
@@ -988,6 +984,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road",
     "sidewalk": "no"
   }
 },
@@ -1891,7 +1888,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {
@@ -2790,7 +2788,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {
@@ -2910,7 +2909,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {

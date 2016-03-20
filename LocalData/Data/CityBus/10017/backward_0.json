@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:15:02Z",
+    "timestamp_osm_base": "2016-03-18T14:34:01Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -268,8 +268,8 @@
   "bounds": {
     "minlat": 22.9156933,
     "minlon": 120.1753335,
-    "maxlat": 22.9589598,
-    "maxlon": 120.1838735
+    "maxlat": 22.9589623,
+    "maxlon": 120.1838488
   },
   "nodes": [
     265765788,
@@ -377,7 +377,7 @@
     { "lat": 22.9577122, "lon": 120.1837507 },
     { "lat": 22.9580607, "lon": 120.1838261 },
     { "lat": 22.9584196, "lon": 120.1838488 },
-    { "lat": 22.9589598, "lon": 120.1838735 }
+    { "lat": 22.9589623, "lon": 120.1838467 }
   ],
   "tags": {
     "cycleway:right": "shared_lane",
@@ -655,6 +655,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "中華西路一段",
+    "name:en": "Section 1 , JhongHua West Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",
@@ -732,6 +733,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "濱南路",
+    "name:en": "BinNan Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",
@@ -742,10 +744,10 @@
   "type": "way",
   "id": 286090984,
   "bounds": {
-    "minlat": 22.9589598,
+    "minlat": 22.9589623,
     "minlon": 120.1838226,
     "maxlat": 22.9617783,
-    "maxlon": 120.1838735
+    "maxlon": 120.1838491
   },
   "nodes": [
     1236235583,
@@ -756,7 +758,7 @@
     1236235101
   ],
   "geometry": [
-    { "lat": 22.9589598, "lon": 120.1838735 },
+    { "lat": 22.9589623, "lon": 120.1838467 },
     { "lat": 22.9598850, "lon": 120.1838491 },
     { "lat": 22.9609182, "lon": 120.1838247 },
     { "lat": 22.9611685, "lon": 120.1838226 },
@@ -768,6 +770,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "濱南路",
+    "name:en": "BinNan Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:11:02Z",
+    "timestamp_osm_base": "2016-03-20T04:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,9 +10,9 @@
 {
   "type": "relation",
   "id": 4065000,
-  "timestamp": "2016-01-20T15:17:01Z",
-  "version": 11,
-  "changeset": 36703153,
+  "timestamp": "2016-03-13T12:58:04Z",
+  "version": 12,
+  "changeset": 37799557,
   "user": "Kagami",
   "uid": 189328,
   "members": [
@@ -68,7 +68,7 @@
     },
     {
       "type": "node",
-      "ref": 3022633480,
+      "ref": 2977437387,
       "role": "platform"
     },
     {
@@ -214,6 +214,16 @@
     {
       "type": "way",
       "ref": 294174228,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 403462292,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 403462288,
       "role": ""
     },
     {
@@ -533,9 +543,8 @@
     { "lat": 23.0696974, "lon": 120.2188559 }
   ],
   "tags": {
-    "highway": "service",
-    "name": "安和路五段336巷",
-    "service": "alley"
+    "highway": "residential",
+    "name": "安和路五段336巷"
   }
 },
 {
@@ -964,18 +973,12 @@
   "type": "way",
   "id": 299038151,
   "bounds": {
-    "minlat": 23.0363860,
-    "minlon": 120.2136987,
+    "minlat": 23.0401434,
+    "minlon": 120.2152657,
     "maxlat": 23.0633380,
     "maxlon": 120.2189697
   },
   "nodes": [
-    1681589719,
-    1682019878,
-    1801435697,
-    1681589769,
-    1681589801,
-    1333117515,
     1671718752,
     1655810787,
     1655810791,
@@ -1016,12 +1019,6 @@
     1590028949
   ],
   "geometry": [
-    { "lat": 23.0363860, "lon": 120.2136987 },
-    { "lat": 23.0370747, "lon": 120.2139731 },
-    { "lat": 23.0375309, "lon": 120.2141375 },
-    { "lat": 23.0378822, "lon": 120.2142806 },
-    { "lat": 23.0388358, "lon": 120.2146962 },
-    { "lat": 23.0400708, "lon": 120.2152250 },
     { "lat": 23.0401434, "lon": 120.2152657 },
     { "lat": 23.0411205, "lon": 120.2156692 },
     { "lat": 23.0417920, "lon": 120.2159700 },
@@ -1131,9 +1128,8 @@
     { "lat": 23.0694264, "lon": 120.2160215 }
   ],
   "tags": {
-    "highway": "service",
-    "name": "安和路五段336巷",
-    "service": "alley"
+    "highway": "residential",
+    "name": "安和路五段336巷"
   }
 },
 {
@@ -1250,6 +1246,64 @@
     "name": "中正橋",
     "name:en": "Zhongzhen Bridge",
     "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 403462288,
+  "bounds": {
+    "minlat": 23.0400708,
+    "minlon": 120.2152250,
+    "maxlat": 23.0401434,
+    "maxlon": 120.2152657
+  },
+  "nodes": [
+    1333117515,
+    1671718752
+  ],
+  "geometry": [
+    { "lat": 23.0400708, "lon": 120.2152250 },
+    { "lat": 23.0401434, "lon": 120.2152657 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "安和路三段",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
+  }
+},
+{
+  "type": "way",
+  "id": 403462292,
+  "bounds": {
+    "minlat": 23.0363860,
+    "minlon": 120.2136987,
+    "maxlat": 23.0400708,
+    "maxlon": 120.2152250
+  },
+  "nodes": [
+    1681589719,
+    1682019878,
+    1801435697,
+    1681589769,
+    1681589801,
+    1333117515
+  ],
+  "geometry": [
+    { "lat": 23.0363860, "lon": 120.2136987 },
+    { "lat": 23.0370747, "lon": 120.2139731 },
+    { "lat": 23.0375309, "lon": 120.2141375 },
+    { "lat": 23.0378822, "lon": 120.2142806 },
+    { "lat": 23.0388358, "lon": 120.2146962 },
+    { "lat": 23.0400708, "lon": 120.2152250 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "安和路三段",
+    "ref": "19",
+    "ref:en": "Provincial Highway 19",
+    "ref:zh": "台19線"
   }
 }
 

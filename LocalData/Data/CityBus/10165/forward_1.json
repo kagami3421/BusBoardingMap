@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:11:02Z",
+    "timestamp_osm_base": "2016-03-18T14:27:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -1296,7 +1296,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
-    "name:en": "Sinsin Road",
+    "name:en": "SinSing Road",
     "oneway": "yes"
   }
 },
@@ -1412,11 +1412,13 @@
   ],
   "tags": {
     "highway": "primary",
-    "name": "金華路二段",
+    "name": "金華路一段",
+    "name:en": "Section 1 , JinHua Rd.",
     "oneway": "yes",
     "ref": "17甲",
     "ref:en": "Provincial Highway 17A",
-    "ref:zh": "台17甲線"
+    "ref:zh": "台17甲線",
+    "sidewalk": "no"
   }
 },
 {
@@ -1739,7 +1741,9 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
-    "oneway": "yes"
+    "name:en": "SinSing Road",
+    "oneway": "yes",
+    "sidewalk": "no"
   }
 },
 {
@@ -1812,6 +1816,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:03:02Z",
+    "timestamp_osm_base": "2016-03-20T05:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -876,6 +876,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }
@@ -900,7 +901,8 @@
   "tags": {
     "bridge": "yes",
     "highway": "tertiary",
-    "name": "至善橋"
+    "name": "至善橋",
+    "name:en": "JhiShan Bridge"
   }
 },
 {
@@ -1038,7 +1040,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "永成路三段"
+    "name": "永成路三段",
+    "name:en": "Section 3 , YongCheng Road"
   }
 },
 {
@@ -1413,6 +1416,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "中華西路一段",
+    "name:en": "Section 1 , JhongHua West Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",
@@ -1443,6 +1447,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes"
   }
 },
@@ -1623,7 +1628,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "永成路三段",
-    "name:en": "Section 3 , YongChen Road",
+    "name:en": "Section 3 , YongCheng Road",
     "sidewalk": "no"
   }
 },
@@ -1911,6 +1916,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "中華南路二段",
+    "name:en": "Section 2 , JhongHua South Road",
     "oneway": "yes",
     "sidewalk": "right"
   }
@@ -1972,6 +1978,7 @@
     "highway": "primary",
     "lanes": "2",
     "name": "濱南路",
+    "name:en": "BinNan Road",
     "oneway": "yes",
     "ref": "17",
     "ref:en": "Provincial Highway 17",

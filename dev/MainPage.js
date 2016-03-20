@@ -1,5 +1,6 @@
 'use strict';
 
+
 L.BusMain = {};
 
 var MainPageVars = {
@@ -19,45 +20,60 @@ $(function() {
   MainPageVars.MainProcess = L.BusMain.mainprocess();
 });
 
-L.BusMain.mainprocess = function () {
-    return new L.BusMain.MainProcessor();
+L.BusMain.mainprocess = function() {
+  return new L.BusMain.MainProcessor();
 };
 
 L.BusMain.MainProcessor = L.Class.extend({
   initialize: function() {
     this._RouteController = undefined;
-
     this._InitData();
   },
 
-  _InitData : function () {
+  _InitData: function() {
 
     var _Class = this;
 
     $.getJSON('LocalData/Config.json', function(data) {
-      _Class._RouteController = L.BusMain.routeControl(data, function() {
-        _Class._RouteController.SetDirection('forward');
-        _Class._RouteController.SetDate({
-          Year: '104',
-          Month: 'Total'
-        });
-        _Class._RouteController.ApplyToMap();
+      _Class._RouteController = L.BusMain.routeControl(data, function(error) {
+        if(error === null){
+          _Class._RouteController.SetDirection('forward');
+          _Class._RouteController.SetDate({
+            Year: '2015',
+            Month: 'Total'
+          });
+          _Class._RouteController.ApplyToMap();
 
-        _Class._InitControls(data);
+          _Class._InitControls(data);
+        }
+        else {
+          console.log('Error occured when creating layers.');
+        }
       });
     });
   },
 
-  _InitControls : function (Config) {
+  _InitControls: function(Config) {
+
+    var _Class = this;
 
     var _Legend = L.BusMainControl.legend(Config.CapacityRange);
-
     MainPageVars.BaseMap.addControl(_Legend);
+
+    var _Slider = L.BusMainControl.slider(function(DateObj) {
+      console.log(DateObj.Year);
+      console.log(DateObj.Month);
+      //console.log(_Controller);
+
+      _Class._RouteController.SetDate(DateObj);
+
+    }, Config.CapacityControl);
+    MainPageVars.BaseMap.addControl(_Slider);
   }
 });
 
-L.BusMain.routeControl = function (ConfigJson, CallbackFunction) {
-    return new L.BusMain.RoutesController(ConfigJson, CallbackFunction);
+L.BusMain.routeControl = function(ConfigJson, CallbackFunction) {
+  return new L.BusMain.RoutesController(ConfigJson, CallbackFunction);
 };
 
 L.BusMain.RoutesController = L.Class.extend({
@@ -113,17 +129,27 @@ L.BusMain.RoutesController = L.Class.extend({
         function(callback) {
           $.getJSON('LocalData/Data/Collection.json', function(data) {
             callback(null, data);
+          }).fail(function() {
+            callback("collection_error" , null);
           });
         },
         function(arg1, callback) {
-          _class._CreateAllRouteLayers(arg1, Config, function() {
-            callback(null, arg1);
+          _class._CreateAllRouteLayers(arg1, Config, function(err) {
+            if(err === null){
+              callback(null, arg1);
+            }
+            else {
+              callback(err, null);
+            }
           });
         }
       ],
       function(err, result) {
-        if (result !== null) {
-          DoneCallBack();
+        if (err === null) {
+          DoneCallBack(null);
+        }
+        else {
+          DoneCallBack(err);
         }
       });
   },
@@ -143,20 +169,31 @@ L.BusMain.RoutesController = L.Class.extend({
 
     async.each(CategoryList, function(category, callbackA) {
         async.each(Collection[category].members, function(singleRoute, callbackB) {
-            _Class._DownloadEachRouteSource(singleRoute, Config, function(layer) {
-              _Class.RouteLayers.push(layer);
-              callbackB();
+            _Class._DownloadEachRouteSource(singleRoute, Config, function(error , layer) {
+              if(error !== null){
+                callbackB(error);
+              }
+              else {
+                _Class.RouteLayers.push(layer);
+                callbackB(null);
+              }
             });
           },
           function(err) {
-            if (err !== undefined) {
-                callbackA();
+            if (err !== null) {
+              callbackA(err);
+            }
+            else {
+              callbackA(null);
             }
           });
       },
       function(err) {
-        if (err !== undefined) {
-          DoneCallBack();
+        if (err !== null) {
+          DoneCallBack(err);
+        }
+        else {
+          DoneCallBack(null);
         }
       });
   },
@@ -169,40 +206,66 @@ L.BusMain.RoutesController = L.Class.extend({
         function(callback) {
           $.getJSON('LocalData/Data/' + CollecionUnit.tags['ref:category'] + '/' + CollecionUnit.tags['ref:querycode'] + '/Capacity.json', function(data) {
             callback(null, data);
+          }).fail(function() {
+            callback("capacity_error" , null);
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('forward', CollecionUnit, function(result) {
-            callback(null, result);
+          _Class._DownloadDirectionSource('forward', CollecionUnit, function(err , result) {
+            if(err !== null){
+              callback(err , null);
+            }
+            else {
+              callback(null, result);
+            }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('forward_extend', CollecionUnit, function(result) {
-            callback(null, result);
+          _Class._DownloadDirectionSource('forward_extend', CollecionUnit, function(err , result) {
+            if(err !== null){
+              callback(err , null);
+            }
+            else {
+              callback(null, result);
+            }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('backward', CollecionUnit, function(result) {
-            callback(null, result);
+          _Class._DownloadDirectionSource('backward', CollecionUnit, function(err , result) {
+            if(err !== null){
+              callback(err , null);
+            }
+            else {
+              callback(null, result);
+            }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('backward_extend', CollecionUnit, function(result) {
-            callback(null, result);
+          _Class._DownloadDirectionSource('backward_extend', CollecionUnit, function(err , result) {
+            if(err !== null){
+              callback(err , null);
+            }
+            else {
+              callback(null, result);
+            }
           });
         }
       ],
       function(err, results) {
-        if (err !== undefined) {
+        if (err === null) {
           var Forwards = results[1].concat(results[2]);
           var Backwards = results[3].concat(results[4]);
           var EachLayer = L.BusMain.routeLayer(Forwards, Backwards, results[0], ConfigData);
-          DoneCallBack(EachLayer);
+          DoneCallBack(null , EachLayer);
+        }
+        else {
+          console.log(CollecionUnit.tags['ref:querycode'] + " DownloadEachRouteSource Error: " + err);
+          DoneCallBack(err , null);
         }
       });
   },
 
-  _DownloadDirectionSource: function(strDirection, CollecionUnit, DoneCallBack) {
+  _DownloadDirectionSource: function(strDirection, CollectionUnit, DoneCallBack) {
 
     var DirNums = 0;
     var Count = 0;
@@ -210,36 +273,47 @@ L.BusMain.RoutesController = L.Class.extend({
 
     //var _class = this;
 
-    for (var i = 0; i < CollecionUnit.members.length; i++) {
-      if (CollecionUnit.members[i].role === strDirection) {
+    for (var i = 0; i < CollectionUnit.members.length; i++) {
+      if (CollectionUnit.members[i].role === strDirection) {
         DirNums++;
       }
     }
 
-    async.whilst(
-      function() {
-        return Count < DirNums;
-      },
-      function(callback) {
+    if(DirNums === 0){
+      DoneCallBack(null , Result);
+    }
+    else {
 
-        $.getJSON('LocalData/Data/' + CollecionUnit.tags['ref:category'] + '/' + CollecionUnit.tags['ref:querycode'] + '/' + strDirection + '_' + Count + '.json', function(data) {
-          Result.push(data);
+      async.whilst(
+        function() {
+          return Count < DirNums;
+        },
+        function(callback) {
 
-          Count++;
-          callback();
-        });
-      },
-      function(err) {
-        if (err !== undefined) {
-          DoneCallBack(Result);
+          $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/' + strDirection + '_' + Count + '.json', function(data) {
+            Result.push(data);
+            Count++;
+            callback(null , Count);
+          }).fail(function() {
+            callback(strDirection , null);
+          });
+        },
+        function(err , result) {
+          if (err !== null) {
+            DoneCallBack(err + " direction is missing or broken.", null);
+          }
+          else {
+            DoneCallBack(null , Result);
+          }
         }
-      }
-    );
+      );
+
+    }
   }
 });
 
-L.BusMain.routeLayer = function (ForwardSource, BackwardSource, CapaJson, RangeJson) {
-    return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson);
+L.BusMain.routeLayer = function(ForwardSource, BackwardSource, CapaJson, RangeJson) {
+  return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson);
 };
 
 L.BusMain.RouteLayer = L.FeatureGroup.extend({
@@ -263,8 +337,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
       for (var i = 0; i < this.ForwardPolylines.length; i++) {
         this.addLayer(this.ForwardPolylines[i]);
       }
-    }
-    else if (strDir === 'backward') {
+    } else if (strDir === 'backward') {
       for (var j = 0; j < this.BackwardPolylines.length; j++) {
         this.addLayer(this.BackwardPolylines[j]);
       }
@@ -272,7 +345,14 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   },
 
   SetDate: function(TargetDate) {
+    //console.log(this.CapacityJson);
+    //console.log(TargetDate);
     var GettedColour = this._CacaulateColourFromRange(this.ColourRangeJson, this.CapacityJson, TargetDate);
+
+    //console.log('------------------------------');
+    //console.log(this.ColourRangeJson);
+    //console.log(this.CapacityJson);
+    //console.log(GettedColour);
 
     var showedPolylines = this.getLayers();
 
@@ -316,14 +396,13 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
 
     if (Capacity[TargetDate.Year] === undefined) {
       result = this._GetZeroCapacityColour(ColourRange);
-    }
-    else {
+    } else {
       var CurrentCapacity = Capacity[TargetDate.Year][TargetDate.Month];
+      //console.log(CurrentCapacity);
 
-      if (CurrentCapacity === 0) {
+      if (parseInt(CurrentCapacity) === 0) {
         result = this._GetZeroCapacityColour(ColourRange);
-      }
-      else {
+      } else {
         for (var i = 0; i < ColourRange.length; i++) {
           if (CurrentCapacity < ColourRange[i].MaxCapacity && CurrentCapacity > ColourRange[i].MinCapacity) {
             result = {

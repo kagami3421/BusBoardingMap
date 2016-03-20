@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T11:55:02Z",
+    "timestamp_osm_base": "2016-03-18T13:53:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -813,6 +813,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
+    "name:en": "SinSing Road",
     "oneway": "yes"
   }
 },
@@ -1816,7 +1817,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
-    "name:en": "Sinsin Road",
+    "name:en": "SinSing Road",
     "oneway": "yes"
   }
 },
@@ -1858,6 +1859,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
+    "name:en": "SinSing Road",
     "oneway": "yes",
     "sidewalk": "no"
   }
@@ -2030,7 +2032,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
-    "name:en": "Sinsin Road",
+    "name:en": "SinSing Road",
     "oneway": "yes"
   }
 },
@@ -2187,7 +2189,9 @@
   "tags": {
     "highway": "tertiary",
     "name": "新興路",
-    "oneway": "yes"
+    "name:en": "SinSing Road",
+    "oneway": "yes",
+    "sidewalk": "no"
   }
 },
 {

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:01:02Z",
+    "timestamp_osm_base": "2016-03-20T05:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,11 +10,11 @@
 {
   "type": "relation",
   "id": 4107379,
-  "timestamp": "2016-02-22T17:26:55Z",
-  "version": 8,
-  "changeset": 37372380,
-  "user": "ezjerry",
-  "uid": 1595400,
+  "timestamp": "2016-03-13T12:32:00Z",
+  "version": 9,
+  "changeset": 37799169,
+  "user": "Kagami",
+  "uid": 189328,
   "members": [
     {
       "type": "way",
@@ -234,6 +234,16 @@
     {
       "type": "way",
       "ref": 294336539,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396429570,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 396429569,
       "role": ""
     },
     {
@@ -1233,8 +1243,8 @@
   "type": "way",
   "id": 294336539,
   "bounds": {
-    "minlat": 23.0402109,
-    "minlon": 120.3117518,
+    "minlat": 23.0402405,
+    "minlon": 120.3117089,
     "maxlat": 23.0407653,
     "maxlon": 120.3121292
   },
@@ -1244,7 +1254,7 @@
     1133821932
   ],
   "geometry": [
-    { "lat": 23.0402109, "lon": 120.3117518 },
+    { "lat": 23.0402405, "lon": 120.3117089 },
     { "lat": 23.0405018, "lon": 120.3119037 },
     { "lat": 23.0407653, "lon": 120.3121292 }
   ],
@@ -2068,6 +2078,8 @@
     2758621252,
     2758621249,
     2758621237,
+    4069408353,
+    4069408355,
     2758621198,
     2758621196,
     2758621178,
@@ -2124,6 +2136,8 @@
     { "lat": 23.0757523, "lon": 120.5194616 },
     { "lat": 23.0751300, "lon": 120.5194402 },
     { "lat": 23.0747223, "lon": 120.5194616 },
+    { "lat": 23.0738787, "lon": 120.5194782 },
+    { "lat": 23.0736645, "lon": 120.5194824 },
     { "lat": 23.0736279, "lon": 120.5194831 },
     { "lat": 23.0733275, "lon": 120.5194616 },
     { "lat": 23.0723834, "lon": 120.5192041 },
@@ -2390,6 +2404,58 @@
   ],
   "tags": {
     "highway": "primary",
+    "name": "中山路",
+    "ref": "20",
+    "ref:en": "Provincial Highway 20",
+    "ref:zh": "台20線"
+  }
+},
+{
+  "type": "way",
+  "id": 396429569,
+  "bounds": {
+    "minlat": 23.0389758,
+    "minlon": 120.3112500,
+    "maxlat": 23.0400503,
+    "maxlon": 120.3115998
+  },
+  "nodes": [
+    1773322193,
+    3992353318
+  ],
+  "geometry": [
+    { "lat": 23.0389758, "lon": 120.3112500 },
+    { "lat": 23.0400503, "lon": 120.3115998 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "中山路",
+    "ref": "20",
+    "ref:en": "Provincial Highway 20",
+    "ref:zh": "台20線"
+  }
+},
+{
+  "type": "way",
+  "id": 396429570,
+  "bounds": {
+    "minlat": 23.0400503,
+    "minlon": 120.3115998,
+    "maxlat": 23.0402405,
+    "maxlon": 120.3117089
+  },
+  "nodes": [
+    3992353318,
+    1851617884
+  ],
+  "geometry": [
+    { "lat": 23.0400503, "lon": 120.3115998 },
+    { "lat": 23.0402405, "lon": 120.3117089 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
     "name": "中山路",
     "ref": "20",
     "ref:en": "Provincial Highway 20",

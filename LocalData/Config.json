@@ -1,79 +1,97 @@
 {
-  "TargetCity":"臺南市",
-  "TargetNetwork":"臺南市公車",
-  "CapactiyData":{
-    "Url":"http://61.60.30.138/opendata/0d56af62-d124-4d85-b4c0-12160eb07e8e?format=json",
-    "RefCode":"路線編號",
-    "OutputTemplate":{
-      "YearCode":"年度",
-      "Year":"總計",
-      "January":"一月",
-      "February":"二月",
-      "March":"三月",
-      "April":"四月",
-      "May":"五月",
-      "June":"六月",
-      "July":"七月",
-      "August":"八月",
-      "September":"九月",
-      "October":"十月",
-      "November":"十一月",
-      "December":"十二月"
+  "TargetCity": "臺南市",
+  "TargetNetwork": "臺南市公車",
+  "CapactiyData": {
+    "Url": "http://61.60.30.138/opendata/0d56af62-d124-4d85-b4c0-12160eb07e8e?format=json",
+    "RefCode": "路線編號",
+    "OutputTemplate": {
+      "YearCode": "年度",
+      "Year": "總計",
+      "January": "一月",
+      "February": "二月",
+      "March": "三月",
+      "April": "四月",
+      "May": "五月",
+      "June": "六月",
+      "July": "七月",
+      "August": "八月",
+      "September": "九月",
+      "October": "十月",
+      "November": "十一月",
+      "December": "十二月"
     }
   },
-  "CapacityRange":
-  [
+  "CapacityControl": {
+    "From": "2014",
+    "To": "2015",
+    "Ranges": [
+      "Total",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "CapacityRange": [
     {
       "ColourCode": "#FF0000",
-      "HightlightColourCode" : "#FF9C9C",
+      "HightlightColourCode": "#FF9C9C",
       "MaxCapacity": 2000000,
       "MinCapacity": 1000001
     },
     {
       "ColourCode": "#FF6600",
-      "HightlightColourCode" : "#FF9650",
+      "HightlightColourCode": "#FF9650",
       "MaxCapacity": 1000000,
       "MinCapacity": 500001
     },
     {
       "ColourCode": "#FFEB00",
-      "HightlightColourCode" : "#FFF578",
+      "HightlightColourCode": "#FFF578",
       "MaxCapacity": 500000,
       "MinCapacity": 100001
     },
     {
       "ColourCode": "#00FF00",
-      "HightlightColourCode" : "#82FF81",
+      "HightlightColourCode": "#82FF81",
       "MaxCapacity": 100000,
       "MinCapacity": 50001
     },
     {
       "ColourCode": "#00A5FF",
-      "HightlightColourCode" : "#7DD2FF",
+      "HightlightColourCode": "#7DD2FF",
       "MaxCapacity": 50000,
       "MinCapacity": 10001
     },
     {
       "ColourCode": "#0000FF",
-      "HightlightColourCode" : "#8281FF",
+      "HightlightColourCode": "#8281FF",
       "MaxCapacity": 10000,
       "MinCapacity": 5001
     },
     {
       "ColourCode": "#7700FF",
-      "HightlightColourCode" : "#BE78FF",
+      "HightlightColourCode": "#BE78FF",
       "MaxCapacity": 5000,
       "MinCapacity": 1001
     },
     {
       "ColourCode": "#FF00FF",
-      "HightlightColourCode" : "#FF81FF",
+      "HightlightColourCode": "#FF81FF",
       "MaxCapacity": 1000,
       "MinCapacity": 1
     },
     {
       "ColourCode": "#444444",
-      "HightlightColourCode" : "#8E8E8E",
+      "HightlightColourCode": "#8E8E8E",
       "MaxCapacity": 0,
       "MinCapacity": 0
     }

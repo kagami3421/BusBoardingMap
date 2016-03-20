@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:04:03Z",
+    "timestamp_osm_base": "2016-03-18T14:09:02Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10,11 +10,11 @@
 {
   "type": "relation",
   "id": 4053988,
-  "timestamp": "2016-02-07T19:04:42Z",
-  "version": 8,
-  "changeset": 37065938,
-  "user": "ezjerry",
-  "uid": 1595400,
+  "timestamp": "2016-03-14T14:21:00Z",
+  "version": 9,
+  "changeset": 37821919,
+  "user": "Kagami",
+  "uid": 189328,
   "members": [
     {
       "type": "way",
@@ -34,6 +34,11 @@
     {
       "type": "way",
       "ref": 396594303,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 403652594,
       "role": ""
     },
     {
@@ -221,18 +226,19 @@
     "maxlon": 120.3385077
   },
   "nodes": [
-    508031764,
-    3913013356
+    3913013356,
+    508031764
   ],
   "geometry": [
-    { "lat": 22.8886811, "lon": 120.3379950 },
-    { "lat": 22.8913276, "lon": 120.3385077 }
+    { "lat": 22.8913276, "lon": 120.3385077 },
+    { "lat": 22.8886811, "lon": 120.3379950 }
   ],
   "tags": {
     "bridge": "yes",
     "highway": "primary",
-    "name": "南雄路",
-    "oneway": "-1",
+    "layer": "1",
+    "name": "南雄橋",
+    "oneway": "yes",
     "ref": "19甲",
     "ref:en": "Provincial Highway 19A",
     "ref:zh": "台19甲線"
@@ -470,7 +476,9 @@
     3994083660,
     3994083647,
     3994083654,
-    3994083646
+    3994083646,
+    3994083652,
+    3994083622
   ],
   "geometry": [
     { "lat": 22.9598364, "lon": 120.3278596 },
@@ -561,7 +569,9 @@
     { "lat": 22.9038426, "lon": 120.3518043 },
     { "lat": 22.9038274, "lon": 120.3517247 },
     { "lat": 22.9038106, "lon": 120.3515926 },
-    { "lat": 22.9038124, "lon": 120.3514564 }
+    { "lat": 22.9038124, "lon": 120.3514564 },
+    { "lat": 22.9038136, "lon": 120.3513937 },
+    { "lat": 22.9038153, "lon": 120.3513021 }
   ],
   "tags": {
     "highway": "primary",
@@ -734,6 +744,36 @@
     "ref": "19甲",
     "ref:en": "Provincial Highway 19A",
     "ref:zh": "台19甲線"
+  }
+},
+{
+  "type": "way",
+  "id": 403652594,
+  "bounds": {
+    "minlat": 22.8991153,
+    "minlon": 120.3460534,
+    "maxlat": 22.8998262,
+    "maxlon": 120.3475317
+  },
+  "nodes": [
+    3994083638,
+    3994083639,
+    3994083575,
+    3994083574,
+    3994083573,
+    3994083572
+  ],
+  "geometry": [
+    { "lat": 22.8998262, "lon": 120.3475317 },
+    { "lat": 22.8997810, "lon": 120.3474883 },
+    { "lat": 22.8997216, "lon": 120.3474212 },
+    { "lat": 22.8996375, "lon": 120.3472978 },
+    { "lat": 22.8994868, "lon": 120.3469813 },
+    { "lat": 22.8991153, "lon": 120.3460534 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "oneway": "yes"
   }
 }
 

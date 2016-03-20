@@ -77,14 +77,16 @@ module.exports = function(grunt) {
           May: value[Template.May],
           June: value[Template.June],
           July: value[Template.July],
-          August: value[Template.Auguest],
+          August: value[Template.August],
           September: value[Template.September],
           October: value[Template.October],
           November: value[Template.November],
           December: value[Template.December]
         };
 
-        Output[value[Template.YearCode]] = EachFormatted;
+        var WesternYear = parseInt(value[Template.YearCode]) + 1911;
+
+        Output[WesternYear] = EachFormatted;
       });
 
       OutputString = JSON.stringify(Output);

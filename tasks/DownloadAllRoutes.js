@@ -4,7 +4,7 @@ var request = require('request');
 var async = require('async');
 
 module.exports = function(grunt) {
-  grunt.registerTask('fetch-routes', function() {
+  grunt.registerTask('fetch-routes', function(categoryArg , routeArg) {
     var done = this.async();
 
     var OverPassTaiwanUrl = 'https://overpass.nchc.org.tw/api/interpreter?data=';
@@ -20,18 +20,14 @@ module.exports = function(grunt) {
 
       var _collection = grunt.file.readJSON("LocalData/Data/Collection.json");
 
-      if(_collection !== undefined){
+      if (_collection !== undefined) {
         callback(null, _collection);
-      }
-      else{
+      } else {
         callback("Can't find Collection json file.", null);
       }
     };
 
-    /*************************  Async Function  **************************/
-    /*************************** Asyncs *********************************/
-
-    var DownloadAllCategories = function(buckets , callback) {
+    var DownloadAllCategories = function(buckets, callback) {
       grunt.log.writeln('------------------- Message Start ----------------');
       grunt.log.writeln('Start Download ...');
 
@@ -43,9 +39,9 @@ module.exports = function(grunt) {
         },
         function(callback) {
 
-            var categoryIndex = Object.keys(buckets)[index];
+          var categoryIndex = Object.keys(buckets)[index];
 
-            DownloadSingleCategory(buckets[categoryIndex] , function(err){
+          _DownloadSingleCategory(buckets[categoryIndex], function(err) {
             index++;
             callback(err);
           });
@@ -57,13 +53,19 @@ module.exports = function(grunt) {
           } else {
             grunt.log.writeln('------------------- Message End ----------------');
             grunt.log.writeln('Every category files download successfully !');
-            callback(null , buckets);
+            callback(null, buckets);
           }
         }
       );
     };
 
-    var DownloadSingleCategory = function(Category , DoneCallback) {
+    var DownloadOneCategory = function(buckets, callback) {
+      _DownloadSingleCategory(buckets[categoryArg], function(err) {
+        callback(err);
+      });
+    };
+
+    var _DownloadSingleCategory = function(Category, DoneCallback) {
 
       grunt.log.writeln('------------------- Message Start ----------------');
 
@@ -73,11 +75,13 @@ module.exports = function(grunt) {
 
       async.whilst(
         function() {
-          return index < Category.members.length;
+          return index < Object.keys(Category.members).length;
         },
         function(callback) {
 
-          DownloadSingleRoute(Category.members[index] , function(err){
+          var routeIndex = Object.keys(Category.members)[index];
+
+          _DownloadSingleRoute(Category.members[routeIndex], function(err) {
             index++;
             callback(err);
           });
@@ -94,7 +98,14 @@ module.exports = function(grunt) {
       );
     };
 
-    var DownloadSingleRoute = function(singleRoute , DoneCallback) {
+    var DownloadOneRoute = function(buckets, callback) {
+      //TODO: Should use querycode to download single route.
+      _DownloadSingleRoute(buckets[categoryArg].members[routeArg], function(err) {
+        callback(err);
+      });
+    };
+
+    var _DownloadSingleRoute = function(singleRoute, DoneCallback) {
 
       grunt.log.writeln('------------------- Message Start ----------------');
 
@@ -113,24 +124,21 @@ module.exports = function(grunt) {
         function(callback) {
           grunt.log.writeln('Download Direction :' + singleRoute.members[index].role);
 
-          request(OverPassMainUrl + OverpassQuery1 + singleRoute.members[index].ref + OverpassQuery2, function(error, response, body) {
+          request(OverPassTaiwanUrl + OverpassQuery1 + singleRoute.members[index].ref + OverpassQuery2, function(error, response, body) {
             if (error) {
               grunt.log.writeln('Download Error :' + error.message);
             } else {
 
-              if(singleRoute.members[index].role === 'forward_extend'){
+              if (singleRoute.members[index].role === 'forward_extend') {
                 grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + singleRoute.members[index].role + '_' + ExtendFIndex + '.json', body);
                 ExtendFIndex++;
-              }
-              else if (singleRoute.members[index].role === 'backward_extend') {
+              } else if (singleRoute.members[index].role === 'backward_extend') {
                 grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + singleRoute.members[index].role + '_' + ExtendBIndex + '.json', body);
                 ExtendBIndex++;
-              }
-              else if (singleRoute.members[index].role === 'forward') {
+              } else if (singleRoute.members[index].role === 'forward') {
                 grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + singleRoute.members[index].role + '_' + MainFIndex + '.json', body);
                 MainFIndex++;
-              }
-              else if (singleRoute.members[index].role === 'backward') {
+              } else if (singleRoute.members[index].role === 'backward') {
                 grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + singleRoute.members[index].role + '_' + MainBIndex + '.json', body);
                 MainBIndex++;
               }
@@ -154,16 +162,44 @@ module.exports = function(grunt) {
       );
     };
 
+    /*************************  Async Function  **************************/
     /*************************** Asyncs *********************************/
 
-    async.waterfall([LoadCollection , DownloadAllCategories],
-      function(err, result) {
-        if (err) {
-          grunt.log.errorlns(err);
-          done(false);
-        } else {
-          done(true);
-        }
+    if (arguments.length === 0) {
+      async.waterfall([LoadCollection, DownloadAllCategories],
+        function(err, result) {
+          if (err) {
+            grunt.log.errorlns(err);
+            done(false);
+          } else {
+            done(true);
+          }
+        });
+    }
+    else if (arguments.length === 1)
+    {
+      async.waterfall([LoadCollection, DownloadOneCategory],
+        function(err, result) {
+          if (err) {
+            grunt.log.errorlns(err);
+            done(false);
+          } else {
+            done(true);
+          }
       });
+    }
+    else if (arguments.length === 2)
+    {
+      async.waterfall([LoadCollection, DownloadOneRoute],
+        function(err, result) {
+          if (err) {
+            grunt.log.errorlns(err);
+            done(false);
+          } else {
+            done(true);
+          }
+      });
+    }
+
   });
 };

@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-03-10T12:18:02Z",
+    "timestamp_osm_base": "2016-03-20T05:00:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -341,6 +341,7 @@
   "tags": {
     "highway": "tertiary",
     "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road",
     "sidewalk": "no"
   }
 },
@@ -722,7 +723,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路一段"
+    "name": "大同路一段",
+    "name:en": "Section 1 , DaTong Road"
   }
 },
 {
@@ -784,7 +786,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {
@@ -1163,7 +1166,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {
@@ -1669,7 +1673,8 @@
   ],
   "tags": {
     "highway": "tertiary",
-    "name": "大同路二段"
+    "name": "大同路二段",
+    "name:en": "Section 2 , DaTong Road"
   }
 },
 {
