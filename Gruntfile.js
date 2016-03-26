@@ -77,6 +77,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.registerTask('compile-css', ['sass']);
-  grunt.registerTask('build', ['uglify', 'cssmin']);
+  grunt.registerTask('build', ['uglify', 'cssmin', 'processhtml']);
   grunt.registerTask('server', ['connect', 'watch']);
 };
