@@ -1,3 +1,17 @@
+@font-face {
+  font-family: Chunkfive;
+  src: url(../Font/Chunkfive.otf); }
+
+@font-face {
+  font-family: Geo;
+  src: url(../Font/Geo.otf);
+  font-style: normal; }
+
+@font-face {
+  font-family: Geo;
+  src: url(../Font/Geo_Oblique.otf);
+  font-style: oblique; }
+
 #map {
   left: 0;
   top: 0;
@@ -5,38 +19,57 @@
   right: 0;
   position: absolute; }
 
-.busmain_legend {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
-  border-radius: 4px;
-  background-color: #FFF; }
-  .busmain_legend .legend-title {
-    margin-bottom: 5px;
-    font-weight: bold; }
-  .busmain_legend .legend-scale {
-    margin-left: 10px;
-    margin-right: 10px; }
-    .busmain_legend .legend-scale ul {
-      margin: 0 0 5px;
-      padding: 0;
-      float: left;
-      list-style: none; }
-      .busmain_legend .legend-scale ul li {
-        margin-left: 0;
-        line-height: 18px;
-        margin-bottom: 2px; }
-        .busmain_legend .legend-scale ul li span {
-          display: block;
-          float: left;
-          height: 16px;
-          width: 30px;
-          margin-right: 5px;
-          margin-left: 0;
-          border: 1px solid #999; }
+.busmain_legend .legend-title {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white; }
 
-.busmain_slider {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
-  border-radius: 4px;
-  background-color: #FFF; }
-  .busmain_slider input[type=range] {
-    border: 1px solid white;
-    width: 400px; }
+.busmain_legend .legend-scale {
+  margin-left: 10px;
+  margin-right: 10px; }
+  .busmain_legend .legend-scale ul {
+    margin: 0 0 5px;
+    padding: 0;
+    float: left;
+    list-style: none; }
+    .busmain_legend .legend-scale ul li {
+      margin-left: 0;
+      line-height: 18px;
+      margin-bottom: 2px;
+      color: white; }
+      .busmain_legend .legend-scale ul li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px hidden #999; }
+
+.busmain_slider input[type=range] {
+  border: 1px hidden white;
+  width: 400px; }
+
+.dateViewText {
+  font-family: Geo;
+  color: white;
+  letter-spacing: 1px;
+  font-size: xx-large;
+  margin-top: 1%;
+  margin-bottom: 1%; }
+
+.busmain_ridershipView .ridershipViewLegend {
+  font-family: Geo;
+  color: white;
+  letter-spacing: 1px;
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.busmain_ridershipView .ridershipViewText {
+  font-family: Geo;
+  color: white;
+  letter-spacing: 1px;
+  font-size: xx-large;
+  margin-top: 1%;
+  margin-bottom: 1%; }

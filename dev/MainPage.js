@@ -11,7 +11,12 @@ var MainPageVars = {
 };
 
 $(function() {
-  MainPageVars.BaseMap = L.map('map').setView([23.1852, 120.4287], 11);
+  MainPageVars.BaseMap = L.map('map' , {
+    zoomControl: false,
+    center: [23.1852, 120.4287],
+    zoom: 11
+  });
+  //MainPageVars.BaseMap.zoomControl.disable();
 
   L.tileLayer(MainPageVars.BaseMapUrl, {
     attribution: MainPageVars.Attribution
@@ -27,6 +32,17 @@ L.BusMain.mainprocess = function() {
 L.BusMain.MainProcessor = L.Class.extend({
   initialize: function() {
     this._RouteController = undefined;
+    this._DateSlider = undefined;
+
+    this._Legend = undefined;
+    this._DateView = undefined;
+    this._TotalView = undefined;
+
+    this._InitDate = {
+      Year: '2014',
+      Month: 'Total'
+    };
+
     this._InitData();
   },
 
@@ -34,41 +50,61 @@ L.BusMain.MainProcessor = L.Class.extend({
 
     var _Class = this;
 
-    $.getJSON('LocalData/Config.json', function(data) {
-      _Class._RouteController = L.BusMain.routeControl(data, function(error) {
-        if(error === null){
-          _Class._RouteController.SetDirection('forward');
-          _Class._RouteController.SetDate({
-            Year: '2015',
-            Month: 'Total'
+    async.parallel([
+        function(callback) {
+          $.getJSON('LocalData/Config.json', function(data) {
+            callback(null , data);
           });
-          _Class._RouteController.ApplyToMap();
+        },
+        function(callback) {
+          $.getJSON('LocalData/Data/TotalCapacity.json', function(data) {
+            callback(null , data);
+          });
+        }
+      ],
+      function(err, results) {
+        _Class._RouteController = L.BusMain.routeControl(results[0] , function(error) {
+          if (error === null) {
+            _Class._RouteController.SetDirection('forward');
+            _Class._RouteController.SetDate(_Class._InitDate);
+            _Class._RouteController.ApplyToMap();
 
-          _Class._InitControls(data);
-        }
-        else {
-          console.log('Error occured when creating layers.');
-        }
+            _Class._InitControls(results[0] , results[1]);
+          } else {
+            console.log('Error occured when creating layers.');
+          }
+        });
       });
-    });
   },
 
-  _InitControls: function(Config) {
+  _InitControls: function(Config , TotalCapacity) {
 
     var _Class = this;
 
-    var _Legend = L.BusMainControl.legend(Config.CapacityRange);
-    MainPageVars.BaseMap.addControl(_Legend);
+    _Class._Legend = L.BusMainControl.legend(Config.CapacityRange);
+    MainPageVars.BaseMap.addControl(_Class._Legend);
 
-    var _Slider = L.BusMainControl.slider(function(DateObj) {
-      console.log(DateObj.Year);
-      console.log(DateObj.Month);
+    _Class._DateView = L.BusMainControl.dateview();
+    MainPageVars.BaseMap.addControl(_Class._DateView);
+    _Class._DateView.ChangeValue(_Class._InitDate);
+
+    _Class._TotalView = L.BusMainControl.ridership(TotalCapacity);
+    MainPageVars.BaseMap.addControl(_Class._TotalView);
+    _Class._TotalView.ChangeValue(_Class._InitDate);
+
+    //Slider change value event
+    _Class._DateSlider = L.BusMainControl.slider(function(DateObj) {
+      //console.log(DateObj.Year);
+      //console.log(DateObj.Month);
       //console.log(_Controller);
 
       _Class._RouteController.SetDate(DateObj);
 
+      _Class._DateView.ChangeValue(DateObj);
+      _Class._TotalView.ChangeValue(DateObj);
+
     }, Config.CapacityControl);
-    MainPageVars.BaseMap.addControl(_Slider);
+    MainPageVars.BaseMap.addControl(_Class._DateSlider);
   }
 });
 
@@ -130,15 +166,14 @@ L.BusMain.RoutesController = L.Class.extend({
           $.getJSON('LocalData/Data/Collection.json', function(data) {
             callback(null, data);
           }).fail(function() {
-            callback("collection_error" , null);
+            callback("collection_error", null);
           });
         },
         function(arg1, callback) {
           _class._CreateAllRouteLayers(arg1, Config, function(err) {
-            if(err === null){
+            if (err === null) {
               callback(null, arg1);
-            }
-            else {
+            } else {
               callback(err, null);
             }
           });
@@ -147,8 +182,7 @@ L.BusMain.RoutesController = L.Class.extend({
       function(err, result) {
         if (err === null) {
           DoneCallBack(null);
-        }
-        else {
+        } else {
           DoneCallBack(err);
         }
       });
@@ -169,11 +203,10 @@ L.BusMain.RoutesController = L.Class.extend({
 
     async.each(CategoryList, function(category, callbackA) {
         async.each(Collection[category].members, function(singleRoute, callbackB) {
-            _Class._DownloadEachRouteSource(singleRoute, Config, function(error , layer) {
-              if(error !== null){
+            _Class._DownloadEachRouteSource(singleRoute, Config, function(error, layer) {
+              if (error !== null) {
                 callbackB(error);
-              }
-              else {
+              } else {
                 _Class.RouteLayers.push(layer);
                 callbackB(null);
               }
@@ -182,8 +215,7 @@ L.BusMain.RoutesController = L.Class.extend({
           function(err) {
             if (err !== null) {
               callbackA(err);
-            }
-            else {
+            } else {
               callbackA(null);
             }
           });
@@ -191,8 +223,7 @@ L.BusMain.RoutesController = L.Class.extend({
       function(err) {
         if (err !== null) {
           DoneCallBack(err);
-        }
-        else {
+        } else {
           DoneCallBack(null);
         }
       });
@@ -207,45 +238,41 @@ L.BusMain.RoutesController = L.Class.extend({
           $.getJSON('LocalData/Data/' + CollecionUnit.tags['ref:category'] + '/' + CollecionUnit.tags['ref:querycode'] + '/Capacity.json', function(data) {
             callback(null, data);
           }).fail(function() {
-            callback("capacity_error" , null);
+            callback("capacity_error", null);
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('forward', CollecionUnit, function(err , result) {
-            if(err !== null){
-              callback(err , null);
-            }
-            else {
+          _Class._DownloadDirectionSource('forward', CollecionUnit, function(err, result) {
+            if (err !== null) {
+              callback(err, null);
+            } else {
               callback(null, result);
             }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('forward_extend', CollecionUnit, function(err , result) {
-            if(err !== null){
-              callback(err , null);
-            }
-            else {
+          _Class._DownloadDirectionSource('forward_extend', CollecionUnit, function(err, result) {
+            if (err !== null) {
+              callback(err, null);
+            } else {
               callback(null, result);
             }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('backward', CollecionUnit, function(err , result) {
-            if(err !== null){
-              callback(err , null);
-            }
-            else {
+          _Class._DownloadDirectionSource('backward', CollecionUnit, function(err, result) {
+            if (err !== null) {
+              callback(err, null);
+            } else {
               callback(null, result);
             }
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('backward_extend', CollecionUnit, function(err , result) {
-            if(err !== null){
-              callback(err , null);
-            }
-            else {
+          _Class._DownloadDirectionSource('backward_extend', CollecionUnit, function(err, result) {
+            if (err !== null) {
+              callback(err, null);
+            } else {
               callback(null, result);
             }
           });
@@ -256,11 +283,10 @@ L.BusMain.RoutesController = L.Class.extend({
           var Forwards = results[1].concat(results[2]);
           var Backwards = results[3].concat(results[4]);
           var EachLayer = L.BusMain.routeLayer(Forwards, Backwards, results[0], ConfigData);
-          DoneCallBack(null , EachLayer);
-        }
-        else {
+          DoneCallBack(null, EachLayer);
+        } else {
           console.log(CollecionUnit.tags['ref:querycode'] + " DownloadEachRouteSource Error: " + err);
-          DoneCallBack(err , null);
+          DoneCallBack(err, null);
         }
       });
   },
@@ -279,10 +305,9 @@ L.BusMain.RoutesController = L.Class.extend({
       }
     }
 
-    if(DirNums === 0){
-      DoneCallBack(null , Result);
-    }
-    else {
+    if (DirNums === 0) {
+      DoneCallBack(null, Result);
+    } else {
 
       async.whilst(
         function() {
@@ -293,17 +318,16 @@ L.BusMain.RoutesController = L.Class.extend({
           $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/' + strDirection + '_' + Count + '.json', function(data) {
             Result.push(data);
             Count++;
-            callback(null , Count);
+            callback(null, Count);
           }).fail(function() {
-            callback(strDirection , null);
+            callback(strDirection, null);
           });
         },
-        function(err , result) {
+        function(err, result) {
           if (err !== null) {
             DoneCallBack(err + " direction is missing or broken.", null);
-          }
-          else {
-            DoneCallBack(null , Result);
+          } else {
+            DoneCallBack(null, Result);
           }
         }
       );

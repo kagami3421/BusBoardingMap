@@ -1,3 +1,18 @@
+@font-face {
+    font-family: Chunkfive;
+    src: url(../Font/Chunkfive.otf);
+}
+@font-face {
+    font-family: Geo;
+    src: url(../Font/Geo.otf);
+    font-style:normal;
+}
+@font-face {
+    font-family: Geo;
+    src: url(../Font/Geo_Oblique.otf);
+    font-style:oblique;
+}
+
 #map {
   left: 0;
   top: 0;
@@ -5,17 +20,14 @@
   right: 0;
   position: absolute;
 }
+
 // Colour Legend
 .busmain_legend {
-  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-  border-radius: 4px;
-  background-color: #FFF;
-
   .legend-title {
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
   }
-
   .legend-scale {
 
     margin-left: 10px;
@@ -30,6 +42,7 @@
         margin-left: 0;
         line-height: 18px;
         margin-bottom: 2px;
+        color: white;
         span {
           display: block;
           float: left;
@@ -37,7 +50,7 @@
           width: 30px;
           margin-right: 5px;
           margin-left: 0;
-          border: 1px solid #999;
+          border: 1px hidden #999;
         }
       }
     }
@@ -46,12 +59,41 @@
 
 //Date Slider
 .busmain_slider {
-  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-  border-radius: 4px;
-  background-color: #FFF;
-
   input[type=range]{
-    border: 1px solid white;
+    border: 1px hidden white;
     width: 400px;
+  }
+}
+
+@mixin white-legend() {
+  font-family: Geo;
+  color: white;
+  letter-spacing: 1px;
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@mixin white-text() {
+  font-family: Geo;
+  color: white;
+  letter-spacing: 1px;
+  font-size: xx-large;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.dateViewText{
+  @include white-text();
+}
+
+.busmain_ridershipView{
+
+  .ridershipViewLegend{
+    @include white-legend();
+  }
+
+  .ridershipViewText{
+    @include white-text();
   }
 }

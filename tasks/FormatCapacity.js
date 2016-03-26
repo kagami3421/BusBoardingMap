@@ -52,11 +52,6 @@ module.exports = function(grunt) {
         if(TargetRoute.tags.ref.localeCompare(value[ConfigJson.CapactiyData.RefCode]) === 0){
           Output.push(value);
         }
-        else {
-          if(value[ConfigJson.CapactiyData.RefCode].indexOf(TargetRoute.tags.ref) !== -1){
-            Output.push(value);
-          }
-        }
       });
 
       MakeCapacityFile(Output , TargetRoute , ConfigJson);
@@ -105,9 +100,11 @@ module.exports = function(grunt) {
           else {
             for (var value in results[0]) {
               if (results[0].hasOwnProperty(value)) {
-                results[0][value].members.map(function(route, index) {
-                  FindCapacitiesByRoute(results[1] , route , results[2]);
-                });
+                for (var variable in results[0][value].members) {
+                  if (results[0][value].members.hasOwnProperty(variable)) {
+                    FindCapacitiesByRoute(results[1] , results[0][value].members[variable] , results[2]);
+                  }
+                }
               }
             }
             done(true);

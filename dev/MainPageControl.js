@@ -20,7 +20,7 @@ L.BusMainControl.ColourLegend = L.Control.extend({
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_legend');
 
-    this._Title = "<div class='legend-title'>Boarding Capacity Range</div>";
+    this._Title = "<div class='legend-title'>RiderShip Range</div>";
     this._LegendScale = L.DomUtil.create('div', 'legend-scale');
     this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
 
@@ -61,18 +61,13 @@ L.BusMainControl.DateSlider = L.Control.extend({
     $(this._MainSlider).attr( "type", "range" );
     $(this._MainSlider).attr( "min", "1" );
     $(this._MainSlider).attr( "max" , (((this._controlJson.To - this._controlJson.From) + 1) *  this._controlJson.Ranges.length));
-
-    this._SliderLegend = L.DomUtil.create('div', 'slider_legend');
+    $(this._MainSlider).attr( "value" , "0");
 
     L.DomEvent.on(this._MainSlider, "change", function (e) {
-        //e.stopPropagation();
-        //TODO: Link change event with ouside. Return Year and Month.
-        //console.log(this._MainSlider.value);
         this._callback(this._changeValue(this._MainSlider.value));
     }, this);
 
     $(this.container).append(this._MainSlider);
-    $(this.container).append(this._SliderLegend);
 
     //Prevent map also to be dragged when dragging slider.
     L.DomEvent.disableClickPropagation(this.container);
@@ -116,5 +111,67 @@ L.BusMainControl.DateSlider = L.Control.extend({
     Output['Year'] = ResultYear;
     Output['Month'] = this._controlJson.Ranges[(sliderValue - ResultMonth) - 1];
     return Output;
+  }
+});
+
+L.BusMainControl.dateview = function (options) {
+    return new L.BusMainControl.DateView(options);
+};
+
+L.BusMainControl.DateView= L.Control.extend({
+  options: {
+    position: 'topleft'
+  },
+
+  initialize: function(options) {
+    L.Util.setOptions(this, options);
+  },
+
+  onAdd: function(map) {
+    this.container = L.DomUtil.create('div', 'busmain_dateview');
+
+    this._MainText = L.DomUtil.create('h1', 'dateViewText');
+
+    $(this.container).append(this._MainText);
+
+    return this.container;
+  },
+
+  ChangeValue : function (DateObj) {
+    $(this._MainText).html('Year: ' + DateObj.Year + '<br>' + 'Month: ' +DateObj.Month);
+  }
+});
+
+
+L.BusMainControl.ridership = function (TotalCapacityJson , options) {
+    return new L.BusMainControl.RidershipView(TotalCapacityJson , options);
+};
+
+L.BusMainControl.RidershipView= L.Control.extend({
+  options: {
+    position: 'topright'
+  },
+
+  initialize: function(TotalCapacityJson , options) {
+    L.Util.setOptions(this, options);
+
+    this._TotalJson = TotalCapacityJson;
+  },
+
+  onAdd: function(map) {
+    this.container = L.DomUtil.create('div', 'busmain_ridershipView');
+
+    this._Legend = L.DomUtil.create('h2', 'ridershipViewLegend');
+    this._MainText = L.DomUtil.create('h1', 'ridershipViewText');
+
+    $(this.container).append(this._Legend);
+    $(this.container).append(this._MainText);
+
+    return this.container;
+  },
+
+  ChangeValue : function (DateObj) {
+    $(this._Legend).text('Total RiderShip');
+    $(this._MainText).text(this._TotalJson[DateObj.Year][DateObj.Month]);
   }
 });
