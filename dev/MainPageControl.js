@@ -20,7 +20,7 @@ L.BusMainControl.ColourLegend = L.Control.extend({
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_legend');
 
-    this._Title = "<div class='legend-title'>RiderShip Range</div>";
+    this._Title = "<div class='legend-title'>Average Monthly Boarding</div>";
     this._LegendScale = L.DomUtil.create('div', 'legend-scale');
     this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
 
@@ -28,7 +28,7 @@ L.BusMainControl.ColourLegend = L.Control.extend({
 
     for (var i = 0; i < this.colourRange.length; i++) {
 
-      var _EachLegend = "<li><span style='background:"+ this.colourRange[i].ColourCode +";'></span>"+ this.colourRange[i].MaxCapacity + "~" + this.colourRange[i].MinCapacity +"</li>";
+      var _EachLegend = "<li><span style='background:"+ this.colourRange[i].ColourCode +";'></span>"+ this.colourRange[i].MaxCapacity + " - " + this.colourRange[i].MinCapacity +"</li>";
 
       $(this._LegendLabels).append(_EachLegend);
     }

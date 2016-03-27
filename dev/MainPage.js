@@ -105,6 +105,10 @@ L.BusMain.MainProcessor = L.Class.extend({
 
     }, Config.CapacityControl);
     MainPageVars.BaseMap.addControl(_Class._DateSlider);
+  },
+
+  _ShowHideMask : function (boolMask) {
+    
   }
 });
 

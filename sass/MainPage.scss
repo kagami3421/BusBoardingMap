@@ -1,3 +1,5 @@
+
+/************************** Font Setting *************************/
 @font-face {
     font-family: Chunkfive;
     src: url(../Font/Chunkfive.otf);
@@ -12,6 +14,7 @@
     src: url(../Font/Geo_Oblique.otf);
     font-style:oblique;
 }
+/***************************************************************/
 
 #map {
   left: 0;
@@ -64,6 +67,8 @@
     width: 400px;
   }
 }
+
+//Set Text
 
 @mixin white-legend() {
   font-family: Geo;
