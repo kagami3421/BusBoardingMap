@@ -127,7 +127,8 @@ module.exports = function(grunt) {
           request(OverPassTaiwanUrl + OverpassQuery1 + singleRoute.members[index].ref + OverpassQuery2, function(error, response, body) {
             if (error) {
               grunt.log.writeln('Download Error :' + error.message);
-            } else {
+            }
+            else {
 
               if (singleRoute.members[index].role === 'forward_extend') {
                 grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + singleRoute.members[index].role + '_' + ExtendFIndex + '.json', body);

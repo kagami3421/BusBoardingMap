@@ -11,8 +11,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/scripts/MainPage.min.js': ['dev/MainPage.js'],
-          'dist/scripts/MainPageControl.min.js': ['dev/MainPageControl.js']
+          'dist/MainPage.min.js': ['dev/MainPage.js'],
+          'dist/MainPageControl.min.js': ['dev/MainPageControl.js']
         }
       }
     },
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/css/MainPage.min.css': ['dev/MainPage.css']
+          'dist/MainPage.min.css': ['dev/MainPage.css']
         }
       }
     },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'index.html': ['dev/index.html']
+          'index.html': ['DevIndex.html']
         }
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       scripts: {
-        files: ['sass/*.scss', 'dev/*.js', 'index.html'],
+        files: ['sass/*.scss', 'dev/*.js', 'DevIndex.html'],
         tasks: ['sass', 'build']
       }
     },

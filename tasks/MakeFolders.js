@@ -25,16 +25,20 @@ module.exports = function(grunt) {
       grunt.log.writeln('Creating Directories...');
 
       for (var pro in arg) {
-        if (grunt.file.isDir('LocalData/Data/' + arg[pro].name) === false) {
-          grunt.file.mkdir('LocalData/Data/' + arg[pro].name);
-        }
+        if (arg.hasOwnProperty(pro)) {
+          if (grunt.file.isDir('LocalData/Data/' + arg[pro].name) === false) {
+            grunt.file.mkdir('LocalData/Data/' + arg[pro].name);
+          }
 
-        if (grunt.file.isDir('LocalData/Data/' + arg[pro].name) === true) {
-          arg[pro].members.map(function(value, index) {
-            if (grunt.file.isDir('LocalData/Data/' + arg[pro].name + '/' + value.tags['ref:querycode']) === false) {
-              grunt.file.mkdir('LocalData/Data/' + arg[pro].name + '/' + value.tags['ref:querycode']);
+          if (grunt.file.isDir('LocalData/Data/' + arg[pro].name) === true) {
+            for (var route in arg[pro].members) {
+              if (arg[pro].members.hasOwnProperty(route)) {
+                if (grunt.file.isDir('LocalData/Data/' + arg[pro].name + '/' + arg[pro].members[route].tags['ref:querycode']) === false) {
+                  grunt.file.mkdir('LocalData/Data/' + arg[pro].name + '/' + arg[pro].members[route].tags['ref:querycode']);
+                }
+              }
             }
-          });
+          }
         }
       }
 
@@ -48,10 +52,11 @@ module.exports = function(grunt) {
 
         var resultString;
 
-        if (err) {
+        if (err !== null) {
           grunt.log.errorlns(err);
           done(false);
-        } else {
+        }
+        else {
           resultString = JSON.stringify(result);
           grunt.file.write('LocalData/Data/Collection.json', resultString);
           done(true);
