@@ -16,7 +16,6 @@ http://kagami3421.github.io/BusRidershipMap
 * Change direction of route
 * Ridership shift by time
 * Choose to highlight certain route by route list
-* Loading mask
 
 # Library Reference:
 

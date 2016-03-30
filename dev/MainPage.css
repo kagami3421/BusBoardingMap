@@ -1,11 +1,11 @@
 /************************** Font Setting *************************/
 @font-face {
   font-family: Chunkfive;
-  src: url(../../Font/Chunkfive.otf); }
+  src: url(../Font/Chunkfive.otf); }
 
 @font-face {
   font-family: Geo;
-  src: url(../../Font/Geo.otf);
+  src: url(../Font/Geo.otf);
   font-style: normal; }
 
 @font-face {
@@ -75,3 +75,56 @@
   font-size: xx-large;
   margin-top: 1%;
   margin-bottom: 1%; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.LoadingMask {
+  opacity: 0; }
+  .LoadingMask .lmask {
+    background-color: rgba(102, 102, 153, 0.5);
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute; }
+  .LoadingMask .loading {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px; }
+    .LoadingMask .loading .spinner {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      width: 26px;
+      height: 26px;
+      animation: spin 1s infinite linear; }
+    .LoadingMask .loading .maskedCircle {
+      width: 20px;
+      height: 20px;
+      border-radius: 12px;
+      border: 3px solid white; }
+    .LoadingMask .loading .mask {
+      width: 12px;
+      height: 12px;
+      overflow: hidden; }

@@ -43,6 +43,8 @@ L.BusMain.MainProcessor = L.Class.extend({
       Month: 'Total'
     };
 
+    this._ShowHideMask(true);
+
     this._InitData();
   },
 
@@ -70,7 +72,10 @@ L.BusMain.MainProcessor = L.Class.extend({
             _Class._RouteController.ApplyToMap();
 
             _Class._InitControls(results[0] , results[1]);
-          } else {
+
+            _Class._ShowHideMask(false);
+          }
+          else {
             console.log('Error occured when creating layers.');
           }
         });
@@ -108,7 +113,12 @@ L.BusMain.MainProcessor = L.Class.extend({
   },
 
   _ShowHideMask : function (boolMask) {
-    
+    if(boolMask === true){
+      $(".LoadingMask").css("animation", "fadein 2s");
+    }
+    else {
+      $(".LoadingMask").css("animation", "fadein 2s");
+    }
   }
 });
 
