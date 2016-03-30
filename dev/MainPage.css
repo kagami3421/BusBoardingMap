@@ -82,20 +82,8 @@
   to {
     transform: rotate(360deg); } }
 
-@keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-
 .LoadingMask {
-  opacity: 0; }
+  display: none; }
   .LoadingMask .lmask {
     background-color: rgba(102, 102, 153, 0.5);
     z-index: 9998;

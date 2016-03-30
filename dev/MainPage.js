@@ -114,10 +114,10 @@ L.BusMain.MainProcessor = L.Class.extend({
 
   _ShowHideMask : function (boolMask) {
     if(boolMask === true){
-      $(".LoadingMask").css("animation", "fadein 2s");
+      $(".LoadingMask").css("display", "initial");
     }
     else {
-      $(".LoadingMask").css("animation", "fadein 2s");
+      $(".LoadingMask").css("display", "none");
     }
   }
 });
