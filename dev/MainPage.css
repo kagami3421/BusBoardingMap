@@ -48,9 +48,11 @@
         margin-left: 0;
         border: 1px hidden #999; }
 
-.busmain_slider input[type=range] {
-  border: 1px hidden white;
-  width: 400px; }
+.busmain_slider {
+  width: 95%; }
+  .busmain_slider input[type=range] {
+    border: 1px hidden white;
+    width: inherit; }
 
 .dateViewText {
   font-family: Geo;

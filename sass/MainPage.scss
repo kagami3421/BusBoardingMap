@@ -62,9 +62,12 @@
 
 //Date Slider
 .busmain_slider {
+
+  width: 95%;
+
   input[type=range]{
     border: 1px hidden white;
-    width: 400px;
+    width: inherit;
   }
 }
 
@@ -102,6 +105,8 @@
     @include white-text();
   }
 }
+
+//Loading Mask
 
 @keyframes spin {
 	from { transform: rotate(0deg); }

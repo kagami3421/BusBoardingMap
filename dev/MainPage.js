@@ -385,7 +385,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   SetDate: function(TargetDate) {
     //console.log(this.CapacityJson);
     //console.log(TargetDate);
-    var GettedColour = this._CacaulateColourFromRange(this.ColourRangeJson, this.CapacityJson, TargetDate);
+    var GettedColour = this._GetRange(this.ColourRangeJson, this.CapacityJson, TargetDate);
 
     //console.log('------------------------------');
     //console.log(this.ColourRangeJson);
@@ -395,7 +395,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
     var showedPolylines = this.getLayers();
 
     if (showedPolylines.length > 0) {
-      this._ChangeColour(GettedColour.Colour, showedPolylines);
+      this._ChangeColour(GettedColour, showedPolylines);
     }
   },
 
@@ -410,7 +410,8 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
         if (SourceArray[i].elements[j].type === "way") {
           //console.log(this.SourceJsons[i].elements[j].geometry);
           var polyline = L.polyline(SourceArray[i].elements[j].geometry, {
-            color: '#C7C7C7'
+            color: '#C7C7C7',
+            weight: 5
           });
           resultPolylines.push(polyline);
         }
@@ -420,15 +421,16 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
     return resultPolylines;
   },
 
-  _ChangeColour: function(colourString, polylineArray) {
+  _ChangeColour: function(resultObject, polylineArray) {
     for (var i = 0; i < polylineArray.length; i++) {
       polylineArray[i].setStyle({
-        color: colourString
+        color: resultObject.Colour,
+        weight: resultObject.Width
       });
     }
   },
 
-  _CacaulateColourFromRange: function(ColourRange, Capacity, TargetDate) {
+  _GetRange: function(ColourRange, Capacity, TargetDate) {
 
     var result;
 
@@ -445,7 +447,8 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
           if (CurrentCapacity < ColourRange[i].MaxCapacity && CurrentCapacity > ColourRange[i].MinCapacity) {
             result = {
               Colour: ColourRange[i].ColourCode,
-              HightlightColour: ColourRange[i].HightlightColourCode
+              HightlightColour: ColourRange[i].HightlightColourCode,
+              Width: ColourRange[i].Width
             };
             break;
           }

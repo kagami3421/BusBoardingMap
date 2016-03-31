@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       scripts: {
-        files: ['sass/*.scss', 'dev/*.js', 'DevIndex.html'],
+        files: ['sass/*.scss', 'dev/*.js', 'DevIndex.html' , 'LocalData/Config.json'],
         tasks: ['sass', 'build']
       }
     },

@@ -44,7 +44,7 @@ L.BusMainControl.slider = function (ControlRangeJson , options) {
 
 L.BusMainControl.DateSlider = L.Control.extend({
   options: {
-    position: 'bottomright'
+    position: 'topleft'
   },
 
   initialize: function(CallbackFunction , ControlRangeJson , options) {
@@ -138,7 +138,7 @@ L.BusMainControl.DateView= L.Control.extend({
   },
 
   ChangeValue : function (DateObj) {
-    $(this._MainText).html('Year: ' + DateObj.Year + '<br>' + 'Month: ' +DateObj.Month);
+    $(this._MainText).html('Year: ' + DateObj.Year + '&nbsp;&nbsp;&nbsp;' + 'Month: ' +DateObj.Month);
   }
 });
 

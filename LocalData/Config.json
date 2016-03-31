@@ -45,55 +45,64 @@
       "ColourCode": "#E8DAEF",
       "HightlightColourCode": "#FF9C9C",
       "MaxCapacity": 2000000,
-      "MinCapacity": 1000000
+      "MinCapacity": 1000000,
+      "Width": 6.5
     },
     {
       "ColourCode": "#D2B4DE",
       "HightlightColourCode": "#FF9650",
       "MaxCapacity": 1000000,
-      "MinCapacity": 500000
+      "MinCapacity": 500000,
+      "Width": 6
     },
     {
       "ColourCode": "#BB8FCE",
       "HightlightColourCode": "#FFF578",
       "MaxCapacity": 500000,
-      "MinCapacity": 100000
+      "MinCapacity": 100000,
+      "Width": 5.5
     },
     {
       "ColourCode": "#A569BD",
       "HightlightColourCode": "#82FF81",
       "MaxCapacity": 100000,
-      "MinCapacity": 50000
+      "MinCapacity": 50000,
+      "Width": 5
     },
     {
       "ColourCode": "#8E44AD",
       "HightlightColourCode": "#7DD2FF",
       "MaxCapacity": 50000,
-      "MinCapacity": 10000
+      "MinCapacity": 10000,
+      "Width": 4.5
     },
     {
       "ColourCode": "#7D3C98",
       "HightlightColourCode": "#8281FF",
       "MaxCapacity": 10000,
-      "MinCapacity": 5000
+      "MinCapacity": 5000,
+      "Width": 4
     },
     {
       "ColourCode": "#6C3483",
       "HightlightColourCode": "#BE78FF",
       "MaxCapacity": 5000,
-      "MinCapacity": 1000
+      "MinCapacity": 1000,
+      "Width": 3.5
     },
     {
       "ColourCode": "#4A235A",
       "HightlightColourCode": "#FF81FF",
       "MaxCapacity": 1000,
-      "MinCapacity": 1
+      "MinCapacity": 1,
+      "Width": 3
     },
     {
       "ColourCode": "#626567",
       "HightlightColourCode": "#8E8E8E",
       "MaxCapacity": 0,
-      "MinCapacity": 0
+      "MinCapacity": 0,
+      "Width": 3
     }
   ]
 }
