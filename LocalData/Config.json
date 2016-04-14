@@ -24,6 +24,8 @@
   "CapacityControl": {
     "From": "2014",
     "To": "2015",
+    "MaxRoof": 1000000,
+    "MinRoof": 0,
     "Ranges": [
       "Total",
       "January",
@@ -44,7 +46,7 @@
     {
       "ColourCode": "#E8DAEF",
       "HightlightColourCode": "#FF9C9C",
-      "MaxCapacity": 2000000,
+      "MaxCapacity": 5000000,
       "MinCapacity": 1000000,
       "Width": 6.5
     },

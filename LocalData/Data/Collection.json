@@ -1,1 +1,3517 @@
-{"Yellow":{"name":"Yellow","members":{"1500":{"type":"relation","id":4038085,"members":[{"type":"relation","ref":4038083,"role":"forward"},{"type":"relation","ref":4038084,"role":"backward"},{"type":"relation","ref":4038411,"role":"forward_extend"},{"type":"relation","ref":4038412,"role":"backward_extend"}],"tags":{"name":"黃幹線","network":"臺南市公車","operator":"興南客運;新營客運","public_transport:version":"2","ref":"黃幹線","ref:category":"Yellow","ref:querycode":"1500","route_master":"bus","type":"route_master"}},"1501":{"type":"relation","id":4094407,"members":[{"type":"relation","ref":4094402,"role":"forward"},{"type":"relation","ref":4094403,"role":"backward"},{"type":"relation","ref":4094427,"role":"forward_extend"},{"type":"relation","ref":4094428,"role":"backward_extend"}],"tags":{"name":"黃1","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃1","ref:category":"Yellow","ref:querycode":"1501","route_master":"bus","type":"route_master"}},"1502":{"type":"relation","id":4094406,"members":[{"type":"relation","ref":4094404,"role":"forward"},{"type":"relation","ref":4094405,"role":"backward"}],"tags":{"name":"黃2","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃2","ref:category":"Yellow","ref:querycode":"1502","route_master":"bus","type":"route_master"}},"1503":{"type":"relation","id":4094977,"members":[{"type":"relation","ref":4094972,"role":"forward"},{"type":"relation","ref":4094973,"role":"backward"},{"type":"relation","ref":4095010,"role":"forward_extend"},{"type":"relation","ref":4095011,"role":"backward_extend"}],"tags":{"name":"黃3","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃3","ref:category":"Yellow","ref:querycode":"1503","route_master":"bus","type":"route_master"}},"1504":{"type":"relation","id":4094976,"members":[{"type":"relation","ref":4094974,"role":"forward"},{"type":"relation","ref":4094975,"role":"backward"}],"tags":{"name":"黃4","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃4","ref:category":"Yellow","ref:querycode":"1504","route_master":"bus","type":"route_master"}},"1505":{"type":"relation","id":4096487,"members":[{"type":"relation","ref":4096485,"role":"forward"},{"type":"relation","ref":4096486,"role":"backward"}],"tags":{"name":"黃5","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃5","ref:category":"Yellow","ref:querycode":"1505","route_master":"bus","type":"route_master"}},"1506":{"type":"relation","id":4096578,"members":[{"type":"relation","ref":4096576,"role":"forward"},{"type":"relation","ref":4096577,"role":"backward"},{"type":"relation","ref":5876853,"role":"forward_extend"},{"type":"relation","ref":5876854,"role":"backward_extend"}],"tags":{"name":"黃6","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃6","ref:category":"Yellow","ref:querycode":"1506","route_master":"bus","type":"route_master"}},"1507":{"type":"relation","id":4096828,"members":[{"type":"relation","ref":4096826,"role":"forward"},{"type":"relation","ref":4096827,"role":"backward"},{"type":"relation","ref":4096844,"role":"forward_extend"},{"type":"relation","ref":4096845,"role":"backward_extend"},{"type":"relation","ref":5128878,"role":"forward_extend"},{"type":"relation","ref":5128879,"role":"backward_extend"}],"tags":{"name":"黃7","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃7","ref:category":"Yellow","ref:querycode":"1507","route_master":"bus","type":"route_master"}},"1509":{"type":"relation","id":3845767,"members":[{"type":"relation","ref":3844799,"role":"forward"},{"type":"relation","ref":3845766,"role":"backward"}],"tags":{"name":"黃9","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃9","ref:category":"Yellow","ref:querycode":"1509","route_master":"bus","type":"route_master"}},"1510":{"type":"relation","id":4096599,"members":[{"type":"relation","ref":4096597,"role":"forward"},{"type":"relation","ref":4096598,"role":"backward"},{"type":"relation","ref":4096662,"role":"forward_extend"},{"type":"relation","ref":4096663,"role":"backward_extend"}],"tags":{"name":"黃10","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃10","ref:category":"Yellow","ref:querycode":"1510","route_master":"bus","type":"route_master"}},"1511":{"type":"relation","id":4096850,"members":[{"type":"relation","ref":4096848,"role":"forward"},{"type":"relation","ref":4096849,"role":"backward"},{"type":"relation","ref":4096958,"role":"forward_extend"},{"type":"relation","ref":4096957,"role":"backward_extend"}],"tags":{"name":"黃11","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃11","ref:category":"Yellow","ref:querycode":"1511","route_master":"bus","type":"route_master"}},"1512":{"type":"relation","id":4098557,"members":[{"type":"relation","ref":4098548,"role":"forward"},{"type":"relation","ref":4098549,"role":"backward"},{"type":"relation","ref":4098550,"role":"forward_extend"},{"type":"relation","ref":4098551,"role":"backward_extend"},{"type":"relation","ref":4098625,"role":"forward_extend"}],"tags":{"name":"黃12","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃12","ref:category":"Yellow","ref:querycode":"1512","route_master":"bus","type":"route_master"}},"1513":{"type":"relation","id":4098556,"members":[{"type":"relation","ref":4098554,"role":"forward"},{"type":"relation","ref":4098555,"role":"backward"},{"type":"relation","ref":4098552,"role":"forward_extend"},{"type":"relation","ref":4098553,"role":"backward_extend"}],"tags":{"name":"黃13","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃13","ref:category":"Yellow","ref:querycode":"1513","route_master":"bus","type":"route_master"}},"1514":{"type":"relation","id":4094254,"members":[{"type":"relation","ref":4094252,"role":"forward"},{"type":"relation","ref":4094253,"role":"backward"},{"type":"relation","ref":4094276,"role":"forward_extend"},{"type":"relation","ref":4094277,"role":"backward_extend"}],"tags":{"name":"黃14","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃14","ref:category":"Yellow","ref:querycode":"1514","route_master":"bus","type":"route_master"}},"1515":{"type":"relation","id":4094323,"members":[{"type":"relation","ref":4094321,"role":"forward"},{"type":"relation","ref":4094322,"role":"backward"}],"tags":{"name":"黃15","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃15","ref:category":"Yellow","ref:querycode":"1515","route_master":"bus","type":"route_master"}},"1520":{"type":"relation","id":4094110,"members":[{"type":"relation","ref":4094108,"role":"forward"},{"type":"relation","ref":4094109,"role":"backward"}],"tags":{"name":"黃20","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"黃20","ref:category":"Yellow","ref:querycode":"1520","route_master":"bus","type":"route_master"}},"1802":{"type":"relation","id":5343182,"members":[{"type":"relation","ref":5343180,"role":"forward"},{"type":"relation","ref":5343181,"role":"backward"}],"tags":{"name":"黃6-1(農村樂活公車)","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"黃6-1","ref:category":"Yellow","ref:querycode":"1802","route_master":"bus","type":"route_master"}}}},"Blue":{"name":"Blue","members":{"1200":{"type":"relation","id":3905750,"members":[{"type":"relation","ref":3805315,"role":"forward"},{"type":"relation","ref":3905749,"role":"backward"}],"tags":{"name":"藍幹線","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍幹線","ref:category":"Blue","ref:querycode":"1200","route_master":"bus","type":"route_master"}},"1201":{"type":"relation","id":4090981,"members":[{"type":"relation","ref":4090977,"role":"forward"},{"type":"relation","ref":4090978,"role":"backward"}],"tags":{"name":"藍1","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍1","ref:category":"Blue","ref:querycode":"1201","route_master":"bus","type":"route_master"}},"1202":{"type":"relation","id":4090646,"members":[{"type":"relation","ref":4090641,"role":"forward"},{"type":"relation","ref":4090642,"role":"backward"},{"type":"relation","ref":4090681,"role":"forward_extend"},{"type":"relation","ref":4090682,"role":"backward_extend"}],"tags":{"name":"藍2","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍2","ref:category":"Blue","ref:querycode":"1202","route_master":"bus","type":"route_master"}},"1203":{"type":"relation","id":4090645,"members":[{"type":"relation","ref":4090643,"role":"forward"},{"type":"relation","ref":4090644,"role":"backward"}],"tags":{"name":"藍3","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍3","ref:category":"Blue","ref:querycode":"1203","route_master":"bus","type":"route_master"}},"1210":{"type":"relation","id":4090982,"members":[{"type":"relation","ref":4090979,"role":"forward"},{"type":"relation","ref":4090980,"role":"backward"}],"tags":{"name":"藍10","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍10","ref:category":"Blue","ref:querycode":"1210","route_master":"bus","type":"route_master"}},"1211":{"type":"relation","id":4077059,"members":[{"type":"relation","ref":4077053,"role":"forward"},{"type":"relation","ref":4077054,"role":"backward"}],"tags":{"name":"藍11","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍11","ref:category":"Blue","ref:querycode":"1211","route_master":"bus","type":"route_master"}},"1212":{"type":"relation","id":4077060,"members":[{"type":"relation","ref":4077055,"role":"forward"},{"type":"relation","ref":4077056,"role":"backward"}],"tags":{"name":"藍12","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍12","ref:category":"Blue","ref:querycode":"1212","route_master":"bus","type":"route_master"}},"1213":{"type":"relation","id":4077061,"members":[{"type":"relation","ref":4077057,"role":"forward"},{"type":"relation","ref":4077058,"role":"backward"}],"tags":{"name":"藍13","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍13","ref:category":"Blue","ref:querycode":"1213","route_master":"bus","type":"route_master"}},"1220":{"type":"relation","id":4081185,"members":[{"type":"relation","ref":4081183,"role":"forward"},{"type":"relation","ref":4081184,"role":"backward"}],"tags":{"name":"藍20","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍20","ref:category":"Blue","ref:querycode":"1220","route_master":"bus","type":"route_master"}},"1221":{"type":"relation","id":4079190,"members":[{"type":"relation","ref":4079186,"role":"forward"},{"type":"relation","ref":4079187,"role":"backward"},{"type":"relation","ref":4079269,"role":"forward_extend"},{"type":"relation","ref":4079270,"role":"backward_extend"}],"tags":{"name":"藍21","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍21","ref:category":"Blue","ref:querycode":"1221","route_master":"bus","type":"route_master"}},"1222":{"type":"relation","id":4079191,"members":[{"type":"relation","ref":4079188,"role":"forward"},{"type":"relation","ref":4079189,"role":"backward"},{"type":"relation","ref":4079308,"role":"forward_extend"},{"type":"relation","ref":4079309,"role":"backward_extend"}],"tags":{"name":"藍22","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍22","ref:category":"Blue","ref:querycode":"1222","route_master":"bus","type":"route_master"}},"1223":{"type":"relation","id":4074266,"members":[{"type":"relation","ref":4074264,"role":"forward"},{"type":"relation","ref":4074265,"role":"backward"}],"tags":{"name":"藍23","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍23","ref:category":"Blue","ref:querycode":"1223","route_master":"bus","type":"route_master"}},"1224":{"type":"relation","id":4074007,"members":[{"type":"relation","ref":4074005,"role":"forward"},{"type":"relation","ref":4074006,"role":"backward"}],"tags":{"name":"藍24","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍24","ref:category":"Blue","ref:querycode":"1224","route_master":"bus","type":"route_master"}},"1225":{"type":"relation","id":4074635,"members":[{"type":"relation","ref":4074633,"role":"forward"},{"type":"relation","ref":4074634,"role":"backward"}],"tags":{"name":"藍25","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"藍25","ref:category":"Blue","ref:querycode":"1225","route_master":"bus","type":"route_master"}}}},"Green":{"name":"Green","members":{"1100":{"type":"relation","id":3905751,"members":[{"type":"relation","ref":3805268,"role":"forward"},{"type":"relation","ref":3905748,"role":"backward"}],"tags":{"name":"綠幹線","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠幹線","ref:category":"Green","ref:querycode":"1100","route_master":"bus","type":"route_master"}},"1101":{"type":"relation","id":4103106,"members":[{"type":"relation","ref":4103100,"role":"forward"},{"type":"relation","ref":4103101,"role":"backward"}],"tags":{"name":"綠1","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠1","ref:category":"Green","ref:querycode":"1101","route_master":"bus","type":"route_master"}},"1102":{"type":"relation","id":4103107,"members":[{"type":"relation","ref":4103102,"role":"forward"},{"type":"relation","ref":4103103,"role":"backward"},{"type":"relation","ref":4103376,"role":"forward_extend"},{"type":"relation","ref":4103377,"role":"backward_extend"}],"tags":{"name":"綠2","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠2","ref:category":"Green","ref:querycode":"1102","route_master":"bus","type":"route_master"}},"1103":{"type":"relation","id":4103108,"members":[{"type":"relation","ref":4103104,"role":"forward"},{"type":"relation","ref":4103105,"role":"backward"}],"tags":{"name":"綠3","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠3","ref:category":"Green","ref:querycode":"1103","route_master":"bus","type":"route_master"}},"1104":{"type":"relation","id":4102918,"members":[{"type":"relation","ref":4102916,"role":"forward"},{"type":"relation","ref":4102917,"role":"backward"}],"tags":{"name":"綠4","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠4","ref:category":"Green","ref:querycode":"1104","route_master":"bus","type":"route_master"}},"1105":{"type":"relation","id":4105052,"members":[{"type":"relation","ref":4105050,"role":"forward"},{"type":"relation","ref":4105051,"role":"backward"}],"tags":{"name":"綠5","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠5","ref:category":"Green","ref:querycode":"1105","route_master":"bus","type":"route_master"}},"1106":{"type":"relation","id":4105433,"members":[{"type":"relation","ref":4105429,"role":"forward"},{"type":"relation","ref":4105430,"role":"backward"}],"tags":{"name":"綠6","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠6","ref:category":"Green","ref:querycode":"1106","route_master":"bus","type":"route_master"}},"1107":{"type":"relation","id":4105434,"members":[{"type":"relation","ref":4105431,"role":"forward"},{"type":"relation","ref":4105432,"role":"backward"}],"tags":{"name":"綠7","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠7","ref:category":"Green","ref:querycode":"1107","route_master":"bus","type":"route_master"}},"1110":{"type":"relation","id":4105555,"members":[{"type":"relation","ref":4105553,"role":"forward"},{"type":"relation","ref":4105554,"role":"backward"},{"type":"relation","ref":4105592,"role":"forward_extend"},{"type":"relation","ref":4105593,"role":"backward_extend"}],"tags":{"name":"綠10","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠10","ref:category":"Green","ref:querycode":"1110","route_master":"bus","type":"route_master"}},"1111":{"type":"relation","id":4105727,"members":[{"type":"relation","ref":4105725,"role":"forward"},{"type":"relation","ref":4105726,"role":"backward"}],"tags":{"name":"綠11","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠11","ref:category":"Green","ref:querycode":"1111","route_master":"bus","type":"route_master"}},"1112":{"type":"relation","id":4107380,"members":[{"type":"relation","ref":4107378,"role":"forward"},{"type":"relation","ref":4107379,"role":"backward"}],"tags":{"name":"綠12","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠12","ref:category":"Green","ref:querycode":"1112","route_master":"bus","type":"route_master"}},"1113":{"type":"relation","id":4107405,"members":[{"type":"relation","ref":4107403,"role":"forward"},{"type":"relation","ref":4107404,"role":"backward"}],"tags":{"name":"綠13","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠13","ref:category":"Green","ref:querycode":"1113","route_master":"bus","type":"route_master"}},"1114":{"type":"relation","id":4103000,"members":[{"type":"relation","ref":4102998,"role":"forward"},{"type":"relation","ref":4102999,"role":"backward"}],"tags":{"name":"綠14","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠14","ref:category":"Green","ref:querycode":"1114","route_master":"bus","type":"route_master"}},"1115":{"type":"relation","id":4103053,"members":[{"type":"relation","ref":4103051,"role":"forward"},{"type":"relation","ref":4103052,"role":"backward"}],"tags":{"name":"綠15","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠15","ref:category":"Green","ref:querycode":"1115","route_master":"bus","type":"route_master"}},"1116":{"type":"relation","id":4060903,"members":[{"type":"relation","ref":4060899,"role":"forward"},{"type":"relation","ref":4060900,"role":"backward"},{"type":"relation","ref":4060901,"role":"forward_extend"},{"type":"relation","ref":4060902,"role":"backward_extend"},{"type":"relation","ref":4060923,"role":"forward_extend"},{"type":"relation","ref":4060924,"role":"backward_extend"}],"tags":{"name":"綠16","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠16","ref:category":"Green","ref:querycode":"1116","route_master":"bus","type":"route_master"}},"1117":{"type":"relation","id":4051250,"members":[{"type":"relation","ref":4050288,"role":"forward"},{"type":"relation","ref":4050289,"role":"backward"}],"tags":{"name":"綠17","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠17","ref:category":"Green","ref:querycode":"1117","route_master":"bus","type":"route_master"}},"1120":{"type":"relation","id":4109138,"members":[{"type":"relation","ref":4109131,"role":"forward"},{"type":"relation","ref":4109132,"role":"backward"},{"type":"relation","ref":4152322,"role":"forward_extend"},{"type":"relation","ref":4152323,"role":"backward_extend"}],"tags":{"name":"綠20","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠20","ref:category":"Green","ref:querycode":"1120","route_master":"bus","type":"route_master"}},"1121":{"type":"relation","id":4109182,"members":[{"type":"relation","ref":4109180,"role":"forward"},{"type":"relation","ref":4109181,"role":"backward"}],"tags":{"name":"綠21","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠21","ref:category":"Green","ref:querycode":"1121","route_master":"bus","type":"route_master"}},"1122":{"type":"relation","id":4109139,"members":[{"type":"relation","ref":4109133,"role":"forward"},{"type":"relation","ref":4109134,"role":"backward"}],"tags":{"name":"綠22","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠22","ref:category":"Green","ref:querycode":"1122","route_master":"bus","type":"route_master"}},"1123":{"type":"relation","id":4109194,"members":[{"type":"relation","ref":4109189,"role":"forward"},{"type":"relation","ref":4109190,"role":"backward"}],"tags":{"name":"綠23","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠23","ref:category":"Green","ref:querycode":"1123","route_master":"bus","type":"route_master"}},"1124":{"type":"relation","id":4109137,"members":[{"type":"relation","ref":4109135,"role":"forward"},{"type":"relation","ref":4109136,"role":"backward"},{"type":"relation","ref":4109153,"role":"forward_extend"},{"type":"relation","ref":4109154,"role":"backward_extend"}],"tags":{"name":"綠24","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠24","ref:category":"Green","ref:querycode":"1124","route_master":"bus","type":"route_master"}},"1125":{"type":"relation","id":4109193,"members":[{"type":"relation","ref":4109191,"role":"forward"},{"type":"relation","ref":4109192,"role":"backward"}],"tags":{"name":"綠25","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠25","ref:category":"Green","ref:querycode":"1125","route_master":"bus","type":"route_master"}},"1126":{"type":"relation","id":4107555,"members":[{"type":"relation","ref":4107553,"role":"forward"},{"type":"relation","ref":4107554,"role":"backward"}],"tags":{"name":"綠26","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠26","ref:category":"Green","ref:querycode":"1126","route_master":"bus","type":"route_master"}},"1127":{"type":"relation","id":4107536,"members":[{"type":"relation","ref":4107532,"role":"forward"},{"type":"relation","ref":4107533,"role":"backward"},{"type":"relation","ref":4107534,"role":"forward_extend"},{"type":"relation","ref":4107535,"role":"backward_extend"}],"tags":{"name":"綠27","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"綠27","ref:category":"Green","ref:querycode":"1127","route_master":"bus","type":"route_master"}}}},"Red":{"name":"Red","members":{"1600":{"type":"relation","id":3905767,"members":[{"type":"relation","ref":3805400,"role":"forward"},{"type":"relation","ref":3905766,"role":"backward"},{"type":"relation","ref":4053668,"role":"forward_extend"},{"type":"relation","ref":4053669,"role":"backward_extend"}],"tags":{"name":"紅幹線","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅幹線","ref:category":"Red","ref:querycode":"1600","route_master":"bus","type":"route_master"}},"1601":{"type":"relation","id":4051878,"members":[{"type":"relation","ref":4051869,"role":"forward"},{"type":"relation","ref":4051877,"role":"backward"}],"tags":{"name":"紅1","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅1","ref:category":"Red","ref:querycode":"1601","route_master":"bus","type":"route_master"}},"1602":{"type":"relation","id":4053448,"members":[{"type":"relation","ref":4053446,"role":"forward"},{"type":"relation","ref":4053447,"role":"backward"},{"type":"relation","ref":4066936,"role":"forward_extend"},{"type":"relation","ref":4066937,"role":"backward_extend"}],"tags":{"name":"紅2","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅2","ref:category":"Red","ref:querycode":"1602","route_master":"bus","type":"route_master"}},"1603":{"type":"relation","id":4058217,"members":[{"type":"relation","ref":4058215,"role":"forward"},{"type":"relation","ref":4058216,"role":"backward"}],"tags":{"name":"紅3","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅3","ref:category":"Red","ref:querycode":"1603","route_master":"bus","type":"route_master"}},"1604":{"type":"relation","id":4055900,"members":[{"type":"relation","ref":4055898,"role":"forward"},{"type":"relation","ref":4055899,"role":"backward"}],"tags":{"name":"紅4","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅4","ref:category":"Red","ref:querycode":"1604","route_master":"bus","type":"route_master"}},"1610":{"type":"relation","id":4056199,"members":[{"type":"relation","ref":4056197,"role":"forward"},{"type":"relation","ref":4056198,"role":"backward"}],"tags":{"name":"紅10","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅10","ref:category":"Red","ref:querycode":"1610","route_master":"bus","type":"route_master"}},"1611":{"type":"relation","id":4055682,"members":[{"type":"relation","ref":4055678,"role":"forward"},{"type":"relation","ref":4055679,"role":"backward"}],"tags":{"name":"紅11","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅11","ref:category":"Red","ref:querycode":"1611","route_master":"bus","type":"route_master"}},"1612":{"type":"relation","id":4055683,"members":[{"type":"relation","ref":4055680,"role":"forward"},{"type":"relation","ref":4055681,"role":"backward"}],"tags":{"name":"紅12","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅12","ref:category":"Red","ref:querycode":"1612","route_master":"bus","type":"route_master"}},"1613":{"type":"relation","id":4053990,"members":[{"type":"relation","ref":4053988,"role":"forward"},{"type":"relation","ref":4053989,"role":"backward"}],"tags":{"name":"紅13","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅13","ref:category":"Red","ref:querycode":"1613","route_master":"bus","type":"route_master"}},"1614":{"type":"relation","id":4055796,"members":[{"type":"relation","ref":4055794,"role":"forward"},{"type":"relation","ref":4055795,"role":"backward"}],"tags":{"name":"紅14","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅14","ref:category":"Red","ref:querycode":"1614","route_master":"bus","type":"route_master"}},"1801":{"type":"relation","id":5166423,"members":[{"type":"relation","ref":5166421,"role":"forward"},{"type":"relation","ref":5166422,"role":"backward"}],"tags":{"name":"奇美博物館假日公車","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"紅3-1","ref:category":"Red","ref:querycode":"1801","route_master":"bus","type":"route_master"}}}},"Orange":{"name":"Orange","members":{"1400":{"type":"relation","id":3916164,"members":[{"type":"relation","ref":3916162,"role":"forward"},{"type":"relation","ref":3916163,"role":"backward"}],"tags":{"name":"橘幹線","network":"臺南市公車","operator":"興南客運","ref":"橘幹線","ref:category":"Orange","ref:querycode":"1400","route_master":"bus","type":"route_master"}},"1401":{"type":"relation","id":4067606,"members":[{"type":"relation","ref":4067605,"role":"forward"},{"type":"relation","ref":4067604,"role":"backward"},{"type":"relation","ref":4091370,"role":"forward_extend"},{"type":"relation","ref":4091371,"role":"backward_extend"}],"tags":{"name":"橘1","network":"臺南市公車","operator":"興南客運","ref":"橘1","ref:category":"Orange","ref:querycode":"1401","route_master":"bus","type":"route_master"}},"1402":{"type":"relation","id":4067508,"members":[{"type":"relation","ref":4067506,"role":"forward"},{"type":"relation","ref":4067507,"role":"backward"}],"tags":{"name":"橘2","network":"臺南市公車","operator":"興南客運","ref":"橘2","ref:category":"Orange","ref:querycode":"1402","route_master":"bus","type":"route_master"}},"1403":{"type":"relation","id":4067742,"members":[{"type":"relation","ref":4067740,"role":"forward"},{"type":"relation","ref":4067741,"role":"backward"},{"type":"relation","ref":4067799,"role":"forward_extend"},{"type":"relation","ref":4067800,"role":"backward_extend"},{"type":"relation","ref":5343169,"role":"forward_extend"},{"type":"relation","ref":5343170,"role":"backward_extend"}],"tags":{"name":"橘3","network":"臺南市公車","operator":"興南客運","ref":"橘3","ref:category":"Orange","ref:querycode":"1403","route_master":"bus","type":"route_master"}},"1404":{"type":"relation","id":4071513,"members":[{"type":"relation","ref":4071511,"role":"forward"},{"type":"relation","ref":4071512,"role":"backward"}],"tags":{"name":"橘4","network":"臺南市公車","operator":"興南客運","ref":"橘4","ref:category":"Orange","ref:querycode":"1404","route_master":"bus","type":"route_master"}},"1405":{"type":"relation","id":4071565,"members":[{"type":"relation","ref":4071563,"role":"forward"},{"type":"relation","ref":4071564,"role":"backward"}],"tags":{"name":"橘5","network":"臺南市公車","operator":"興南客運","ref":"橘5","ref:category":"Orange","ref:querycode":"1405","route_master":"bus","type":"route_master"}},"1410":{"type":"relation","id":4072047,"members":[{"type":"relation","ref":4072045,"role":"forward"},{"type":"relation","ref":4072046,"role":"backward"}],"tags":{"name":"橘10","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"橘10","ref:category":"Orange","ref:querycode":"1410","route_master":"bus","type":"route_master"}},"1411":{"type":"relation","id":4069024,"members":[{"type":"relation","ref":4069022,"role":"forward"},{"type":"relation","ref":4069023,"role":"backward"},{"type":"relation","ref":4069039,"role":"forward_extend"},{"type":"relation","ref":4069040,"role":"backward_extend"},{"type":"relation","ref":4069042,"role":"forward_extend"},{"type":"relation","ref":4069043,"role":"backward_extend"},{"type":"relation","ref":4069057,"role":"forward_extend"},{"type":"relation","ref":4069058,"role":"backward_extend"}],"tags":{"name":"橘11","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"橘11","ref:category":"Orange","ref:querycode":"1411","route_master":"bus","type":"route_master"}},"1412":{"type":"relation","id":4069578,"members":[{"type":"relation","ref":4069576,"role":"forward"},{"type":"relation","ref":4069577,"role":"backward"}],"tags":{"name":"橘12","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"橘12","ref:category":"Orange","ref:querycode":"1412","route_master":"bus","type":"route_master"}},"1420":{"type":"relation","id":4061052,"members":[{"type":"relation","ref":4061050,"role":"forward"},{"type":"relation","ref":4061051,"role":"backward"}],"tags":{"name":"橘20","network":"臺南市公車","operator":"興南客運","public_transport:version":"2","ref":"橘20","ref:category":"Orange","ref:querycode":"1420","route_master":"bus","type":"route_master"}}}},"CityBus":{"name":"CityBus","members":{"1077":{"type":"relation","id":6072564,"members":[{"type":"relation","ref":6072560,"role":"forward"},{"type":"relation","ref":6072561,"role":"backward"},{"type":"relation","ref":6072562,"role":"forward"},{"type":"relation","ref":6072563,"role":"backward"}],"tags":{"name":"77路","network":"臺南市公車","operator":"四方客運","public_transport:version":"2","ref":"77","ref:category":"CityBus","ref:querycode":"1077","route_master":"bus","type":"route_master"}},"10017":{"type":"relation","id":5420056,"members":[{"type":"relation","ref":5420055,"role":"forward"},{"type":"relation","ref":5420054,"role":"backward"}],"tags":{"name":"17路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"17","ref:category":"CityBus","ref:querycode":"10017","route_master":"bus","type":"route_master"}},"10019":{"type":"relation","id":4444913,"members":[{"type":"relation","ref":4444911,"role":"backward"},{"type":"relation","ref":4444912,"role":"forward"},{"type":"relation","ref":4444936,"role":"forward"},{"type":"relation","ref":4444937,"role":"backward"}],"tags":{"name":"19路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"19","ref:category":"CityBus","ref:querycode":"10019","route_master":"bus","type":"route_master"}},"10020":{"type":"relation","id":4020969,"members":[{"type":"relation","ref":4020968,"role":"backward"},{"type":"relation","ref":4065072,"role":"forward"}],"tags":{"name":"20路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"20","ref:category":"CityBus","ref:querycode":"10020","route_master":"bus","type":"route_master"}},"10021":{"type":"relation","id":4019361,"members":[{"type":"relation","ref":4019360,"role":"forward"},{"type":"relation","ref":4065115,"role":"backward"}],"tags":{"name":"21路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"21","ref:category":"CityBus","ref:querycode":"10021","route_master":"bus","type":"route_master"}},"10160":{"type":"relation","id":3950907,"members":[{"type":"relation","ref":4062493,"role":"forward"},{"type":"relation","ref":3366796,"role":"backward"},{"type":"relation","ref":4062492,"role":"forward_extend"},{"type":"relation","ref":4011013,"role":"backward_extend"}],"tags":{"name":"1路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"1","ref:category":"CityBus","ref:querycode":"10160","route_master":"bus","type":"route_master"}},"10161":{"type":"relation","id":3966183,"members":[{"type":"relation","ref":3966181,"role":"forward"},{"type":"relation","ref":4064999,"role":"backward"},{"type":"relation","ref":3966182,"role":"forward_extend"},{"type":"relation","ref":4064997,"role":"backward_extend"},{"type":"relation","ref":3715083,"role":"backward"},{"type":"relation","ref":4065000,"role":"forward"},{"type":"relation","ref":3967173,"role":"backward_extend"},{"type":"relation","ref":4065001,"role":"forward_extend"},{"type":"relation","ref":3967349,"role":"backward_extend"},{"type":"relation","ref":4064998,"role":"forward_extend"}],"tags":{"name":"18路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"18","ref:category":"CityBus","ref:querycode":"10161","route_master":"bus","type":"route_master"}},"10162":{"type":"relation","id":3925023,"members":[{"type":"relation","ref":3747819,"role":"forward"},{"type":"relation","ref":4062719,"role":"backward"},{"type":"relation","ref":3925022,"role":"forward"},{"type":"relation","ref":4062720,"role":"backward"},{"type":"relation","ref":3925037,"role":"backward_extend"},{"type":"relation","ref":4062717,"role":"forward_extend"},{"type":"relation","ref":3946533,"role":"forward_extend"},{"type":"relation","ref":4062716,"role":"backward_extend"},{"type":"relation","ref":3946615,"role":"forward_extend"},{"type":"relation","ref":4062718,"role":"backward_extend"}],"tags":{"name":"2路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"2","ref:category":"CityBus","ref:querycode":"10162","route_master":"bus","type":"route_master"}},"10163":{"type":"relation","id":3958662,"members":[{"type":"relation","ref":3960705,"role":"backward"},{"type":"relation","ref":4062732,"role":"forward"},{"type":"relation","ref":3958645,"role":"forward"},{"type":"relation","ref":4062733,"role":"backward"},{"type":"relation","ref":3958660,"role":"forward_extend"},{"type":"relation","ref":4062734,"role":"backward_extend"},{"type":"relation","ref":3958661,"role":"forward_extend"},{"type":"relation","ref":4062731,"role":"backward_extend"}],"tags":{"name":"3路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"3","ref:category":"CityBus","ref:querycode":"10163","route_master":"bus","type":"route_master"}},"10164":{"type":"relation","id":3962262,"members":[{"type":"relation","ref":3044696,"role":"backward"},{"type":"relation","ref":4064410,"role":"forward"},{"type":"relation","ref":3962260,"role":"forward"},{"type":"relation","ref":4064409,"role":"backward"},{"type":"relation","ref":3962345,"role":"forward_extend"},{"type":"relation","ref":4064408,"role":"backward_extend"},{"type":"relation","ref":3962261,"role":"backward_extend"},{"type":"relation","ref":4064411,"role":"forward_extend"}],"tags":{"name":"5路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"5","ref:category":"CityBus","ref:querycode":"10164","route_master":"bus","type":"route_master"}},"10165":{"type":"relation","id":3969615,"members":[{"type":"relation","ref":3969625,"role":"forward"},{"type":"relation","ref":4064419,"role":"backward"},{"type":"relation","ref":3969576,"role":"backward"},{"type":"relation","ref":4064418,"role":"forward"},{"type":"relation","ref":3969679,"role":"forward_extend"},{"type":"relation","ref":4064420,"role":"backward_extend"},{"type":"relation","ref":3969682,"role":"forward_extend"},{"type":"relation","ref":4064421,"role":"backward_extend"},{"type":"relation","ref":3969614,"role":"backward_extend"},{"type":"relation","ref":4064417,"role":"forward_extend"}],"tags":{"name":"6路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"6","ref:category":"CityBus","ref:querycode":"10165","route_master":"bus","type":"route_master"}},"10166":{"type":"relation","id":4010987,"members":[{"type":"relation","ref":3975088,"role":"forward_extend"},{"type":"relation","ref":4064432,"role":"backward_extend"},{"type":"relation","ref":4064433,"role":"forward"},{"type":"relation","ref":4064434,"role":"backward"}],"tags":{"name":"7路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"7","ref:category":"CityBus","ref:querycode":"10166","route_master":"bus","type":"route_master"}},"10167":{"type":"relation","id":4016580,"members":[{"type":"relation","ref":3975104,"role":"forward"},{"type":"relation","ref":4064447,"role":"backward"},{"type":"relation","ref":4016579,"role":"forward_extend"},{"type":"relation","ref":4064446,"role":"backward_extend"}],"tags":{"name":"9路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"9","ref:category":"CityBus","ref:querycode":"10167","route_master":"bus","type":"route_master"}},"10168":{"type":"relation","id":4016597,"members":[{"type":"relation","ref":3978119,"role":"forward"},{"type":"relation","ref":4064839,"role":"backward"}],"tags":{"name":"10路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"10","ref:category":"CityBus","ref:querycode":"10168","route_master":"bus","type":"route_master"}},"10169":{"type":"relation","id":3975089,"members":[{"type":"relation","ref":4004878,"role":"forward"},{"type":"relation","ref":4064930,"role":"backward"},{"type":"relation","ref":3715129,"role":"backward"},{"type":"relation","ref":4064931,"role":"forward"}],"tags":{"name":"11路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"11","ref:category":"CityBus","ref:querycode":"10169","route_master":"bus","type":"route_master"}},"10170":{"type":"relation","id":4019260,"members":[{"type":"relation","ref":3487881,"role":"forward"},{"type":"relation","ref":4064958,"role":"backward"}],"tags":{"name":"14路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"14","ref:category":"CityBus","ref:querycode":"10170","route_master":"bus","type":"route_master"}},"10450":{"type":"relation","id":4019261,"members":[{"type":"relation","ref":4019259,"role":"forward"},{"type":"relation","ref":4019277,"role":"forward_extend"}],"tags":{"name":"0右路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"0右","ref:category":"CityBus","ref:querycode":"10450","route_master":"bus","type":"route_master"}},"10451":{"type":"relation","id":4016613,"members":[{"type":"relation","ref":3366785,"role":"forward"},{"type":"relation","ref":4016612,"role":"forward_extend"}],"tags":{"name":"0左路","network":"臺南市公車","operator":"府城客運","ref":"0左","ref:category":"CityBus","ref:querycode":"10451","route_master":"bus","type":"route_master"}},"10452":{"type":"relation","id":4016606,"members":[{"type":"relation","ref":3069637,"role":"forward"},{"type":"relation","ref":4064965,"role":"backward"},{"type":"relation","ref":4016605,"role":"forward_extend"},{"type":"relation","ref":4064964,"role":"backward_extend"}],"tags":{"name":"15路","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"15","ref:category":"CityBus","ref:querycode":"10452","route_master":"bus","type":"route_master"}}}},"Brown":{"name":"Brown","members":{"1300":{"type":"relation","id":4032408,"members":[{"type":"relation","ref":4032406,"role":"forward"},{"type":"relation","ref":4032407,"role":"backward"},{"type":"relation","ref":4032685,"role":"forward_extend"},{"type":"relation","ref":4032686,"role":"backward_extend"}],"tags":{"name":"棕幹線","network":"臺南市公車","operator":"新營客運;興南客運","public_transport:version":"2","ref":"棕幹線","ref:category":"Brown","ref:querycode":"1300","route_master":"bus","type":"route_master"}},"1301":{"type":"relation","id":4058651,"members":[{"type":"relation","ref":4058649,"role":"forward"},{"type":"relation","ref":4058650,"role":"backward"}],"tags":{"name":"棕1","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"棕1","ref:category":"Brown","ref:querycode":"1301","route_master":"bus","type":"route_master"}},"1302":{"type":"relation","id":4060430,"members":[{"type":"relation","ref":4060413,"role":"forward"},{"type":"relation","ref":4060414,"role":"backward"}],"tags":{"from":"新營","name":"棕2","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"棕2","ref:category":"Brown","ref:querycode":"1302","route_master":"bus","to":"下中","type":"route_master","via":"鹽水"}},"1303":{"type":"relation","id":4060474,"members":[{"type":"relation","ref":4060465,"role":"forward"},{"type":"relation","ref":4060466,"role":"backward"},{"type":"relation","ref":4060472,"role":"forward_extend"},{"type":"relation","ref":4060473,"role":"backward_extend"}],"tags":{"name":"棕3","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"棕3","ref:category":"Brown","ref:querycode":"1303","route_master":"bus","type":"route_master"}},"1310":{"type":"relation","id":4053733,"members":[{"type":"relation","ref":4053731,"role":"forward"},{"type":"relation","ref":4053732,"role":"backward"}],"tags":{"name":"棕10","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"棕10","ref:category":"Brown","ref:querycode":"1310","route_master":"bus","type":"route_master"}},"1311":{"type":"relation","id":4032928,"members":[{"type":"relation","ref":4032926,"role":"forward"},{"type":"relation","ref":4032927,"role":"backward"}],"tags":{"name":"棕11","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"棕11","ref:category":"Brown","ref:querycode":"1311","route_master":"bus","type":"route_master"}}}},"TourBus":{"name":"TourBus","members":{"6066":{"type":"relation","id":5392668,"members":[{"type":"relation","ref":5392667,"role":"forward"}],"tags":{"name":"66關子嶺線","network":"臺南市公車","operator":"新營客運","public_transport:version":"2","ref":"66","ref:category":"TourBus","ref:querycode":"6066","route_master":"bus","type":"route_master"}},"10210":{"type":"relation","id":4100797,"members":[{"type":"relation","ref":4100795,"role":"forward"},{"type":"relation","ref":4100796,"role":"backward"},{"type":"relation","ref":4101092,"role":"forward_extend"},{"type":"relation","ref":4101093,"role":"backward_extend"},{"type":"relation","ref":4101143,"role":"forward_extend"},{"type":"relation","ref":4101144,"role":"backward_extend"}],"tags":{"name":"99台江線","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"99","ref:category":"TourBus","ref:querycode":"10210","route_master":"bus","type":"route_master"}},"10211":{"type":"relation","id":4099165,"members":[{"type":"relation","ref":4099163,"role":"forward"},{"type":"relation","ref":4099164,"role":"backward"},{"type":"relation","ref":4099161,"role":"forward_extend"},{"type":"relation","ref":4099162,"role":"backward_extend"}],"tags":{"name":"88安平線","network":"臺南市公車","operator":"府城客運","public_transport:version":"2","ref":"88","ref:category":"TourBus","ref:querycode":"10211","route_master":"bus","type":"route_master"}}}},"HSRExpress":{"name":"HSRExpress","members":{"10262":{"type":"relation","id":4101308,"members":[{"type":"relation","ref":4101306,"role":"forward"},{"type":"relation","ref":4101307,"role":"backward"},{"type":"relation","ref":4101363,"role":"forward_extend"},{"type":"relation","ref":4101364,"role":"backward_extend"}],"tags":{"name":"H31市府線","network":"臺南市公車","old_ref":"7651","operator":"興南客運","public_transport:version":"2","ref":"H31","ref:category":"HSRExpress","ref:querycode":"10262","route_master":"bus","type":"route_master"}},"10265":{"type":"relation","id":4102806,"members":[{"type":"relation","ref":4102804,"role":"forward"},{"type":"relation","ref":4102805,"role":"backward"},{"type":"relation","ref":4102830,"role":"forward_extend"},{"type":"relation","ref":4102831,"role":"backward_extend"}],"tags":{"name":"H62奇美線","network":"臺南市公車","old_ref":"7658","operator":"興南客運","public_transport:version":"2","ref":"H62","ref:category":"HSRExpress","ref:querycode":"10265","route_master":"bus","type":"route_master"}}}}}
+{
+  "Yellow": {
+    "name": "Yellow",
+    "members": {
+      "1500": {
+        "type": "relation",
+        "id": 4038085,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4038083,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4038084,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4038411,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4038412,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃幹線",
+          "network": "臺南市公車",
+          "operator": "興南客運;新營客運",
+          "public_transport:version": "2",
+          "ref": "黃幹線",
+          "ref:category": "Yellow",
+          "ref:querycode": "1500",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1501": {
+        "type": "relation",
+        "id": 4094407,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094402,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094403,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094427,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4094428,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃1",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃1",
+          "ref:category": "Yellow",
+          "ref:querycode": "1501",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1502": {
+        "type": "relation",
+        "id": 4094406,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094404,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094405,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃2",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃2",
+          "ref:category": "Yellow",
+          "ref:querycode": "1502",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1503": {
+        "type": "relation",
+        "id": 4094977,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094972,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094973,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4095010,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4095011,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃3",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃3",
+          "ref:category": "Yellow",
+          "ref:querycode": "1503",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1504": {
+        "type": "relation",
+        "id": 4094976,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094974,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094975,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃4",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃4",
+          "ref:category": "Yellow",
+          "ref:querycode": "1504",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1505": {
+        "type": "relation",
+        "id": 4096487,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4096485,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096486,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃5",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃5",
+          "ref:category": "Yellow",
+          "ref:querycode": "1505",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1506": {
+        "type": "relation",
+        "id": 4096578,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4096576,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096577,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 5876853,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 5876854,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃6",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃6",
+          "ref:category": "Yellow",
+          "ref:querycode": "1506",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1507": {
+        "type": "relation",
+        "id": 4096828,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4096826,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096827,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096844,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4096845,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 5128878,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 5128879,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃7",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃7",
+          "ref:category": "Yellow",
+          "ref:querycode": "1507",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1509": {
+        "type": "relation",
+        "id": 3845767,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3844799,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3845766,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃9",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃9",
+          "ref:category": "Yellow",
+          "ref:querycode": "1509",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1510": {
+        "type": "relation",
+        "id": 4096599,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4096597,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096598,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096662,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4096663,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃10",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃10",
+          "ref:category": "Yellow",
+          "ref:querycode": "1510",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1511": {
+        "type": "relation",
+        "id": 4096850,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4096848,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096849,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4096958,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4096957,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃11",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃11",
+          "ref:category": "Yellow",
+          "ref:querycode": "1511",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1512": {
+        "type": "relation",
+        "id": 4098557,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4098548,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4098549,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4098550,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4098551,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4098625,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃12",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃12",
+          "ref:category": "Yellow",
+          "ref:querycode": "1512",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1513": {
+        "type": "relation",
+        "id": 4098556,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4098554,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4098555,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4098552,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4098553,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃13",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃13",
+          "ref:category": "Yellow",
+          "ref:querycode": "1513",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1514": {
+        "type": "relation",
+        "id": 4094254,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094252,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094253,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094276,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4094277,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "黃14",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃14",
+          "ref:category": "Yellow",
+          "ref:querycode": "1514",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1515": {
+        "type": "relation",
+        "id": 4094323,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094321,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094322,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃15",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃15",
+          "ref:category": "Yellow",
+          "ref:querycode": "1515",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1520": {
+        "type": "relation",
+        "id": 4094110,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4094108,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4094109,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃20",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "黃20",
+          "ref:category": "Yellow",
+          "ref:querycode": "1520",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1802": {
+        "type": "relation",
+        "id": 5343182,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 5343180,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 5343181,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "黃6-1(農村樂活公車)",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "黃6-1",
+          "ref:category": "Yellow",
+          "ref:querycode": "1802",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "Blue": {
+    "name": "Blue",
+    "members": {
+      "1200": {
+        "type": "relation",
+        "id": 3905750,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3805315,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3905749,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍幹線",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍幹線",
+          "ref:category": "Blue",
+          "ref:querycode": "1200",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1201": {
+        "type": "relation",
+        "id": 4090981,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4090977,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4090978,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍1",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍1",
+          "ref:category": "Blue",
+          "ref:querycode": "1201",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1202": {
+        "type": "relation",
+        "id": 4090646,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4090641,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4090642,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4090681,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4090682,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "藍2",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍2",
+          "ref:category": "Blue",
+          "ref:querycode": "1202",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1203": {
+        "type": "relation",
+        "id": 4090645,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4090643,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4090644,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍3",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍3",
+          "ref:category": "Blue",
+          "ref:querycode": "1203",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1210": {
+        "type": "relation",
+        "id": 4090982,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4090979,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4090980,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍10",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍10",
+          "ref:category": "Blue",
+          "ref:querycode": "1210",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1211": {
+        "type": "relation",
+        "id": 4077059,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4077053,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4077054,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍11",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍11",
+          "ref:category": "Blue",
+          "ref:querycode": "1211",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1212": {
+        "type": "relation",
+        "id": 4077060,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4077055,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4077056,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍12",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍12",
+          "ref:category": "Blue",
+          "ref:querycode": "1212",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1213": {
+        "type": "relation",
+        "id": 4077061,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4077057,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4077058,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍13",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍13",
+          "ref:category": "Blue",
+          "ref:querycode": "1213",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1220": {
+        "type": "relation",
+        "id": 4081185,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4081183,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4081184,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍20",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍20",
+          "ref:category": "Blue",
+          "ref:querycode": "1220",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1221": {
+        "type": "relation",
+        "id": 4079190,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4079186,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4079187,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4079269,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4079270,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "藍21",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍21",
+          "ref:category": "Blue",
+          "ref:querycode": "1221",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1222": {
+        "type": "relation",
+        "id": 4079191,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4079188,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4079189,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4079308,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4079309,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "藍22",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍22",
+          "ref:category": "Blue",
+          "ref:querycode": "1222",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1223": {
+        "type": "relation",
+        "id": 4074266,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4074264,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4074265,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍23",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍23",
+          "ref:category": "Blue",
+          "ref:querycode": "1223",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1224": {
+        "type": "relation",
+        "id": 4074007,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4074005,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4074006,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍24",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍24",
+          "ref:category": "Blue",
+          "ref:querycode": "1224",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1225": {
+        "type": "relation",
+        "id": 4074635,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4074633,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4074634,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "藍25",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "藍25",
+          "ref:category": "Blue",
+          "ref:querycode": "1225",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "Green": {
+    "name": "Green",
+    "members": {
+      "1100": {
+        "type": "relation",
+        "id": 3905751,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3805268,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3905748,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠幹線",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠幹線",
+          "ref:category": "Green",
+          "ref:querycode": "1100",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1101": {
+        "type": "relation",
+        "id": 4103106,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4103100,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4103101,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠1",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠1",
+          "ref:category": "Green",
+          "ref:querycode": "1101",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1102": {
+        "type": "relation",
+        "id": 4103107,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4103102,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4103103,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4103376,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4103377,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠2",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠2",
+          "ref:category": "Green",
+          "ref:querycode": "1102",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1103": {
+        "type": "relation",
+        "id": 4103108,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4103104,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4103105,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠3",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠3",
+          "ref:category": "Green",
+          "ref:querycode": "1103",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1104": {
+        "type": "relation",
+        "id": 4102918,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4102916,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4102917,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠4",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠4",
+          "ref:category": "Green",
+          "ref:querycode": "1104",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1105": {
+        "type": "relation",
+        "id": 4105052,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4105050,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105051,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠5",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠5",
+          "ref:category": "Green",
+          "ref:querycode": "1105",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1106": {
+        "type": "relation",
+        "id": 4105433,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4105429,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105430,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠6",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠6",
+          "ref:category": "Green",
+          "ref:querycode": "1106",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1107": {
+        "type": "relation",
+        "id": 4105434,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4105431,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105432,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠7",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠7",
+          "ref:category": "Green",
+          "ref:querycode": "1107",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1110": {
+        "type": "relation",
+        "id": 4105555,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4105553,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105554,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105592,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4105593,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠10",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠10",
+          "ref:category": "Green",
+          "ref:querycode": "1110",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1111": {
+        "type": "relation",
+        "id": 4105727,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4105725,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4105726,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠11",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠11",
+          "ref:category": "Green",
+          "ref:querycode": "1111",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1112": {
+        "type": "relation",
+        "id": 4107380,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4107378,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4107379,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠12",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠12",
+          "ref:category": "Green",
+          "ref:querycode": "1112",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1113": {
+        "type": "relation",
+        "id": 4107405,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4107403,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4107404,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠13",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠13",
+          "ref:category": "Green",
+          "ref:querycode": "1113",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1114": {
+        "type": "relation",
+        "id": 4103000,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4102998,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4102999,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠14",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠14",
+          "ref:category": "Green",
+          "ref:querycode": "1114",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1115": {
+        "type": "relation",
+        "id": 4103053,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4103051,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4103052,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠15",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠15",
+          "ref:category": "Green",
+          "ref:querycode": "1115",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1116": {
+        "type": "relation",
+        "id": 4060903,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4060899,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4060900,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4060901,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4060902,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4060923,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4060924,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠16",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠16",
+          "ref:category": "Green",
+          "ref:querycode": "1116",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1117": {
+        "type": "relation",
+        "id": 4051250,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4050288,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4050289,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠17",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠17",
+          "ref:category": "Green",
+          "ref:querycode": "1117",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1120": {
+        "type": "relation",
+        "id": 4109138,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109131,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109132,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4152322,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4152323,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠20",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠20",
+          "ref:category": "Green",
+          "ref:querycode": "1120",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1121": {
+        "type": "relation",
+        "id": 4109182,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109180,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109181,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠21",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠21",
+          "ref:category": "Green",
+          "ref:querycode": "1121",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1122": {
+        "type": "relation",
+        "id": 4109139,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109133,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109134,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠22",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠22",
+          "ref:category": "Green",
+          "ref:querycode": "1122",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1123": {
+        "type": "relation",
+        "id": 4109194,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109189,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109190,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠23",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠23",
+          "ref:category": "Green",
+          "ref:querycode": "1123",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1124": {
+        "type": "relation",
+        "id": 4109137,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109135,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109136,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109153,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4109154,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠24",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠24",
+          "ref:category": "Green",
+          "ref:querycode": "1124",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1125": {
+        "type": "relation",
+        "id": 4109193,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4109191,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4109192,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠25",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠25",
+          "ref:category": "Green",
+          "ref:querycode": "1125",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1126": {
+        "type": "relation",
+        "id": 4107555,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4107553,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4107554,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "綠26",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠26",
+          "ref:category": "Green",
+          "ref:querycode": "1126",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1127": {
+        "type": "relation",
+        "id": 4107536,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4107532,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4107533,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4107534,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4107535,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "綠27",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "綠27",
+          "ref:category": "Green",
+          "ref:querycode": "1127",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "Red": {
+    "name": "Red",
+    "members": {
+      "1600": {
+        "type": "relation",
+        "id": 3905767,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3805400,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3905766,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4053668,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4053669,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "紅幹線",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅幹線",
+          "ref:category": "Red",
+          "ref:querycode": "1600",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1601": {
+        "type": "relation",
+        "id": 4051878,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4051869,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4051877,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅1",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅1",
+          "ref:category": "Red",
+          "ref:querycode": "1601",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1602": {
+        "type": "relation",
+        "id": 4053448,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4053446,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4053447,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4066936,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4066937,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "紅2",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅2",
+          "ref:category": "Red",
+          "ref:querycode": "1602",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1603": {
+        "type": "relation",
+        "id": 4058217,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4058215,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4058216,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅3",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅3",
+          "ref:category": "Red",
+          "ref:querycode": "1603",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1604": {
+        "type": "relation",
+        "id": 4055900,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4055898,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4055899,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅4",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅4",
+          "ref:category": "Red",
+          "ref:querycode": "1604",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1610": {
+        "type": "relation",
+        "id": 4056199,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4056197,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4056198,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅10",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅10",
+          "ref:category": "Red",
+          "ref:querycode": "1610",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1611": {
+        "type": "relation",
+        "id": 4055682,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4055678,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4055679,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅11",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅11",
+          "ref:category": "Red",
+          "ref:querycode": "1611",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1612": {
+        "type": "relation",
+        "id": 4055683,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4055680,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4055681,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅12",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅12",
+          "ref:category": "Red",
+          "ref:querycode": "1612",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1613": {
+        "type": "relation",
+        "id": 4053990,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4053988,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4053989,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅13",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅13",
+          "ref:category": "Red",
+          "ref:querycode": "1613",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1614": {
+        "type": "relation",
+        "id": 4055796,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4055794,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4055795,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "紅14",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅14",
+          "ref:category": "Red",
+          "ref:querycode": "1614",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1801": {
+        "type": "relation",
+        "id": 5166423,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 5166421,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 5166422,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "奇美博物館假日公車",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "紅3-1",
+          "ref:category": "Red",
+          "ref:querycode": "1801",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "Orange": {
+    "name": "Orange",
+    "members": {
+      "1400": {
+        "type": "relation",
+        "id": 3916164,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3916162,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3916163,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘幹線",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘幹線",
+          "ref:category": "Orange",
+          "ref:querycode": "1400",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1401": {
+        "type": "relation",
+        "id": 4067606,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4067605,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4067604,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4091370,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4091371,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "橘1",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘1",
+          "ref:category": "Orange",
+          "ref:querycode": "1401",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1402": {
+        "type": "relation",
+        "id": 4067508,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4067506,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4067507,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘2",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘2",
+          "ref:category": "Orange",
+          "ref:querycode": "1402",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1403": {
+        "type": "relation",
+        "id": 4067742,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4067740,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4067741,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4067799,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4067800,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 5343169,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 5343170,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "橘3",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘3",
+          "ref:category": "Orange",
+          "ref:querycode": "1403",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1404": {
+        "type": "relation",
+        "id": 4071513,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4071511,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4071512,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘4",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘4",
+          "ref:category": "Orange",
+          "ref:querycode": "1404",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1405": {
+        "type": "relation",
+        "id": 4071565,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4071563,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4071564,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘5",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "ref": "橘5",
+          "ref:category": "Orange",
+          "ref:querycode": "1405",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1410": {
+        "type": "relation",
+        "id": 4072047,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4072045,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4072046,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘10",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "橘10",
+          "ref:category": "Orange",
+          "ref:querycode": "1410",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1411": {
+        "type": "relation",
+        "id": 4069024,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4069022,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4069023,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4069039,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4069040,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4069042,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4069043,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4069057,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4069058,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "橘11",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "橘11",
+          "ref:category": "Orange",
+          "ref:querycode": "1411",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1412": {
+        "type": "relation",
+        "id": 4069578,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4069576,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4069577,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘12",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "橘12",
+          "ref:category": "Orange",
+          "ref:querycode": "1412",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1420": {
+        "type": "relation",
+        "id": 4061052,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4061050,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4061051,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "橘20",
+          "network": "臺南市公車",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "橘20",
+          "ref:category": "Orange",
+          "ref:querycode": "1420",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "CityBus": {
+    "name": "CityBus",
+    "members": {
+      "1077": {
+        "type": "relation",
+        "id": 6072564,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 6072560,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 6072561,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 6072562,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 6072563,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "77路",
+          "network": "臺南市公車",
+          "operator": "四方客運",
+          "public_transport:version": "2",
+          "ref": "77",
+          "ref:category": "CityBus",
+          "ref:querycode": "1077",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10017": {
+        "type": "relation",
+        "id": 5420056,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 5420055,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 5420054,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "17路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "17",
+          "ref:category": "CityBus",
+          "ref:querycode": "10017",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10019": {
+        "type": "relation",
+        "id": 4444913,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4444911,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4444912,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4444936,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4444937,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "19路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "19",
+          "ref:category": "CityBus",
+          "ref:querycode": "10019",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10020": {
+        "type": "relation",
+        "id": 4020969,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4020968,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4065072,
+            "role": "forward"
+          }
+        ],
+        "tags": {
+          "name": "20路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "20",
+          "ref:category": "CityBus",
+          "ref:querycode": "10020",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10021": {
+        "type": "relation",
+        "id": 4019361,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4019360,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4065115,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "21路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "21",
+          "ref:category": "CityBus",
+          "ref:querycode": "10021",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10160": {
+        "type": "relation",
+        "id": 3950907,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4062493,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3366796,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4062492,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4011013,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "1路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "1",
+          "ref:category": "CityBus",
+          "ref:querycode": "10160",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10161": {
+        "type": "relation",
+        "id": 3966183,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3966181,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064999,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3966182,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064997,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3715083,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4065000,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3967173,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4065001,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3967349,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064998,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "18路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "18",
+          "ref:category": "CityBus",
+          "ref:querycode": "10161",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10162": {
+        "type": "relation",
+        "id": 3925023,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3747819,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4062719,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3925022,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4062720,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3925037,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4062717,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3946533,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4062716,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3946615,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4062718,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "2路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "2",
+          "ref:category": "CityBus",
+          "ref:querycode": "10162",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10163": {
+        "type": "relation",
+        "id": 3958662,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3960705,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4062732,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3958645,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4062733,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3958660,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4062734,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3958661,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4062731,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "3路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "3",
+          "ref:category": "CityBus",
+          "ref:querycode": "10163",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10164": {
+        "type": "relation",
+        "id": 3962262,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3044696,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064410,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3962260,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064409,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3962345,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064408,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3962261,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064411,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "5路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "5",
+          "ref:category": "CityBus",
+          "ref:querycode": "10164",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10165": {
+        "type": "relation",
+        "id": 3969615,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3969625,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064419,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3969576,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064418,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 3969679,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064420,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3969682,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064421,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 3969614,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064417,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "6路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "6",
+          "ref:category": "CityBus",
+          "ref:querycode": "10165",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10166": {
+        "type": "relation",
+        "id": 4010987,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3975088,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064432,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064433,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064434,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "7路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "7",
+          "ref:category": "CityBus",
+          "ref:querycode": "10166",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10167": {
+        "type": "relation",
+        "id": 4016580,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3975104,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064447,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4016579,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064446,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "9路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "9",
+          "ref:category": "CityBus",
+          "ref:querycode": "10167",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10168": {
+        "type": "relation",
+        "id": 4016597,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3978119,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064839,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "10路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "10",
+          "ref:category": "CityBus",
+          "ref:querycode": "10168",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10169": {
+        "type": "relation",
+        "id": 3975089,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4004878,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064930,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 3715129,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064931,
+            "role": "forward"
+          }
+        ],
+        "tags": {
+          "name": "11路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "11",
+          "ref:category": "CityBus",
+          "ref:querycode": "10169",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10170": {
+        "type": "relation",
+        "id": 4019260,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3487881,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064958,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "14路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "14",
+          "ref:category": "CityBus",
+          "ref:querycode": "10170",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10450": {
+        "type": "relation",
+        "id": 4019261,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4019259,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4019277,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "0右路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "0右",
+          "ref:category": "CityBus",
+          "ref:querycode": "10450",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10451": {
+        "type": "relation",
+        "id": 4016613,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3366785,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4016612,
+            "role": "forward_extend"
+          }
+        ],
+        "tags": {
+          "name": "0左路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "ref": "0左",
+          "ref:category": "CityBus",
+          "ref:querycode": "10451",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10452": {
+        "type": "relation",
+        "id": 4016606,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 3069637,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4064965,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4016605,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4064964,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "15路",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "15",
+          "ref:category": "CityBus",
+          "ref:querycode": "10452",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "Brown": {
+    "name": "Brown",
+    "members": {
+      "1300": {
+        "type": "relation",
+        "id": 4032408,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4032406,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4032407,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4032685,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4032686,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "棕幹線",
+          "network": "臺南市公車",
+          "operator": "新營客運;興南客運",
+          "public_transport:version": "2",
+          "ref": "棕幹線",
+          "ref:category": "Brown",
+          "ref:querycode": "1300",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1301": {
+        "type": "relation",
+        "id": 4058651,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4058649,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4058650,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "棕1",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "棕1",
+          "ref:category": "Brown",
+          "ref:querycode": "1301",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1302": {
+        "type": "relation",
+        "id": 4060430,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4060413,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4060414,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "from": "新營",
+          "name": "棕2",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "棕2",
+          "ref:category": "Brown",
+          "ref:querycode": "1302",
+          "route_master": "bus",
+          "to": "下中",
+          "type": "route_master",
+          "via": "鹽水"
+        }
+      },
+      "1303": {
+        "type": "relation",
+        "id": 4060474,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4060465,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4060466,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4060472,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4060473,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "棕3",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "棕3",
+          "ref:category": "Brown",
+          "ref:querycode": "1303",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1310": {
+        "type": "relation",
+        "id": 4053733,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4053731,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4053732,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "棕10",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "棕10",
+          "ref:category": "Brown",
+          "ref:querycode": "1310",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "1311": {
+        "type": "relation",
+        "id": 4032928,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4032926,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4032927,
+            "role": "backward"
+          }
+        ],
+        "tags": {
+          "name": "棕11",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "棕11",
+          "ref:category": "Brown",
+          "ref:querycode": "1311",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "TourBus": {
+    "name": "TourBus",
+    "members": {
+      "6066": {
+        "type": "relation",
+        "id": 5392668,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 5392667,
+            "role": "forward"
+          }
+        ],
+        "tags": {
+          "name": "66關子嶺線",
+          "network": "臺南市公車",
+          "operator": "新營客運",
+          "public_transport:version": "2",
+          "ref": "66",
+          "ref:category": "TourBus",
+          "ref:querycode": "6066",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10210": {
+        "type": "relation",
+        "id": 4100797,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4100795,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4100796,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4101092,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4101093,
+            "role": "backward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4101143,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4101144,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "99台江線",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "99",
+          "ref:category": "TourBus",
+          "ref:querycode": "10210",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10211": {
+        "type": "relation",
+        "id": 4099165,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4099163,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4099164,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4099161,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4099162,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "88安平線",
+          "network": "臺南市公車",
+          "operator": "府城客運",
+          "public_transport:version": "2",
+          "ref": "88",
+          "ref:category": "TourBus",
+          "ref:querycode": "10211",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  },
+  "HSRExpress": {
+    "name": "HSRExpress",
+    "members": {
+      "10262": {
+        "type": "relation",
+        "id": 4101308,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4101306,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4101307,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4101363,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4101364,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "H31市府線",
+          "network": "臺南市公車",
+          "old_ref": "7651",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "H31",
+          "ref:category": "HSRExpress",
+          "ref:querycode": "10262",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      },
+      "10265": {
+        "type": "relation",
+        "id": 4102806,
+        "members": [
+          {
+            "type": "relation",
+            "ref": 4102804,
+            "role": "forward"
+          },
+          {
+            "type": "relation",
+            "ref": 4102805,
+            "role": "backward"
+          },
+          {
+            "type": "relation",
+            "ref": 4102830,
+            "role": "forward_extend"
+          },
+          {
+            "type": "relation",
+            "ref": 4102831,
+            "role": "backward_extend"
+          }
+        ],
+        "tags": {
+          "name": "H62奇美線",
+          "network": "臺南市公車",
+          "old_ref": "7658",
+          "operator": "興南客運",
+          "public_transport:version": "2",
+          "ref": "H62",
+          "ref:category": "HSRExpress",
+          "ref:querycode": "10265",
+          "route_master": "bus",
+          "type": "route_master"
+        }
+      }
+    }
+  }
+}

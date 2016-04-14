@@ -1,162 +1,165 @@
-
-/************************** Font Setting *************************/
-@font-face {
-    font-family: Chunkfive;
-    src: url(../Font/Chunkfive.otf);
+@import "../node_modules/normalize.css/normalize"; //Reset
+@import "bourbon";
+@import "MyMixin";
+@import "grid-settings";
+@import "neat";
+body {
+    height: 100%;
 }
-@font-face {
-    font-family: Geo;
-    src: url(../Font/Geo.otf);
-    font-style:normal;
-}
-@font-face {
-    font-family: Geo;
-    src: url(../../Font/Geo_Oblique.otf);
-    font-style:oblique;
-}
-/***************************************************************/
-
 #map {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 57px;
+    right: 200px;
+    position: absolute;
+    background-color: yellow;
 }
+aside {
+    position: absolute;
+    top: 0;
+    bottom: 57px;
+    right: 0;
+    width: 200px;
+    background-color: blue;
 
-// Colour Legend
-.busmain_legend {
-  .legend-title {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: white;
-  }
-  .legend-scale {
+    overflow-y: auto;
 
-    margin-left: 10px;
-    margin-right: 10px;
-
-    ul {
-      margin: 0 0 5px;
-      padding: 0;
-      float: left;
-      list-style: none;
-      li {
-        margin-left: 0;
-        line-height: 18px;
-        margin-bottom: 2px;
-        color: white;
-        span {
-          display: block;
-          float: left;
-          height: 16px;
-          width: 30px;
-          margin-right: 5px;
-          margin-left: 0;
-          border: 1px hidden #999;
-        }
-      }
-    }
-  }
+    @include outer-container;
+}
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    background-color: red;
 }
 
 //Date Slider
-.busmain_slider {
+.slider_main {
+    input[type=range] {
+        border: 1px hidden white;
+        width: 95%;
+    }
+}
 
-  width: 95%;
 
-  input[type=range]{
-    border: 1px hidden white;
-    width: inherit;
+.category-bar {
+  @include background(linear-gradient(red, green) left repeat);
+  @include span-columns(3);
+
+  p{
+    @include NoMargin();
   }
 }
 
-//Set Text
+.route-btn {
+  @include background(linear-gradient(red, green) left repeat);
+  @include span-columns(1);
 
-@mixin white-legend() {
-  font-family: Geo;
-  color: white;
-  letter-spacing: 1px;
-  font-size: large;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+  height: 50px;
+  width: 50px;
 
-@mixin white-text() {
-  font-family: Geo;
-  color: white;
-  letter-spacing: 1px;
-  font-size: xx-large;
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
+  @include margin(5px);
 
-.dateViewText{
-  @include white-text();
-}
-
-.busmain_ridershipView{
-
-  .ridershipViewLegend{
-    @include white-legend();
-  }
-
-  .ridershipViewText{
-    @include white-text();
+  p{
+    @include NoMargin();
   }
 }
 
+//////////////// Leaflet Controls /////////////////////////
+// Colour Legend
+.busmain_legend {
+    .legend-title {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+    }
+    .legend-scale {
+        @include margin(null 10px null 10px);
+        .legend-texts {
+            position: relative;
+            bottom: -10px;
+        }
+        ul {
+            margin: 0 0 5px;
+            padding: 0;
+            float: left;
+            list-style: none;
+            li {
+                margin-left: 0;
+                line-height: 18px;
+                margin-bottom: 2px;
+                font-size: medium;
+                color: white;
+                span {
+                    display: block;
+                    float: left;
+                    height: 20px;
+                    width: 30px;
+                    margin-right: 5px;
+                    margin-left: 0;
+                    border: 1px hidden #999;
+                }
+            }
+        }
+    }
+}
+//Text
+.dateViewText {
+    @include text();
+}
+.ridershipViewText {
+    @include text();
+}
 //Loading Mask
-
 @keyframes spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-
-.LoadingMask
-{
-  display: none;
-
-  .lmask {
-    background-color:rgba(102, 102, 153, 0.5);
-    z-index:9998;
-
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-  }
-
-  .loading {
-  	position: absolute;
-    z-index:9999;
-  	top: 50%;
-  	left: 50%;
-  	width: 28px;
-  	height: 28px;
-  	margin: -14px 0 0 -14px;
-
-    .spinner {
-    	position: absolute;
-    	left: 1px;
-    	top: 1px;
-    	width: 26px;
-    	height: 26px;
-    	animation: spin 1s infinite linear;
+.LoadingMask {
+    display: none;
+    .lmask {
+        background-color: rgba(102, 102, 153, 0.5);
+        z-index: 9998;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
     }
-
-    .maskedCircle {
-    	width: 20px;
-    	height: 20px;
-    	border-radius: 12px;
-    	border: 3px solid white;
+    .loading {
+        position: absolute;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        width: 28px;
+        height: 28px;
+        margin: -14px 0 0 -14px;
+        .spinner {
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            width: 26px;
+            height: 26px;
+            animation: spin 1s infinite linear;
+        }
+        .maskedCircle {
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            border: 3px solid white;
+        }
+        .mask {
+            width: 12px;
+            height: 12px;
+            overflow: hidden;
+        }
     }
-
-    .mask {
-    	width: 12px;
-    	height: 12px;
-    	overflow: hidden;
-    }
-  }
 }

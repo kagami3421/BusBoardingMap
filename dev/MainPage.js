@@ -32,6 +32,8 @@ L.BusMain.mainprocess = function() {
 L.BusMain.MainProcessor = L.Class.extend({
   initialize: function() {
     this._RouteController = undefined;
+
+    this._SideBar = undefined;
     this._DateSlider = undefined;
 
     this._Legend = undefined;
@@ -62,6 +64,11 @@ L.BusMain.MainProcessor = L.Class.extend({
           $.getJSON('LocalData/Data/TotalCapacity.json', function(data) {
             callback(null , data);
           });
+        },
+        function(callback) {
+          $.getJSON('LocalData/Data/Collection.json', function(data) {
+            callback(null , data);
+          });
         }
       ],
       function(err, results) {
@@ -71,7 +78,7 @@ L.BusMain.MainProcessor = L.Class.extend({
             _Class._RouteController.SetDate(_Class._InitDate);
             _Class._RouteController.ApplyToMap();
 
-            _Class._InitControls(results[0] , results[1]);
+            _Class._InitControls(results[0] , results[1] , results[2]);
 
             _Class._ShowHideMask(false);
           }
@@ -82,11 +89,11 @@ L.BusMain.MainProcessor = L.Class.extend({
       });
   },
 
-  _InitControls: function(Config , TotalCapacity) {
+  _InitControls: function(Config , TotalCapacity , Collection) {
 
     var _Class = this;
 
-    _Class._Legend = L.BusMainControl.legend(Config.CapacityRange);
+    _Class._Legend = L.BusMainControl.legend(Config.CapacityControl , Config.CapacityRange);
     MainPageVars.BaseMap.addControl(_Class._Legend);
 
     _Class._DateView = L.BusMainControl.dateview();
@@ -109,7 +116,10 @@ L.BusMain.MainProcessor = L.Class.extend({
       _Class._TotalView.ChangeValue(DateObj);
 
     }, Config.CapacityControl);
-    MainPageVars.BaseMap.addControl(_Class._DateSlider);
+    _Class._DateSlider.AddWidget();
+
+    _Class._SideBar = L.BusMainControl.sidebar(Collection);
+    _Class._SideBar.AddWidget();
   },
 
   _ShowHideMask : function (boolMask) {

@@ -1,0 +1,11 @@
+@mixin text() {
+  color: white;
+  letter-spacing: 1px;
+  font-size: xx-large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@mixin NoMargin() {
+  @include margin(0);
+}
