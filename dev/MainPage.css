@@ -380,8 +380,7 @@ body {
   left: 0;
   bottom: 57px;
   right: 200px;
-  position: absolute;
-  background-color: yellow; }
+  position: absolute; }
 
 aside {
   position: absolute;
@@ -389,7 +388,7 @@ aside {
   bottom: 57px;
   right: 0;
   width: 200px;
-  background-color: blue;
+  background-color: #22313F;
   overflow-y: auto;
   max-width: 600px;
   margin-left: auto;
@@ -413,8 +412,9 @@ footer {
   width: 95%; }
 
 .category-bar {
-  background: -webkit-linear-gradient(red, green);
-  background: linear-gradient(red, green);
+  background-color: #6C7A89;
+  color: white;
+  text-align: center;
   float: left;
   display: block;
   margin-right: 3.125%;
@@ -425,8 +425,9 @@ footer {
     margin: 0; }
 
 .route-btn {
-  background: -webkit-linear-gradient(red, green);
-  background: linear-gradient(red, green);
+  background-color: #4B77BE;
+  color: white;
+  text-align: center;
   float: left;
   display: block;
   margin-right: 3.125%;
@@ -436,8 +437,10 @@ footer {
   margin: 5px; }
   .route-btn:last-child {
     margin-right: 0; }
-  .route-btn p {
-    margin: 0; }
+
+.route-btn:hover {
+  background-color: #89C4F4;
+  cursor: pointer; }
 
 .busmain_legend .legend-title {
   margin-bottom: 5px;

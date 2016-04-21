@@ -193,17 +193,20 @@ L.BusMainControl.DateSlider = L.Class.extend({
   }
 });
 
-L.BusMainControl.sidebar = function (CollectionJson) {
-    return new L.BusMainControl.routeSelector(CollectionJson);
+L.BusMainControl.sidebar = function (LClickCallBack , RClickCallBack , CollectionJson) {
+    return new L.BusMainControl.routeSelector(LClickCallBack , RClickCallBack , CollectionJson);
 };
 
 L.BusMainControl.routeSelector = L.Class.extend({
-  initialize: function(CollectionJson) {
+  initialize: function(LClickCallBack , RClickCallBack , CollectionJson) {
     //L.Util.setOptions(this, options);
 
     this._controlJson = CollectionJson;
 
     this._SideBar = L.DomUtil.get("sidebar");
+    this._MainContianer = L.DomUtil.get("main");
+    this._ClickBtnEvent = LClickCallBack;
+    this._ClearEvent = RClickCallBack;
   },
 
   AddWidget: function() {
@@ -213,6 +216,16 @@ L.BusMainControl.routeSelector = L.Class.extend({
         this._CreateCategorySections(this._controlJson[singleCategory] , this._SideBar);
       }
     }
+
+    this._AddClickEvent();
+  },
+
+  ChangeBtnState:function (TargetElement) {
+    $(TargetElement).css( "background-color", "#2574A9" );
+  },
+
+  RevertBtnState:function () {
+    $(".route-btn").css( "background-color", "#4B77BE" );
   },
 
   _CreateCategorySections: function (singleCategory , parentElement) {
@@ -231,15 +244,25 @@ L.BusMainControl.routeSelector = L.Class.extend({
 
   _CreateCategoryBar: function (singleCategoryName , parentElement) {
     var _Bar = L.DomUtil.create('section', 'category-bar' , parentElement);
-    var _Text = "<p>"+ singleCategoryName +"</p>";
 
-    $(_Bar).append(_Text);
+    $(_Bar).text(singleCategoryName);
   },
 
   _CreateSingleRouteButton: function (singleRouteSetting , parentElement) {
     var _Btn = L.DomUtil.create('section', 'route-btn' , parentElement);
-    var _Text = "<p>"+ singleRouteSetting.tags.ref +"</p>";
 
-    $(_Btn).append(_Text);
+    $(_Btn).text(singleRouteSetting.tags.ref);
+    $(_Btn).attr( "id", singleRouteSetting.tags['ref:querycode']);
+  },
+
+  _AddClickEvent : function () {
+    L.DomEvent.on(this._SideBar, "click", function (e) {
+        this._ClickBtnEvent(e);
+    }, this);
+
+    L.DomEvent.on(this._MainContianer, "contextmenu", function (e) {
+        L.DomEvent.preventDefault(e);
+        this._ClearEvent ();
+    }, this);
   }
 });

@@ -9,3 +9,8 @@
 @mixin NoMargin() {
   @include margin(0);
 }
+
+@mixin SideBarText {
+  color: white;
+  text-align: center;
+}

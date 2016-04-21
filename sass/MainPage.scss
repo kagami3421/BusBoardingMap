@@ -12,7 +12,6 @@ body {
     bottom: 57px;
     right: 200px;
     position: absolute;
-    background-color: yellow;
 }
 aside {
     position: absolute;
@@ -20,7 +19,7 @@ aside {
     bottom: 57px;
     right: 0;
     width: 200px;
-    background-color: blue;
+    background-color: #22313F;
 
     overflow-y: auto;
 
@@ -46,7 +45,8 @@ footer {
 
 
 .category-bar {
-  @include background(linear-gradient(red, green) left repeat);
+  background-color: #6C7A89;
+  @include SideBarText;
   @include span-columns(3);
 
   p{
@@ -55,17 +55,19 @@ footer {
 }
 
 .route-btn {
-  @include background(linear-gradient(red, green) left repeat);
+  background-color: #4B77BE;
+  @include SideBarText;
   @include span-columns(1);
 
   height: 50px;
   width: 50px;
 
   @include margin(5px);
+}
 
-  p{
-    @include NoMargin();
-  }
+.route-btn:hover{
+  background-color: #89C4F4;
+  cursor:pointer;
 }
 
 //////////////// Leaflet Controls /////////////////////////
