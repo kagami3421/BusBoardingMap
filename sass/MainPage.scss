@@ -1,48 +1,28 @@
 @import "../node_modules/normalize.css/normalize"; //Reset
+@import "../bower_components/font-awesome/scss/font-awesome";
 @import "bourbon";
 @import "MyMixin";
-@import "grid-settings";
+@import "Control";
+
+@import "Settings";
 @import "neat";
-body {
+@import "layout";
+
+.about {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: $AsideWidth;
     height: 100%;
 }
-#map {
-    top: 0;
-    left: 0;
-    bottom: 57px;
-    right: 200px;
-    position: absolute;
-}
-aside {
-    position: absolute;
-    top: 0;
-    bottom: 57px;
-    right: 0;
-    width: 200px;
-    background-color: #22313F;
 
-    overflow-y: auto;
-
-    @include outer-container;
-}
-footer {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    height: 57px;
-    background-color: red;
-}
-
-//Date Slider
 .slider_main {
-    input[type=range] {
-        border: 1px hidden white;
-        width: 95%;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: $AsideWidth;
+    height: 100%;
 }
-
 
 .category-bar {
   background-color: #6C7A89;
@@ -55,7 +35,7 @@ footer {
 }
 
 .route-btn {
-  background-color: #4B77BE;
+  background-color: #663399;
   @include SideBarText;
   @include span-columns(1);
 
@@ -66,56 +46,14 @@ footer {
 }
 
 .route-btn:hover{
-  background-color: #89C4F4;
+  background-color: #BF55EC;
   cursor:pointer;
 }
 
-//////////////// Leaflet Controls /////////////////////////
-// Colour Legend
-.busmain_legend {
-    .legend-title {
-        margin-bottom: 5px;
-        font-weight: bold;
-        font-size: medium;
-        color: white;
-    }
-    .legend-scale {
-        @include margin(null 10px null 10px);
-        .legend-texts {
-            position: relative;
-            bottom: -10px;
-        }
-        ul {
-            margin: 0 0 5px;
-            padding: 0;
-            float: left;
-            list-style: none;
-            li {
-                margin-left: 0;
-                line-height: 18px;
-                margin-bottom: 2px;
-                font-size: medium;
-                color: white;
-                span {
-                    display: block;
-                    float: left;
-                    height: 20px;
-                    width: 30px;
-                    margin-right: 5px;
-                    margin-left: 0;
-                    border: 1px hidden #999;
-                }
-            }
-        }
-    }
+.route-btn-selected {
+  background-color: #BE90D4;
 }
-//Text
-.dateViewText {
-    @include text();
-}
-.ridershipViewText {
-    @include text();
-}
+
 //Loading Mask
 @keyframes spin {
     from {

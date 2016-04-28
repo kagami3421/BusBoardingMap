@@ -1,0 +1,62 @@
+
+//Date Slider
+.slider_main {
+    input[type=range] {
+        position: absolute;
+        left: 2%;
+        border: 1px hidden white;
+        width: 95%;
+    }
+}
+
+//Text
+.ViewText {
+    @include BigText();
+}
+
+.ViewMediumText {
+    @include MediumText();
+}
+
+.ViewSmallText {
+    @include SmallText();
+}
+
+// Colour Legend
+.busmain_legend {
+    .legend-title {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+    }
+    .legend-scale {
+        @include margin(null 10px null 10px);
+        .legend-texts {
+            position: relative;
+            bottom: -10px;
+        }
+        ul {
+            margin: 0 0 5px;
+            padding: 0;
+            float: left;
+            list-style: none;
+            li {
+                margin-left: 0;
+                line-height: 18px;
+                margin-bottom: 2px;
+                font-size: medium;
+                color: white;
+                span {
+                    display: block;
+                    float: left;
+                    height: 20px;
+                    width: 30px;
+                    margin-right: 5px;
+                    margin-left: 0;
+                    border: 1px hidden #999;
+                }
+            }
+        }
+    }
+}

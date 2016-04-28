@@ -33,26 +33,28 @@ L.BusMain.MainProcessor = L.Class.extend({
   initialize: function() {
     this._RouteController = undefined;
 
+    //HTML Control
     this._SideBar = undefined;
     this._DateSlider = undefined;
 
+    //Leaflet Control
     this._Legend = undefined;
     this._DateView = undefined;
     this._TotalView = undefined;
+    this._RouteLegend = undefined;
 
     this._Date = {
       Year: '2014',
       Month: 'Total'
     };
 
-    this._ShowHideMask(true);
 
-    this._InitData();
+    //Init
+    this._ShowHideMask(true);
+    this._InitData()
   },
 
   _InitData: function() {
-
-    var _Class = this;
 
     async.parallel([
         function(callback) {
@@ -72,68 +74,76 @@ L.BusMain.MainProcessor = L.Class.extend({
         }
       ],
       function(err, results) {
-        _Class._RouteController = L.BusMain.routeControl(results[0] , function(error) {
+        this._RouteController = L.BusMain.routeControl(results[0] , function(error) {
           if (error === null) {
-            _Class._RouteController.SetDirection('forward');
-            _Class._RouteController.SetDate(_Class._Date);
-            _Class._RouteController.ApplyToMap();
+            this._RouteController.SetDirection('forward');
+            this._RouteController.SetDate(this._Date);
+            this._RouteController.ApplyToMap();
 
-            _Class._InitControls(results[0] , results[1] , results[2]);
+            this._InitControls(results[0] , results[1] , results[2]);
 
-            _Class._ShowHideMask(false);
+            this._ShowHideMask(false);
           }
           else {
             console.log('Error occured when creating layers.');
           }
-        });
-      });
+        }.bind(this));
+      }.bind(this));
   },
 
   _InitControls: function(Config , TotalCapacity , Collection) {
 
-    var _Class = this;
+    this._Legend = L.BusMainControl.legend(Config.CapacityControl , Config.CapacityRange);
+    L.BusMain.MainPageVars.BaseMap.addControl(this._Legend);
 
-    _Class._Legend = L.BusMainControl.legend(Config.CapacityControl , Config.CapacityRange);
-    L.BusMain.MainPageVars.BaseMap.addControl(_Class._Legend);
+    this._DateView = L.BusMainControl.dateview();
+    L.BusMain.MainPageVars.BaseMap.addControl(this._DateView);
+    this._DateView.ChangeValue(this._Date);
 
-    _Class._DateView = L.BusMainControl.dateview();
-    L.BusMain.MainPageVars.BaseMap.addControl(_Class._DateView);
-    _Class._DateView.ChangeValue(_Class._Date);
+    this._TotalView = L.BusMainControl.ridership(TotalCapacity);
+    L.BusMain.MainPageVars.BaseMap.addControl(this._TotalView);
+    this._TotalView.ChangeValue(this._Date , null);
 
-    _Class._TotalView = L.BusMainControl.ridership(TotalCapacity);
-    L.BusMain.MainPageVars.BaseMap.addControl(_Class._TotalView);
-    _Class._TotalView.ChangeValue(_Class._Date);
+    this._RouteLegend = L.BusMainControl.routelegend();
+    L.BusMain.MainPageVars.BaseMap.addControl(this._RouteLegend);
+    this._RouteLegend.ChangeText(null);
 
     //Slider change value event
-    _Class._DateSlider = L.BusMainControl.slider(function(DateObj) {
-      //console.log(DateObj.Year);
-      //console.log(DateObj.Month);
-      //console.log(_Controller);
+    this._DateSlider = L.BusMainControl.slider(function (DateObj) {
+      this._Date = DateObj;
 
-      _Class._Date = DateObj;
+      this._RouteController.SetDate(DateObj);
 
-      _Class._RouteController.SetDate(DateObj);
+      this._DateView.ChangeValue(DateObj);
 
-      _Class._DateView.ChangeValue(DateObj);
-      _Class._TotalView.ChangeValue(DateObj);
+      var _GetRouteCapacity;
 
-    }, Config.CapacityControl);
-    _Class._DateSlider.AddWidget();
+
+      if(this._RouteController.IsHasSelecetedRoute() === true){
+        _GetRouteCapacity = this._RouteController.GetRouteCapacity();
+      }
+
+      this._TotalView.ChangeValue(DateObj , _GetRouteCapacity);
+    }.bind(this), Config.CapacityControl);
+
+    this._DateSlider.AddWidget();
 
 
     //route sidebar
-    _Class._SideBar = L.BusMainControl.sidebar(
+    this._SideBar = L.BusMainControl.sidebar(
       function (e) {
-        if(isNaN(e.target.id) === false){
-          _Class._RouteController.SelectRoute(e.target.id , _Class._Date);
-          _Class._SideBar.ChangeBtnState(e.target);
+        if(this._RouteController.IsHasSelecetedRoute() === true){
+          this._RemoveSelectedRoute();
         }
-      },
+
+        this._AddSelectedRoute(e);
+      }.bind(this),
       function () {
-        _Class._RouteController.UnselectRoute(_Class._Date);
-        _Class._SideBar.RevertBtnState();
-      }, Collection);
-      _Class._SideBar.AddWidget();
+        if(this._RouteController.IsHasSelecetedRoute() === true){
+          this._RemoveSelectedRoute();
+        }
+      }.bind(this), Collection);
+      this._SideBar.AddWidget();
   },
 
   _ShowHideMask : function (boolMask) {
@@ -142,6 +152,28 @@ L.BusMain.MainProcessor = L.Class.extend({
     }
     else {
       $(".LoadingMask").css("display", "none");
+    }
+  },
+
+  _RemoveSelectedRoute : function () {
+    this._RouteController.UnselectRoute(this._Date);
+    this._SideBar.RevertBtnState();
+    this._TotalView.ChangeValue(this._Date , null);
+    this._RouteLegend.ChangeText(null);
+  },
+
+  _AddSelectedRoute: function (e) {
+    if(isNaN(e.target.id) === false){
+      this._RouteController.SelectRoute(e.target.id , this._Date);
+      L.BusMain.MainPageVars.BaseMap.fitBounds(this._RouteController.GetRouteBound(e.target.id));
+
+      var _d = this._RouteController.GetRouteCapacity();
+      var _t = this._RouteController.GetRouteTags();
+
+      this._SideBar.ChangeBtnState(e.target);
+      this._TotalView.ChangeValue(this._Date , _d);
+      this._RouteLegend.ChangeText(_t);
+
     }
   }
 });
@@ -157,27 +189,50 @@ L.BusMain.RoutesController = L.Class.extend({
 
     this.RouteLayers = {};
 
-    this._SelectedRoute = [];
+    this._SelectedRoute = null;
+    this._SelectedRouteCode = 0;
 
     //L.Util.setOptions(this, options);
 
     this._LoadRequireData(ConfigJson.CapacityRange, CallbackFunction);
   },
 
+  /************ Select/UnselectRoute Events ***************/
+
+  IsHasSelecetedRoute: function () {
+    return this._SelectedRoute !== null;
+  },
+
   SelectRoute: function (routeCode , DateObject) {
     this.RouteLayers[routeCode].Select("Yes" , DateObject);
+    this.RouteLayers[routeCode].bringToFront();
 
-    this._SelectedRoute.push(this.RouteLayers[routeCode]);
+    this._SelectedRouteCode = routeCode;
+    this._SelectedRoute = this.RouteLayers[routeCode];
   },
 
   UnselectRoute: function (DateObject) {
-    if(this._SelectedRoute.length !== 0){
-      for (var i = 0; i < this._SelectedRoute.length; i++) {
-        this._SelectedRoute[i].Select("No" , DateObject);
-      }
+    if(this._SelectedRoute !== null){
+      this._SelectedRoute.Select("No" , DateObject);
+      this._SelectedRoute.bringToBack();
 
-      this._SelectedRoute = [];
+      this._SelectedRouteCode = 0;
+      this._SelectedRoute = null;
     }
+  },
+
+  GetRouteBound: function (routeCode) {
+    return this.RouteLayers[routeCode].getBounds();
+  },
+
+  GetRouteCapacity : function () {
+    return this.RouteLayers[this._SelectedRouteCode].GetCapacityJson();
+  },
+
+  /***************************************************/
+
+  GetRouteTags : function () {
+    return this.RouteLayers[this._SelectedRouteCode].GetRouteTags();
   },
 
   SetDirection: function(strDirection) {
@@ -221,8 +276,6 @@ L.BusMain.RoutesController = L.Class.extend({
 
   _LoadRequireData: function(Config, DoneCallBack) {
 
-    var _class = this;
-
     async.waterfall([
         function(callback) {
           $.getJSON('LocalData/Data/Collection.json', function(data) {
@@ -232,14 +285,14 @@ L.BusMain.RoutesController = L.Class.extend({
           });
         },
         function(arg1, callback) {
-          _class._CreateAllRouteLayers(arg1, Config, function(err) {
+          this._CreateAllRouteLayers(arg1, Config, function(err) {
             if (err === null) {
               callback(null, arg1);
             } else {
               callback(err, null);
             }
           });
-        }
+        }.bind(this)
       ],
       function(err, result) {
         if (err === null) {
@@ -253,8 +306,6 @@ L.BusMain.RoutesController = L.Class.extend({
 
   _CreateAllRouteLayers: function(Collection, Config, DoneCallBack) {
 
-    var _Class = this;
-
     var CategoryList = [];
 
     for (var category in Collection) {
@@ -265,15 +316,15 @@ L.BusMain.RoutesController = L.Class.extend({
 
     async.each(CategoryList, function(category, callbackA) {
         async.each(Collection[category].members, function(singleRoute, callbackB) {
-            _Class._DownloadEachRouteSource(singleRoute, Config, function(error, layer) {
+            this._DownloadEachRouteSource(singleRoute, Config, function(error, layer) {
               if (error !== null) {
                 callbackB(error);
               } else {
-                _Class.RouteLayers[singleRoute.tags['ref:querycode']] = layer;
+                this.RouteLayers[singleRoute.tags['ref:querycode']] = layer;
                 callbackB(null);
               }
-            });
-          },
+            }.bind(this));
+          }.bind(this),
           function(err) {
             if (err !== null) {
               callbackA(err);
@@ -281,7 +332,7 @@ L.BusMain.RoutesController = L.Class.extend({
               callbackA(null);
             }
           });
-      },
+      }.bind(this),
       function(err) {
         if (err !== null) {
           DoneCallBack(err);
@@ -293,8 +344,6 @@ L.BusMain.RoutesController = L.Class.extend({
 
   _DownloadEachRouteSource: function(CollecionUnit, ConfigData, DoneCallBack) {
 
-    var _Class = this;
-
     async.series([
         function(callback) {
           $.getJSON('LocalData/Data/' + CollecionUnit.tags['ref:category'] + '/' + CollecionUnit.tags['ref:querycode'] + '/Capacity.json', function(data) {
@@ -304,27 +353,27 @@ L.BusMain.RoutesController = L.Class.extend({
           });
         },
         function(callback) {
-          _Class._DownloadDirectionSource('Forward', CollecionUnit, function(err, result) {
+          this._DownloadDirectionSource('Forward', CollecionUnit, function(err, result) {
             if (err !== null) {
               callback(err, null);
             } else {
               callback(null, result);
             }
           });
-        },
+        }.bind(this),
         function(callback) {
-          _Class._DownloadDirectionSource('Backward', CollecionUnit, function(err, result) {
+          this._DownloadDirectionSource('Backward', CollecionUnit, function(err, result) {
             if (err !== null) {
               callback(err, null);
             } else {
               callback(null, result);
             }
           });
-        }
+        }.bind(this)
       ],
       function(err, results) {
         if (err === null) {
-          var EachLayer = L.BusMain.routeLayer(results[1], results[2], results[0], ConfigData);
+          var EachLayer = L.BusMain.routeLayer(results[1], results[2], results[0], ConfigData , CollecionUnit.tags);
           DoneCallBack(null, EachLayer);
         } else {
           console.log(CollecionUnit.tags['ref:querycode'] + " DownloadEachRouteSource Error: " + err);
@@ -344,44 +393,57 @@ L.BusMain.RoutesController = L.Class.extend({
   }
 });
 
-L.BusMain.routeLayer = function(ForwardSource, BackwardSource, CapaJson, RangeJson) {
-  return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson);
+L.BusMain.routeLayer = function(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag) {
+  return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag);
 };
 
-L.BusMain.RouteLayer = L.LayerGroup.extend({
-  initialize: function(ForwardSource, BackwardSource, CapaJson, RangeJson) {
+L.BusMain.RouteLayer = L.FeatureGroup.extend({
+  initialize: function(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag) {
 
     L.FeatureGroup.prototype.initialize.call(this);
 
-    this.ForwardPolylines = this._FormatPolyline(ForwardSource);
-    this.BackwardPolylines = this._FormatPolyline(BackwardSource);
-    this.CapacityJson = CapaJson;
+    this._ForwardPolylines = this._FormatPolyline(ForwardSource);
+    this._BackwardPolylines = this._FormatPolyline(BackwardSource);
 
-    this.ColourRangeJson = RangeJson;
+    this._CapacityJson = CapaJson;
+    this._ColourRangeJson = RangeJson;
 
-    this.IsRouteSelected = false;
+    this._IsRouteSelected = false;
+    this._RouteTags = RouteTag;
+  },
+
+  GetCapacityJson: function () {
+    return this._CapacityJson;
+  },
+
+  GetRouteTags: function () {
+    return this._RouteTags;
   },
 
   Select: function (IsSelected , TargetDate) {
 
-    var _GettedColour = this._GetRange(this.ColourRangeJson, this.CapacityJson, TargetDate);
+    var _GettedColour = this._GetRange(this._ColourRangeJson, this._CapacityJson, TargetDate);
     var _showedPolylines = this.getLayers();
     var _GettedColourCode;
+    var _PolylineOpacity = 0.5;
 
     if (_showedPolylines.length > 0) {
 
       if(IsSelected === "Yes"){
         _GettedColourCode = _GettedColour.SelectedColour;
-        this.IsRouteSelected = true;
+        _PolylineOpacity = 1;
+        this._IsRouteSelected = true;
       }
       else if(IsSelected === "No"){
         _GettedColourCode = _GettedColour.Colour;
-        this.IsRouteSelected = false;
+        _PolylineOpacity = 0.5;
+        this._IsRouteSelected = false;
       }
 
       for (var i = 0; i < _showedPolylines.length; i++) {
         _showedPolylines[i].setStyle({
-          color: _GettedColourCode
+          color: _GettedColourCode,
+          opacity: _PolylineOpacity
         });
       }
     }
@@ -390,28 +452,28 @@ L.BusMain.RouteLayer = L.LayerGroup.extend({
   SetDirection: function(strDir) {
     this.clearLayers();
 
-    //console.log(this.ForwardPolylines);
+    //console.log(this._ForwardPolylines);
 
     if (strDir === 'forward') {
-      for (var i = 0; i < this.ForwardPolylines.length; i++) {
-        this.addLayer(this.ForwardPolylines[i]);
+      for (var i = 0; i < this._ForwardPolylines.length; i++) {
+        this.addLayer(this._ForwardPolylines[i]);
       }
     }
     else if (strDir === 'backward') {
-      for (var j = 0; j < this.BackwardPolylines.length; j++) {
-        this.addLayer(this.BackwardPolylines[j]);
+      for (var j = 0; j < this._BackwardPolylines.length; j++) {
+        this.addLayer(this._BackwardPolylines[j]);
       }
     }
   },
 
   SetDate: function(TargetDate) {
-    //console.log(this.CapacityJson);
+    //console.log(this._CapacityJson);
     //console.log(TargetDate);
-    var _GettedColour = this._GetRange(this.ColourRangeJson, this.CapacityJson, TargetDate);
+    var _GettedColour = this._GetRange(this._ColourRangeJson, this._CapacityJson, TargetDate);
 
     //console.log('------------------------------');
-    //console.log(this.ColourRangeJson);
-    //console.log(this.CapacityJson);
+    //console.log(this._ColourRangeJson);
+    //console.log(this._CapacityJson);
     //console.log(GettedColour);
 
     var _showedPolylines = this.getLayers();
@@ -446,7 +508,7 @@ L.BusMain.RouteLayer = L.LayerGroup.extend({
 
     var _ColourCode;
 
-    if(this.IsRouteSelected === true){
+    if(this._IsRouteSelected === true){
       _ColourCode = resultObject.SelectedColour;
     }
     else {

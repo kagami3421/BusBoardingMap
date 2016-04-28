@@ -9,3 +9,10 @@ $body-line-height: modular-scale(2) !default;
 
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
+
+
+//////////Bus Map Settings//////////////
+$BottomBarHeight : 57px;
+$AsideWidth : 200px;
+
+$AsideLegendHeight: 40px;

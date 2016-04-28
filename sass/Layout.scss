@@ -1,0 +1,59 @@
+body {
+    height: 100%;
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: $BottomBarHeight;
+    right: $AsideWidth;
+}
+aside {
+    position: absolute;
+    top: $AsideLegendHeight;
+    bottom: $BottomBarHeight;
+    right: 0;
+    width: $AsideWidth;
+    background-color: #22313F;
+    overflow-y: auto;
+    @include outer-container;
+}
+
+.sidebar-legend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $AsideWidth;
+    background-color: #22313F;
+    height: $AsideLegendHeight;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: $BottomBarHeight;
+    background-color: #22313F;
+}
+
+
+@media screen and (max-width: 640px) {
+  #map {
+      right: 0;
+      bottom: 50%;
+  }
+  aside {
+      top: 60%;
+      left: 0;
+      width: 100%;
+  }
+  .sidebar-legend{
+      top:50%;
+      left: 0;
+      right: 0;
+      height: 10%;
+      width: 100%;
+  }
+}

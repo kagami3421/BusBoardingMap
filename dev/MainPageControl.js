@@ -8,7 +8,7 @@ L.BusMainControl.legend = function (CapacityConfigJson , ColourRangeJson , optio
 
 L.BusMainControl.ColourLegend = L.Control.extend({
   options: {
-    position: 'bottomleft'
+    position: 'topleft'
   },
 
   initialize: function(CapacityConfigJson , ColourRangeJson , options) {
@@ -67,7 +67,7 @@ L.BusMainControl.dateview = function (options) {
 
 L.BusMainControl.DateView= L.Control.extend({
   options: {
-    position: 'topleft'
+    position: 'bottomleft'
   },
 
   initialize: function(options) {
@@ -77,7 +77,7 @@ L.BusMainControl.DateView= L.Control.extend({
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_dateview');
 
-    this._MainText = L.DomUtil.create('h1', 'dateViewText');
+    this._MainText = L.DomUtil.create('h1', 'ViewText');
 
     $(this.container).append(this._MainText);
 
@@ -109,15 +109,61 @@ L.BusMainControl.RidershipView= L.Control.extend({
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_ridershipView');
 
-    this._MainText = L.DomUtil.create('h1', 'ridershipViewText');
+    this._MainText = L.DomUtil.create('h1', 'ViewText');
 
     $(this.container).append(this._MainText);
 
     return this.container;
   },
 
-  ChangeValue : function (DateObj) {
-    $(this._MainText).text(this._TotalJson[DateObj.Year][DateObj.Month]);
+  ChangeValue : function (DateObj , SingleRouteJson) {
+    if(SingleRouteJson === undefined || SingleRouteJson === null){
+      $(this._MainText).text(this._TotalJson[DateObj.Year][DateObj.Month]);
+    }
+    else {
+      //Check the year has ridership or not.
+      if(SingleRouteJson[DateObj.Year] === undefined){
+        $(this._MainText).text('0');
+      }
+      else {
+        $(this._MainText).text(SingleRouteJson[DateObj.Year][DateObj.Month]);
+      }
+    }
+  }
+});
+
+L.BusMainControl.routelegend = function (options) {
+    return new L.BusMainControl.RouteLegend(options);
+};
+
+L.BusMainControl.RouteLegend= L.Control.extend({
+  options: {
+    position: 'bottomright'
+  },
+
+  initialize: function(options) {
+    L.Util.setOptions(this, options);
+
+    //this._CollectionJson = CollectionJson;
+  },
+
+  onAdd: function(map) {
+    this.container = L.DomUtil.create('div', 'busmain_routeLegend');
+
+    this._MainText = L.DomUtil.create('h1', 'ViewText');
+
+    $(this.container).append(this._MainText);
+
+    return this.container;
+  },
+
+  ChangeText : function (RouteTagsObj) {
+    if(RouteTagsObj === undefined || RouteTagsObj === null){
+      $(this._MainText).text("");
+    }
+    else {
+      $(this._MainText).text(RouteTagsObj.name);
+    }
   }
 });
 
@@ -187,8 +233,8 @@ L.BusMainControl.DateSlider = L.Class.extend({
     //console.log(sliderValue - ResultMonth);
 
     var Output = {};
-    Output['Year'] = ResultYear;
-    Output['Month'] = this._controlJson.Ranges[(sliderValue - ResultMonth) - 1];
+    Output.Year = ResultYear;
+    Output.Month = this._controlJson.Ranges[(sliderValue - ResultMonth) - 1];
     return Output;
   }
 });
@@ -221,23 +267,23 @@ L.BusMainControl.routeSelector = L.Class.extend({
   },
 
   ChangeBtnState:function (TargetElement) {
-    $(TargetElement).css( "background-color", "#2574A9" );
+    $(TargetElement).toggleClass( "route-btn-selected", true );
   },
 
   RevertBtnState:function () {
-    $(".route-btn").css( "background-color", "#4B77BE" );
+    $(".route-btn").toggleClass( "route-btn-selected", false );
   },
 
   _CreateCategorySections: function (singleCategory , parentElement) {
 
     var _Container = L.DomUtil.create('section', 'sidebar-category' , parentElement);
-    var _Class = this;
+    //var _Class = this;
 
     this._CreateCategoryBar(singleCategory.name , _Container);
 
     for (var singleRoute in singleCategory.members) {
       if (singleCategory.members.hasOwnProperty(singleRoute)) {
-        _Class._CreateSingleRouteButton(singleCategory.members[singleRoute] , _Container);
+        this._CreateSingleRouteButton(singleCategory.members[singleRoute] , _Container);
       }
     }
   },
