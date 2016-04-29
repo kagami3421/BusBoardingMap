@@ -51,7 +51,7 @@ L.BusMain.MainProcessor = L.Class.extend({
 
     //Init
     this._ShowHideMask(true);
-    this._InitData()
+    this._InitData();
   },
 
   _InitData: function() {
@@ -73,8 +73,9 @@ L.BusMain.MainProcessor = L.Class.extend({
           });
         }
       ],
+
       function(err, results) {
-        this._RouteController = L.BusMain.routeControl(results[0] , function(error) {
+        this._RouteController = L.BusMain.routeControl(results[2] , results[0] , function(error) {
           if (error === null) {
             this._RouteController.SetDirection('forward');
             this._RouteController.SetDate(this._Date);
@@ -135,8 +136,11 @@ L.BusMain.MainProcessor = L.Class.extend({
         if(this._RouteController.IsHasSelecetedRoute() === true){
           this._RemoveSelectedRoute();
         }
+        
 
-        this._AddSelectedRoute(e);
+        if(isNaN(e.target.id) === false){
+          this._AddSelectedRoute(e);
+        }
       }.bind(this),
       function () {
         if(this._RouteController.IsHasSelecetedRoute() === true){
@@ -178,12 +182,12 @@ L.BusMain.MainProcessor = L.Class.extend({
   }
 });
 
-L.BusMain.routeControl = function(ConfigJson, CallbackFunction) {
-  return new L.BusMain.RoutesController(ConfigJson, CallbackFunction);
+L.BusMain.routeControl = function(CollectionJson , ConfigJson, CallbackFunction) {
+  return new L.BusMain.RoutesController(CollectionJson , ConfigJson, CallbackFunction);
 };
 
 L.BusMain.RoutesController = L.Class.extend({
-  initialize: function(ConfigJson, CallbackFunction) {
+  initialize: function(CollectionJson , ConfigJson, CallbackFunction) {
 
     this.Config = ConfigJson;
 
@@ -194,7 +198,7 @@ L.BusMain.RoutesController = L.Class.extend({
 
     //L.Util.setOptions(this, options);
 
-    this._LoadRequireData(ConfigJson.CapacityRange, CallbackFunction);
+    this._CreateAllRouteLayers(CollectionJson , ConfigJson.CapacityRange, CallbackFunction);
   },
 
   /************ Select/UnselectRoute Events ***************/
@@ -273,36 +277,6 @@ L.BusMain.RoutesController = L.Class.extend({
       }
     }
   },
-
-  _LoadRequireData: function(Config, DoneCallBack) {
-
-    async.waterfall([
-        function(callback) {
-          $.getJSON('LocalData/Data/Collection.json', function(data) {
-            callback(null, data);
-          }).fail(function() {
-            callback("collection_error", null);
-          });
-        },
-        function(arg1, callback) {
-          this._CreateAllRouteLayers(arg1, Config, function(err) {
-            if (err === null) {
-              callback(null, arg1);
-            } else {
-              callback(err, null);
-            }
-          });
-        }.bind(this)
-      ],
-      function(err, result) {
-        if (err === null) {
-          DoneCallBack(null);
-        } else {
-          DoneCallBack(err);
-        }
-      });
-  },
-
 
   _CreateAllRouteLayers: function(Collection, Config, DoneCallBack) {
 
