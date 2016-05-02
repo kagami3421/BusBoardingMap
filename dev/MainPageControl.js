@@ -25,8 +25,10 @@ L.BusMainControl.ColourLegend = L.Control.extend({
 
     this._FoldBtn = L.DomUtil.create('div', 'fold-btn');
 
+    this._FoldIcon = L.DomUtil.create('div', 'fa fa-caret-up fa-3x');
+
     $(this._FoldBtn).attr("id" , "fold");
-    $(this._FoldBtn).append("<div class='fa fa-caret-down fa-3x'></div>");
+    $(this._FoldBtn).append(this._FoldIcon);
 
     this._LegendMain = L.DomUtil.create('div' , 'legend-main');
 
@@ -57,11 +59,13 @@ L.BusMainControl.ColourLegend = L.Control.extend({
       L.DomEvent.stopPropagation(e);
         if(this.isFolded === false){
           this.isFolded = true;
-          $(this._LegendMain).css("display", "none");
+          $(this._FoldIcon).attr('class','fa fa-caret-down fa-3x');
+          $(this._LegendMain).hide('normal');
         }
         else {
           this.isFolded = false;
-          $(this._LegendMain).css("display", "block");
+          $(this._FoldIcon).attr('class','fa fa-caret-up fa-3x');
+          $(this._LegendMain).show('normal');
         }
     }, this);
 
