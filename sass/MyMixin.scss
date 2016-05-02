@@ -2,7 +2,7 @@
 @mixin BigText() {
   color: white;
   letter-spacing: 1px;
-  font-size: xx-large;
+  font-size: 3vmax;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -10,7 +10,7 @@
 @mixin MediumText() {
   color: white;
   letter-spacing: 1px;
-  font-size: x-large;
+  font-size: 2vmax;
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
@@ -19,7 +19,7 @@
 @mixin SmallText() {
   color: white;
   letter-spacing: 1px;
-  font-size: medium;
+  font-size: 1vmax;
   margin-top: 5px;
   margin-bottom: 5px;
   vertical-align: middle;

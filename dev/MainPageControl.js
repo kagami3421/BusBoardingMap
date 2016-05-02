@@ -16,20 +16,28 @@ L.BusMainControl.ColourLegend = L.Control.extend({
 
     this.colourRange = ColourRangeJson;
     this.capacityConfig = CapacityConfigJson;
+
+    this.isFolded = false;
   },
 
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_legend');
 
-    this._Title = "<div class='legend-title'>Average Monthly Boarding</div>";
-    this._LegendScale = L.DomUtil.create('div', 'legend-scale');
-    this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
+    this._FoldBtn = L.DomUtil.create('div', 'fold-btn');
 
+    $(this._FoldBtn).attr("id" , "fold");
+    $(this._FoldBtn).append("<div class='fa fa-caret-down fa-3x'></div>");
+
+    this._LegendMain = L.DomUtil.create('div' , 'legend-main');
+
+    this._Title = L.DomUtil.create('div', 'legend-title' , this._LegendMain);
+    $(this._Title).text('Average Monthly Boarding');
+
+    this._LegendScale = L.DomUtil.create('div', 'legend-scale' , this._LegendMain);
+    this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
     this._LegendTexts = L.DomUtil.create('ul' , 'legend-texts' , this._LegendScale);
 
-    //this.getCapacityAlias(this.colourRange[i].MinCapacity)
-
-    $(this.container).append(this._Title , this._LegendScale);
+    $(this.container).append(this._FoldBtn , this._LegendMain);
 
     for (var i = 0; i < this.colourRange.length; i++) {
 
@@ -44,6 +52,18 @@ L.BusMainControl.ColourLegend = L.Control.extend({
 
       $(this._LegendTexts).append(_EachText);
     }
+
+    L.DomEvent.on(this._FoldBtn, "click", function (e) {
+      L.DomEvent.stopPropagation(e);
+        if(this.isFolded === false){
+          this.isFolded = true;
+          $(this._LegendMain).css("display", "none");
+        }
+        else {
+          this.isFolded = false;
+          $(this._LegendMain).css("display", "block");
+        }
+    }, this);
 
     return this.container;
   },

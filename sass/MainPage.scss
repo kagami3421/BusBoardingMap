@@ -1,5 +1,4 @@
 @import "../node_modules/normalize.css/normalize"; //Reset
-@import "../bower_components/font-awesome/scss/font-awesome";
 @import "bourbon";
 @import "MyMixin";
 @import "Control";
@@ -12,15 +11,25 @@
     position: absolute;
     top: 0;
     right:0;
-    width: $AsideWidth;
     height: 100%;
+    padding: 5px;
+}
+
+#github-link{
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#github-link:hover{
+  color: #BE90D4;
 }
 
 .slider_main {
     position: absolute;
     top: 0;
     left: 0;
-    right: $AsideWidth;
+    right: 40px;
     height: 100%;
 }
 
@@ -36,6 +45,7 @@
 
 .route-btn {
   background-color: #663399;
+  border-radius: 5px;
   @include SideBarText;
   @include span-columns(1);
 
@@ -76,30 +86,9 @@
     }
     .loading {
         position: absolute;
+        color: white;
         z-index: 9999;
         top: 50%;
         left: 50%;
-        width: 28px;
-        height: 28px;
-        margin: -14px 0 0 -14px;
-        .spinner {
-            position: absolute;
-            left: 1px;
-            top: 1px;
-            width: 26px;
-            height: 26px;
-            animation: spin 1s infinite linear;
-        }
-        .maskedCircle {
-            width: 20px;
-            height: 20px;
-            border-radius: 12px;
-            border: 3px solid white;
-        }
-        .mask {
-            width: 12px;
-            height: 12px;
-            overflow: hidden;
-        }
     }
 }

@@ -6,6 +6,7 @@
         left: 2%;
         border: 1px hidden white;
         width: 95%;
+        background-color: transparent;
     }
 }
 
@@ -59,4 +60,24 @@
             }
         }
     }
+}
+
+.fold-btn{
+  display: none;
+  width: 25px;
+  height: 25px;
+  background-color: #913D88;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.fold-btn:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .fold-btn{
+    display: block;
+  }
 }
