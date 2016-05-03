@@ -27,8 +27,8 @@ L.BusMainControl.ColourLegend = L.Control.extend({
 
     this._FoldIcon = L.DomUtil.create('div', 'fa fa-caret-up fa-3x');
 
-    $(this._FoldBtn).attr("id" , "fold");
-    $(this._FoldBtn).append(this._FoldIcon);
+    this._FoldBtn.setAttribute("id" , "fold");
+    this._FoldBtn.appendChild(this._FoldIcon);
 
     this._LegendMain = L.DomUtil.create('div' , 'legend-main');
 
@@ -39,32 +39,32 @@ L.BusMainControl.ColourLegend = L.Control.extend({
     this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
     this._LegendTexts = L.DomUtil.create('ul' , 'legend-texts' , this._LegendScale);
 
-    $(this.container).append(this._FoldBtn , this._LegendMain);
+    this.container.appendChild(this._FoldBtn , this._LegendMain);
 
     for (var i = 0; i < this.colourRange.length; i++) {
 
       var _EachLegend = "<li><span style='background:"+ this.colourRange[i].ColourCode +";'></span></li>";
 
-      $(this._LegendLabels).append(_EachLegend);
+      this._LegendLabels.appendChild(_EachLegend);
     }
 
     for (var j = 0; j < this.colourRange.length - 1; j++) {
 
       var _EachText = "<li>"+ this.colourRange[j].MinCapacity +"</li>";
 
-      $(this._LegendTexts).append(_EachText);
+      this._LegendTexts.appendChild(_EachText);
     }
 
     L.DomEvent.on(this._FoldBtn, "click", function (e) {
       L.DomEvent.stopPropagation(e);
         if(this.isFolded === false){
           this.isFolded = true;
-          $(this._FoldIcon).attr('class','fa fa-caret-down fa-3x');
+          this._FoldIcon.setAttribute('class','fa fa-caret-down fa-3x');
           $(this._LegendMain).hide('normal');
         }
         else {
           this.isFolded = false;
-          $(this._FoldIcon).attr('class','fa fa-caret-up fa-3x');
+          this._FoldIcon.setAttribute('class','fa fa-caret-up fa-3x');
           $(this._LegendMain).show('normal');
         }
     }, this);
@@ -103,7 +103,7 @@ L.BusMainControl.DateView= L.Control.extend({
 
     this._MainText = L.DomUtil.create('h1', 'ViewText');
 
-    $(this.container).append(this._MainText);
+    this.container.appendChild(this._MainText);
 
     return this.container;
   },
@@ -135,7 +135,7 @@ L.BusMainControl.RidershipView= L.Control.extend({
 
     this._MainText = L.DomUtil.create('h1', 'ViewText');
 
-    $(this.container).append(this._MainText);
+    this.container.appendChild(this._MainText);
 
     return this.container;
   },
@@ -176,7 +176,7 @@ L.BusMainControl.RouteLegend= L.Control.extend({
 
     this._MainText = L.DomUtil.create('h1', 'ViewText');
 
-    $(this.container).append(this._MainText);
+    this.container.appendChild(this._MainText);
 
     return this.container;
   },
@@ -206,19 +206,19 @@ L.BusMainControl.DateSlider = L.Class.extend({
   },
 
   AddWidget: function() {
-    this.container = $("#slider_location");
+    this.container = document.getElementById("slider_location");
 
     this._MainSlider = L.DomUtil.create('input', 'slider_main');
-    $(this._MainSlider).attr( "type", "range" );
-    $(this._MainSlider).attr( "min", "1" );
-    $(this._MainSlider).attr( "max" , (((this._controlJson.To - this._controlJson.From) + 1) *  this._controlJson.Ranges.length));
-    $(this._MainSlider).attr( "value" , "0");
+    this._MainSlider.setAttribute( "type", "range" );
+    this._MainSlider.setAttribute( "min", "1" );
+    this._MainSlider.setAttribute( "max" , (((this._controlJson.To - this._controlJson.From) + 1) *  this._controlJson.Ranges.length));
+    this._MainSlider.setAttribute( "value" , "0");
 
     L.DomEvent.on(this._MainSlider, "change", function (e) {
         this._callback(this._changeValue(this._MainSlider.value));
     }, this);
 
-    $(this.container).append(this._MainSlider);
+    this.container.appendChild(this._MainSlider);
 
     //Prevent map also to be dragged when dragging slider.
     //L.DomEvent.disableClickPropagation(this.container);

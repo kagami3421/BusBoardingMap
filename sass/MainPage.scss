@@ -2,31 +2,25 @@
 @import "bourbon";
 @import "MyMixin";
 @import "Control";
-
 @import "Settings";
 @import "neat";
 @import "layout";
-
 //Bottom Content
-
 .about {
     position: absolute;
     top: 0;
-    right:0;
+    right: 0;
     height: 100%;
     padding: 5px;
 }
-
-#github-link{
-  color: white;
-  vertical-align: middle;
-  cursor: pointer;
+#github-link {
+    color: white;
+    vertical-align: middle;
+    cursor: pointer;
 }
-
-#github-link:hover{
-  color: #BE90D4;
+#github-link:hover {
+    color: #BE90D4;
 }
-
 .slider_main {
     position: absolute;
     top: 0;
@@ -34,36 +28,59 @@
     right: 40px;
     height: 100%;
 }
-
 //Aside Content
-
 .category-bar {
-  background-color: #6C7A89;
-  @include SideBarText;
-  @include span-columns(3);
-
-  p{
-    @include NoMargin();
-  }
+    background-color: #6C7A89;
+    @include SideBarText;
+    @include span-columns(3);
+    p {
+        @include NoMargin();
+    }
 }
-
 .route-btn {
-  background-color: #663399;
-  border-radius: 5px;
-  @include SideBarText;
-  @include span-columns(1);
-
-  height: 50px;
-  width: 50px;
-
-  @include margin(5px);
+    background-color: #663399;
+    border-radius: 5px;
+    @include SideBarText;
+    @include span-columns(1);
+    height: 50px;
+    width: 50px;
+    @include margin(5px);
 }
-
-.route-btn:hover{
-  background-color: #BF55EC;
-  cursor:pointer;
+.route-btn:hover {
+    background-color: #BF55EC;
+    cursor: pointer;
 }
-
 .route-btn-selected {
-  background-color: #BE90D4;
+    background-color: #BE90D4;
+}
+.route-back-btn {
+    background-color: #663399;
+    border-radius: 5px;
+    @include SideBarText;
+    height: 50px;
+    width: 50px;
+    @include margin(5px);
+}
+.route-back-btn:hover {
+    background-color: #BF55EC;
+    cursor: pointer;
+}
+.LoadingMask {
+    display: none;
+    .lmask {
+        background-color: rgba(102, 102, 153, 0.5);
+        z-index: 9998;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
+    .loading {
+        position: absolute;
+        color: white;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+    }
 }

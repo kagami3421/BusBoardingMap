@@ -582,3 +582,33 @@ footer {
 
 .route-btn-selected {
   background-color: #BE90D4; }
+
+.route-back-btn {
+  background-color: #663399;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  margin: 5px; }
+
+.route-back-btn:hover {
+  background-color: #BF55EC;
+  cursor: pointer; }
+
+.LoadingMask {
+  display: none; }
+  .LoadingMask .lmask {
+    background-color: rgba(102, 102, 153, 0.5);
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute; }
+  .LoadingMask .loading {
+    position: absolute;
+    color: white;
+    z-index: 9999;
+    top: 50%;
+    left: 50%; }
