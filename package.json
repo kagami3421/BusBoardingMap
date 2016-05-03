@@ -2,9 +2,10 @@
   "name": "BusBoardingMap",
   "version": "1.0.0",
   "description": "View bus boarding capacity map",
-  "main": "MainPage.min.js",
+  "main": "dev/MainPage.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "global":"npm install -g bower && npm install -g grunt-cli"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,8 @@
   },
   "keywords": [
     "bus",
-    "map"
+    "map",
+    "tainan"
   ],
   "author": "Kagami",
   "license": "GPL-2.0",
@@ -22,19 +24,17 @@
   "homepage": "https://github.com/kagami3421/BusBoardingMap",
   "devDependencies": {
     "async": "^1.5.1",
-    "bower": "^1.7.7",
-    "grunt": "^0.4.5",
-    "grunt-contrib-compass": "^1.1.1",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-processhtml": "^0.3.9",
+    "grunt": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.3.13",
     "grunt-sass": "^1.1.0",
-    "node-bourbon": "^4.2.8",
-    "request": "^2.67.0"
+    "request": "^2.72.0"
   },
   "dependencies": {
-    "bourbon-neat": "^1.7.4"
+    "bourbon-neat": "^1.7.4",
+    "node-bourbon": "^4.2.7"
   }
 }

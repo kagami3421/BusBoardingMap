@@ -1,6 +1,11 @@
 body {
     height: 100%;
 }
+
+#main {
+  overflow: hidden;
+}
+
 #map {
     position: absolute;
     top: 0;

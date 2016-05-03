@@ -1,7 +1,7 @@
 {
-  "name": "BusBoardingMap",
+  "name": "busboardingmap",
   "description": "View bus boarding capacity map",
-  "main": "MainPage.min.js",
+  "main": "dev/MainPage.js",
   "authors": [
     "Kagami"
   ],
@@ -24,6 +24,6 @@
     "leaflet": "^0.7.7",
     "jquery": "^2.2.1",
     "async": "^1.5.2",
-    "fontawesome": "^1.6.1"
+    "fontawesome": "^4.6.1"
   }
 }
