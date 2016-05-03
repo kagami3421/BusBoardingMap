@@ -133,12 +133,10 @@ L.BusMain.MainProcessor = L.Class.extend({
     //route sidebar
     this._SideBar = L.BusMainControl.sidebar(
       function (e) {
-        if(this._RouteController.IsHasSelecetedRoute() === true){
-          this._RemoveSelectedRoute();
-        }
-        
+        this._RemoveSelectedRoute();
 
         if(isNaN(e.target.id) === false){
+
           this._AddSelectedRoute(e);
         }
       }.bind(this),

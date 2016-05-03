@@ -7,6 +7,8 @@
 @import "neat";
 @import "layout";
 
+//Bottom Content
+
 .about {
     position: absolute;
     top: 0;
@@ -32,6 +34,8 @@
     right: 40px;
     height: 100%;
 }
+
+//Aside Content
 
 .category-bar {
   background-color: #6C7A89;
@@ -62,33 +66,4 @@
 
 .route-btn-selected {
   background-color: #BE90D4;
-}
-
-//Loading Mask
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.LoadingMask {
-    display: none;
-    .lmask {
-        background-color: rgba(102, 102, 153, 0.5);
-        z-index: 9998;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-    }
-    .loading {
-        position: absolute;
-        color: white;
-        z-index: 9999;
-        top: 50%;
-        left: 50%;
-    }
 }
