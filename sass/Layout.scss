@@ -21,6 +21,7 @@ aside {
 }
 
 .sidebar-legend {
+    z-index: 2;
     position: absolute;
     top: 0;
     right: 0;
@@ -30,6 +31,7 @@ aside {
 }
 
 .sidebar-mask {
+  display: none;
   position: absolute;
   top: $AsideLegendHeight;
   bottom: $BottomBarHeight;
@@ -48,6 +50,7 @@ footer {
     height: $BottomBarHeight;
     background-color: #22313F;
     overflow: hidden;
+    z-index: 2;
 }
 
 
@@ -57,7 +60,7 @@ footer {
       bottom: 50%;
   }
   aside {
-      top: 60%;
+      top: 50%;
       left: 0;
       width: 100%;
   }
@@ -72,7 +75,6 @@ footer {
       top:50%;
       left: 0;
       right: 0;
-      height: 10%;
       width: 100%;
   }
 }

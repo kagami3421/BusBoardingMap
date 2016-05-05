@@ -364,6 +364,12 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+@font-face {
+  font-family: "SourceHanSansTC";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/font/SourceHanSansTC-Regular.otf") format("truetype"); }
+
 .slider_main input[type=range] {
   position: absolute;
   left: 2%;
@@ -372,27 +378,29 @@ textarea {
   background-color: transparent; }
 
 .ViewText {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 3vmax;
+  font-size: 2em;
   margin-top: 5px;
   margin-bottom: 5px; }
 
 .ViewMediumText {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 2vmax;
+  font-size: 1em;
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center; }
 
 .ViewSmallText {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 1vmax;
+  font-size: 0.5em;
   margin-top: 5px;
-  margin-bottom: 5px;
-  vertical-align: middle; }
+  margin-bottom: 5px; }
 
 .busmain_legend .legend-title {
   margin-bottom: 5px;
@@ -462,14 +470,14 @@ body {
   top: 0;
   left: 0;
   bottom: 57px;
-  right: 200px; }
+  right: 230px; }
 
 aside {
   position: absolute;
   top: 40px;
   bottom: 57px;
   right: 0;
-  width: 200px;
+  width: 230px;
   background-color: #22313F;
   overflow-y: auto;
   max-width: 600px;
@@ -481,19 +489,21 @@ aside {
     display: table; }
 
 .sidebar-legend {
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
+  width: 230px;
   background-color: #22313F;
   height: 40px; }
 
 .sidebar-mask {
+  display: none;
   position: absolute;
   top: 40px;
   bottom: 57px;
   right: 0;
-  width: 200px;
+  width: 230px;
   background-color: rgba(103, 128, 159, 0.5);
   z-index: 1; }
 
@@ -505,14 +515,15 @@ footer {
   width: 100%;
   height: 57px;
   background-color: #22313F;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2; }
 
 @media screen and (max-width: 640px) {
   #map {
     right: 0;
     bottom: 50%; }
   aside {
-    top: 60%;
+    top: 50%;
     left: 0;
     width: 100%; }
   .sidebar-mask {
@@ -523,7 +534,6 @@ footer {
     top: 50%;
     left: 0;
     right: 0;
-    height: 10%;
     width: 100%; } }
 
 .about {
@@ -550,7 +560,9 @@ footer {
 
 .category-bar {
   background-color: #6C7A89;
+  font-family: SourceHanSansTC;
   color: white;
+  font-size: small;
   text-align: center;
   float: left;
   display: block;
@@ -562,16 +574,19 @@ footer {
     margin: 0; }
 
 .route-btn {
+  padding: 10px 0px;
   background-color: #663399;
   border-radius: 5px;
+  font-family: SourceHanSansTC;
   color: white;
+  font-size: small;
   text-align: center;
   float: left;
   display: block;
   margin-right: 3.125%;
   width: 31.25%;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   margin: 5px; }
   .route-btn:last-child {
     margin-right: 0; }
@@ -584,12 +599,16 @@ footer {
   background-color: #BE90D4; }
 
 .route-back-btn {
+  padding: 10px 0px;
+  position: absolute;
   background-color: #663399;
   border-radius: 5px;
+  font-family: SourceHanSansTC;
   color: white;
+  font-size: small;
   text-align: center;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   margin: 5px; }
 
 .route-back-btn:hover {

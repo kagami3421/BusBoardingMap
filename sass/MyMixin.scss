@@ -1,28 +1,37 @@
+@font-face {
+  font-family: "SourceHanSansTC";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/font/SourceHanSansTC-Regular.otf") format("truetype");
+}
+
 
 @mixin BigText() {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 3vmax;
+  font-size: 2em;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 @mixin MediumText() {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 2vmax;
+  font-size: 1em;
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
 }
 
 @mixin SmallText() {
+  font-family: SourceHanSansTC;
   color: white;
   letter-spacing: 1px;
-  font-size: 1vmax;
+  font-size: 0.5em;
   margin-top: 5px;
   margin-bottom: 5px;
-  vertical-align: middle;
 }
 
 @mixin NoMargin() {
@@ -30,6 +39,8 @@
 }
 
 @mixin SideBarText {
+  font-family: SourceHanSansTC;
   color: white;
+  font-size: small;
   text-align: center;
 }

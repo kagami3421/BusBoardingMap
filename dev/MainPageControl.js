@@ -23,34 +23,30 @@ L.BusMainControl.ColourLegend = L.Control.extend({
   onAdd: function(map) {
     this.container = L.DomUtil.create('div', 'busmain_legend');
 
-    this._FoldBtn = L.DomUtil.create('div', 'fold-btn');
-
-    this._FoldIcon = L.DomUtil.create('div', 'fa fa-caret-up fa-3x');
-
+    this._FoldBtn = L.DomUtil.create('div', 'fold-btn' , this.container);
     this._FoldBtn.setAttribute("id" , "fold");
-    this._FoldBtn.appendChild(this._FoldIcon);
 
-    this._LegendMain = L.DomUtil.create('div' , 'legend-main');
+    this._FoldIcon = L.DomUtil.create('div', 'fa fa-caret-up fa-2x' , this._FoldBtn);
+
+    this._LegendMain = L.DomUtil.create('div' , 'legend-main' , this.container);
 
     this._Title = L.DomUtil.create('div', 'legend-title' , this._LegendMain);
-    $(this._Title).text('Average Monthly Boarding');
+    this._Title.textContent = 'Average Monthly Boarding';
 
     this._LegendScale = L.DomUtil.create('div', 'legend-scale' , this._LegendMain);
     this._LegendLabels = L.DomUtil.create('ul', 'legend-labels' , this._LegendScale);
     this._LegendTexts = L.DomUtil.create('ul' , 'legend-texts' , this._LegendScale);
 
-    this.container.appendChild(this._FoldBtn , this._LegendMain);
-
     for (var i = 0; i < this.colourRange.length; i++) {
 
-      var _EachLegend = "<li><span style='background:"+ this.colourRange[i].ColourCode +";'></span></li>";
+      var _EachLegend = this._createColourRetangle(i);
 
       this._LegendLabels.appendChild(_EachLegend);
     }
 
     for (var j = 0; j < this.colourRange.length - 1; j++) {
 
-      var _EachText = "<li>"+ this.colourRange[j].MinCapacity +"</li>";
+      var _EachText = this._createRidershipText(j);
 
       this._LegendTexts.appendChild(_EachText);
     }
@@ -59,12 +55,12 @@ L.BusMainControl.ColourLegend = L.Control.extend({
       L.DomEvent.stopPropagation(e);
         if(this.isFolded === false){
           this.isFolded = true;
-          this._FoldIcon.setAttribute('class','fa fa-caret-down fa-3x');
+          this._FoldIcon.setAttribute('class','fa fa-caret-down fa-2x');
           $(this._LegendMain).hide('normal');
         }
         else {
           this.isFolded = false;
-          this._FoldIcon.setAttribute('class','fa fa-caret-up fa-3x');
+          this._FoldIcon.setAttribute('class','fa fa-caret-up fa-2x');
           $(this._LegendMain).show('normal');
         }
     }, this);
@@ -82,6 +78,24 @@ L.BusMainControl.ColourLegend = L.Control.extend({
     else {
       return SingleColourRange;
     }
+  },
+
+  _createColourRetangle : function (i) {
+    var _list = L.DomUtil.create('li' , 'clist');
+    var _colourRetangle = L.DomUtil.create('span','color' , _list);
+    _colourRetangle.setAttribute('style','background:' + this.colourRange[i].ColourCode);
+    //"<li><span style='background:"+ this.colourRange[i].ColourCode +";'></span></li>";
+    _list.appendChild(_colourRetangle);
+
+    return _list;
+  },
+
+  _createRidershipText : function (j) {
+    var _list = document.createElement('li');
+    _list.textContent = this.colourRange[j].MinCapacity;
+    //"<li>"+ this.colourRange[j].MinCapacity +"</li>";
+
+    return _list;
   }
 });
 
@@ -110,7 +124,7 @@ L.BusMainControl.DateView= L.Control.extend({
 
 
   ChangeValue : function (DateObj) {
-    $(this._MainText).html(DateObj.Year + '<br>' +DateObj.Month);
+    this._MainText.innerHTML = DateObj.Year + '<br>' +DateObj.Month;
   }
 });
 
@@ -142,15 +156,15 @@ L.BusMainControl.RidershipView= L.Control.extend({
 
   ChangeValue : function (DateObj , SingleRouteJson) {
     if(SingleRouteJson === undefined || SingleRouteJson === null){
-      $(this._MainText).text(this._TotalJson[DateObj.Year][DateObj.Month]);
+      this._MainText.textContent = this._TotalJson[DateObj.Year][DateObj.Month];
     }
     else {
       //Check the year has ridership or not.
       if(SingleRouteJson[DateObj.Year] === undefined){
-        $(this._MainText).text('0');
+        this._MainText.textContent = '0';
       }
       else {
-        $(this._MainText).text(SingleRouteJson[DateObj.Year][DateObj.Month]);
+        this._MainText.textContent = SingleRouteJson[DateObj.Year][DateObj.Month];
       }
     }
   }
@@ -183,10 +197,10 @@ L.BusMainControl.RouteLegend= L.Control.extend({
 
   ChangeText : function (RouteTagsObj) {
     if(RouteTagsObj === undefined || RouteTagsObj === null){
-      $(this._MainText).text("");
+      this._MainText.textContent = "";
     }
     else {
-      $(this._MainText).text(RouteTagsObj.name);
+      this._MainText.textContent = RouteTagsObj.name;
     }
   }
 });
@@ -277,6 +291,9 @@ L.BusMainControl.routeSelector = L.Class.extend({
     this._MainContianer = L.DomUtil.get("main");
     this._ClickBtnEvent = LClickCallBack;
     this._ClearEvent = RClickCallBack;
+
+    this._SideBarMask = L.DomUtil.get("sidebar-mask");
+    this._SideBarMaskBtn = L.DomUtil.get("sidebar-mask-btn");
   },
 
   AddWidget: function() {
@@ -292,10 +309,15 @@ L.BusMainControl.routeSelector = L.Class.extend({
 
   ChangeBtnState:function (TargetElement) {
     $(TargetElement).toggleClass( "route-btn-selected", true );
+    var _pos = $(TargetElement).position();
+
+    $(this._SideBarMaskBtn).css({ "left": _pos.left , "top": _pos.top });
+    $(this._SideBarMask).css("display","initial");
   },
 
   RevertBtnState:function () {
     $(".route-btn").toggleClass( "route-btn-selected", false );
+    $(this._SideBarMask).css("display","none");
   },
 
   _CreateCategorySections: function (singleCategory , parentElement) {
@@ -315,14 +337,14 @@ L.BusMainControl.routeSelector = L.Class.extend({
   _CreateCategoryBar: function (singleCategoryName , parentElement) {
     var _Bar = L.DomUtil.create('section', 'category-bar' , parentElement);
 
-    $(_Bar).text(singleCategoryName);
+    _Bar.textContent = singleCategoryName;
   },
 
   _CreateSingleRouteButton: function (singleRouteSetting , parentElement) {
     var _Btn = L.DomUtil.create('section', 'route-btn' , parentElement);
 
-    $(_Btn).text(singleRouteSetting.tags.ref);
-    $(_Btn).attr( "id", singleRouteSetting.tags['ref:querycode']);
+    _Btn.textContent = singleRouteSetting.tags.ref;
+    _Btn.setAttribute( "id", singleRouteSetting.tags['ref:querycode']);
   },
 
   _AddClickEvent : function () {
@@ -330,9 +352,8 @@ L.BusMainControl.routeSelector = L.Class.extend({
         this._ClickBtnEvent(e);
     }, this);
 
-    L.DomEvent.on(this._MainContianer, "contextmenu", function (e) {
-        L.DomEvent.preventDefault(e);
-        this._ClearEvent ();
+    L.DomEvent.on(this._SideBarMaskBtn, "click", function (e) {
+       this._ClearEvent();
     }, this);
   }
 });

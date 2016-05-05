@@ -38,12 +38,13 @@
     }
 }
 .route-btn {
+    padding: 10px 0px;
     background-color: #663399;
     border-radius: 5px;
     @include SideBarText;
     @include span-columns(1);
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     @include margin(5px);
 }
 .route-btn:hover {
@@ -54,11 +55,13 @@
     background-color: #BE90D4;
 }
 .route-back-btn {
+    padding: 10px 0px;
+    position: absolute;
     background-color: #663399;
     border-radius: 5px;
     @include SideBarText;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     @include margin(5px);
 }
 .route-back-btn:hover {
