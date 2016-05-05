@@ -10,19 +10,6 @@
     }
 }
 
-//Text
-.ViewText {
-    @include BigText();
-}
-
-.ViewMediumText {
-    @include MediumText();
-}
-
-.ViewSmallText {
-    @include SmallText();
-}
-
 // Colour Legend
 .busmain_legend {
     .legend-title {

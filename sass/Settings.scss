@@ -16,3 +16,17 @@ $BottomBarHeight : 57px;
 $AsideWidth : 230px;
 
 $AsideLegendHeight: 40px;
+
+
+//Common Text
+.ViewText {
+    @include BigText();
+}
+
+.ViewMediumText {
+    @include MediumText();
+}
+
+.ViewSmallText {
+    @include SmallText();
+}

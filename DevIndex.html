@@ -15,7 +15,7 @@
     <!-- /build -->
 
     <!-- build:css:dist https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css -->
-    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <!-- /build -->
 
 </head>
@@ -23,13 +23,13 @@
 <body>
     <section id="main">
         <section id="map"></section>
-        <section class="sidebar-legend">
-          <h1 class="ViewMediumText">Route List</h1>
+        <section class="sidebar-mask" id="sidebar-mask">
+          <section class="route-back-btn" id="sidebar-mask-btn"><i class="fa fa-reply fa-2x"></i></section>
         </section>
-        <aside class="sidebar" id="sidebar">
-          <section class="sidebar-mask" id="sidebar-mask">
-            <section class="route-back-btn" id="sidebar-mask-btn"><i class="fa fa-reply fa-2x"></i></section>
-          </section>
+        <section class="sidebar-legend">
+          <h1 class="ViewMediumText" id = "route-legend">Route List</h1>
+        </section>
+        <aside class="sidebar"  id="sidebar">
             <!-- <section class="sidebar-category">
           <section class="category-bar"><p>Yellow</p></section>
           <section class="route-btn"><p>Yellow 1</p></section>

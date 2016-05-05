@@ -9,37 +9,6 @@ body {
     bottom: $BottomBarHeight;
     right: $AsideWidth;
 }
-aside {
-    position: absolute;
-    top: $AsideLegendHeight;
-    bottom: $BottomBarHeight;
-    right: 0;
-    width: $AsideWidth;
-    background-color: #22313F;
-    overflow-y: auto;
-    @include outer-container;
-}
-
-.sidebar-legend {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: $AsideWidth;
-    background-color: #22313F;
-    height: $AsideLegendHeight;
-}
-
-.sidebar-mask {
-  display: none;
-  position: absolute;
-  top: $AsideLegendHeight;
-  bottom: $BottomBarHeight;
-  right: 0;
-  width: $AsideWidth;
-  background-color: rgba(103, 128, 159, 0.5);
-  z-index: 1;
-}
 
 footer {
     left: 0;
@@ -58,23 +27,5 @@ footer {
   #map {
       right: 0;
       bottom: 50%;
-  }
-  aside {
-      top: 50%;
-      left: 0;
-      width: 100%;
-  }
-
-  .sidebar-mask {
-    top: 60%;
-    left: 0;
-    width: 100%;
-  }
-
-  .sidebar-legend{
-      top:50%;
-      left: 0;
-      right: 0;
-      width: 100%;
   }
 }

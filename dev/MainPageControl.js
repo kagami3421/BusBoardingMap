@@ -170,6 +170,8 @@ L.BusMainControl.RidershipView= L.Control.extend({
   }
 });
 
+/************************ HTML Control **********************************/
+
 L.BusMainControl.routelegend = function (options) {
     return new L.BusMainControl.RouteLegend(options);
 };
@@ -204,8 +206,6 @@ L.BusMainControl.RouteLegend= L.Control.extend({
     }
   }
 });
-
-/************************ HTML Control **********************************/
 
 L.BusMainControl.slider = function (CallbackFunction , ControlRangeJson) {
     return new L.BusMainControl.DateSlider(CallbackFunction , ControlRangeJson);

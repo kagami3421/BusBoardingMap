@@ -1,10 +1,15 @@
 @import "../node_modules/normalize.css/normalize"; //Reset
 @import "bourbon";
-@import "MyMixin";
-@import "Control";
-@import "Settings";
 @import "neat";
-@import "layout";
+
+//Settings
+@import "MyMixin";
+@import "Settings";
+
+@import "Sidebar";
+@import "Control";
+@import "Layout";
+
 //Bottom Content
 .about {
     position: absolute;
@@ -28,46 +33,7 @@
     right: 40px;
     height: 100%;
 }
-//Aside Content
-.category-bar {
-    background-color: #6C7A89;
-    @include SideBarText;
-    @include span-columns(3);
-    p {
-        @include NoMargin();
-    }
-}
-.route-btn {
-    padding: 10px 0px;
-    background-color: #663399;
-    border-radius: 5px;
-    @include SideBarText;
-    @include span-columns(1);
-    height: 60px;
-    width: 60px;
-    @include margin(5px);
-}
-.route-btn:hover {
-    background-color: #BF55EC;
-    cursor: pointer;
-}
-.route-btn-selected {
-    background-color: #BE90D4;
-}
-.route-back-btn {
-    padding: 10px 0px;
-    position: absolute;
-    background-color: #663399;
-    border-radius: 5px;
-    @include SideBarText;
-    height: 60px;
-    width: 60px;
-    @include margin(5px);
-}
-.route-back-btn:hover {
-    background-color: #BF55EC;
-    cursor: pointer;
-}
+
 .LoadingMask {
     display: none;
     .lmask {
