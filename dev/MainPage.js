@@ -106,7 +106,7 @@ L.BusMain.MainProcessor = L.Class.extend({
     this._TotalView.ChangeValue(this._Date , null);
 
     this._RouteLegend = L.BusMainControl.routelegend();
-    L.BusMain.MainPageVars.BaseMap.addControl(this._RouteLegend);
+    //L.BusMain.MainPageVars.BaseMap.addControl(this._RouteLegend);
     this._RouteLegend.ChangeText(null);
 
     //Slider change value event
@@ -534,7 +534,8 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
       if (ColourRange[k].MaxCapacity === 0 && ColourRange[k].MinCapacity === 0) {
         _result = {
           Colour: ColourRange[k].ColourCode,
-          HightlightColour: ColourRange[k].HightlightColourCode
+          SelectedColour: ColourRange[k].SelectedColourCode,
+          Width: ColourRange[k].Width
         };
         break;
       }

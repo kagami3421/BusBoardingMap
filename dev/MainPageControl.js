@@ -172,34 +172,22 @@ L.BusMainControl.RidershipView= L.Control.extend({
 
 /************************ HTML Control **********************************/
 
-L.BusMainControl.routelegend = function (options) {
-    return new L.BusMainControl.RouteLegend(options);
+L.BusMainControl.routelegend = function () {
+    return new L.BusMainControl.RouteLegend();
 };
 
 L.BusMainControl.RouteLegend= L.Control.extend({
-  options: {
-    position: 'bottomright'
+  initialize: function() {
+    this._MainText = L.DomUtil.get('route-legend');
   },
 
-  initialize: function(options) {
-    L.Util.setOptions(this, options);
+  AddWidget: function() {
 
-    //this._CollectionJson = CollectionJson;
-  },
-
-  onAdd: function(map) {
-    this.container = L.DomUtil.create('div', 'busmain_routeLegend');
-
-    this._MainText = L.DomUtil.create('h1', 'ViewText');
-
-    this.container.appendChild(this._MainText);
-
-    return this.container;
   },
 
   ChangeText : function (RouteTagsObj) {
     if(RouteTagsObj === undefined || RouteTagsObj === null){
-      this._MainText.textContent = "";
+      this._MainText.textContent = "Route List";
     }
     else {
       this._MainText.textContent = RouteTagsObj.name;
