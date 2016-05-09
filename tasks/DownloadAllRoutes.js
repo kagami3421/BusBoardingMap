@@ -147,10 +147,17 @@ module.exports = function(grunt) {
                     }
                 ],
                 function(err, results) {
-
                   if(err === null){
-                    grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Forward.json', JSON.stringify(results[0]));
-                    grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Backward.json', JSON.stringify(results[1]));
+
+                    var _Geometries = {
+                      Forward : results[0],
+                      Backward : results[1]
+                    };
+                    
+                    //grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Forward.json', JSON.stringify(results[0]));
+                    //grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Backward.json', JSON.stringify(results[1]));
+
+                    grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Geometry.json', JSON.stringify(_Geometries));
 
                     grunt.log.writeln('Every direction files download successfully !');
                     grunt.log.writeln('------------------- Message End ----------------');

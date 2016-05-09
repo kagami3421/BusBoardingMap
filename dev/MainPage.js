@@ -314,68 +314,57 @@ L.BusMain.RoutesController = L.Class.extend({
       });
   },
 
-  _DownloadEachRouteSource: function(CollecionUnit, ConfigData, DoneCallBack) {
+  _DownloadEachRouteSource: function(CollectionUnit, ConfigData, DoneCallBack) {
 
     async.series([
         function(callback) {
-          $.getJSON('LocalData/Data/' + CollecionUnit.tags['ref:category'] + '/' + CollecionUnit.tags['ref:querycode'] + '/Capacity.json', function(data) {
+          $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/Capacity.json', function(data) {
             callback(null, data);
           }).fail(function() {
             callback("capacity_error", null);
           });
         },
         function(callback) {
-          this._DownloadDirectionSource('Forward', CollecionUnit, function(err, result) {
-            if (err !== null) {
-              callback(err, null);
-            } else {
-              callback(null, result);
-            }
-          });
-        }.bind(this),
-        function(callback) {
-          this._DownloadDirectionSource('Backward', CollecionUnit, function(err, result) {
-            if (err !== null) {
-              callback(err, null);
-            } else {
-              callback(null, result);
-            }
+          $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/Geometry.json', function(data) {
+            callback(null, data);
+          }).fail(function() {
+            callback("Geometry is missing or broken.", null);
           });
         }.bind(this)
       ],
       function(err, results) {
         if (err === null) {
-          var EachLayer = L.BusMain.routeLayer(results[1], results[2], results[0], ConfigData , CollecionUnit.tags);
+          var EachLayer = L.BusMain.routeLayer(results[1] , results[0], ConfigData , CollectionUnit.tags);
           DoneCallBack(null, EachLayer);
         } else {
-          console.log(CollecionUnit.tags['ref:querycode'] + " DownloadEachRouteSource Error: " + err);
+          console.log(CollectionUnit.tags['ref:querycode'] + " DownloadEachRouteSource Error: " + err);
           DoneCallBack(err, null);
         }
       });
-  },
+  }
 
-  _DownloadDirectionSource: function(strDirection, CollectionUnit, DoneCallBack) {
+  /* _DownloadDirectionSource: function(strDirection, CollectionUnit, DoneCallBack) {
     if(strDirection === 'Forward' || strDirection === 'Backward'){
-      $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/' + strDirection  + '.json', function(data) {
+      $.getJSON('LocalData/Data/' + CollectionUnit.tags['ref:category'] + '/' + CollectionUnit.tags['ref:querycode'] + '/' + 'Geometry.json', function(data) {
         DoneCallBack(null, data);
       }).fail(function() {
         DoneCallBack(strDirection  + " direction is missing or broken.", null);
       });
     }
-  }
+  } */
 });
 
-L.BusMain.routeLayer = function(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag) {
-  return new L.BusMain.RouteLayer(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag);
+L.BusMain.routeLayer = function(GeometrySource, CapaJson, RangeJson , RouteTag) {
+  return new L.BusMain.RouteLayer(GeometrySource, CapaJson, RangeJson , RouteTag);
 };
 
 L.BusMain.RouteLayer = L.FeatureGroup.extend({
-  initialize: function(ForwardSource, BackwardSource, CapaJson, RangeJson , RouteTag) {
+  initialize: function(GeometrySource, CapaJson, RangeJson , RouteTag) {
 
     L.FeatureGroup.prototype.initialize.call(this);
 
-    this._ForwardPolylines = this._FormatPolyline(ForwardSource);
-    this._BackwardPolylines = this._FormatPolyline(BackwardSource);
+    this._ForwardPolylines = this._FormatPolyline(GeometrySource.Forward);
+    this._BackwardPolylines = this._FormatPolyline(GeometrySource.Backward);
 
     this._CapacityJson = CapaJson;
     this._ColourRangeJson = RangeJson;
@@ -391,6 +380,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   GetRouteTags: function () {
     return this._RouteTags;
   },
+  
 
   Select: function (IsSelected , TargetDate) {
 
