@@ -10,6 +10,7 @@ L.BusMain.MainPageVars = {
   MainProcess: undefined
 };
 
+
 $(function() {
   L.BusMain.MainPageVars.BaseMap = L.map('map' , {
     zoomControl: false,
@@ -42,6 +43,7 @@ L.BusMain.MainProcessor = L.Class.extend({
     this._DateView = undefined;
     this._TotalView = undefined;
     this._RouteLegend = undefined;
+    this._ZoomControl = undefined;
 
     this._Date = {
       Year: '2014',
@@ -105,8 +107,10 @@ L.BusMain.MainProcessor = L.Class.extend({
     L.BusMain.MainPageVars.BaseMap.addControl(this._TotalView);
     this._TotalView.ChangeValue(this._Date , null);
 
+    this._ZoomControl = L.control.zoom({ position: 'bottomright' });
+    L.BusMain.MainPageVars.BaseMap.addControl(this._ZoomControl);
+
     this._RouteLegend = L.BusMainControl.routelegend();
-    //L.BusMain.MainPageVars.BaseMap.addControl(this._RouteLegend);
     this._RouteLegend.ChangeText(null);
 
     //Slider change value event
@@ -380,7 +384,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   GetRouteTags: function () {
     return this._RouteTags;
   },
-  
+
 
   Select: function (IsSelected , TargetDate) {
 
