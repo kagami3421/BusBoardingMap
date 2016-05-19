@@ -8,19 +8,21 @@ http://kagami3421.github.io/BusRidershipMap
 
 # Features:
 
-* Module colour legend
-* Change all ridership or single ridership view by sliding
-* Choose to highlight certain route by route list
+* Change all ridership or single ridership view by sliding date.
+* Choose route to highlight it by clicking route list.
 
-# ToDo Features:
+# To Do Features:
 
 * Change direction of route
 
-# Library Reference:
+# Library / Tools Reference:
 
 * [Leaftlet](http://leafletjs.com/)
 * [jQuery](https://jquery.com/)
 * [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+* [SASS](http://sass-lang.com/)
+* [Bourbon](http://bourbon.io/)
+* [Bourbon Neat](http://neat.bourbon.io/)
 
 # Data Reference:
 
