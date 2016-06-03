@@ -26,13 +26,29 @@
 #github-link:hover {
     color: #BE90D4;
 }
-.slider_main {
+
+.control_section {
     position: absolute;
     top: 0;
     left: 0;
     right: 40px;
-    height: 100%;
+    height: $ControlBarPercent;
 }
+
+.button_collection {
+  position: absolute;
+  right: 50%;
+}
+
+.slider_section {
+    position: absolute;
+    top: $ControlBarPercent;
+    left: 0;
+    right: 40px;
+    height: 100% - $ControlBarPercent;
+}
+
+//Loading Mask
 
 .LoadingMask {
     display: none;

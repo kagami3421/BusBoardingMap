@@ -134,6 +134,32 @@ L.BusMain.MainProcessor = L.Class.extend({
     this._DateSlider.AddWidget();
 
 
+    //date control buttons
+    this._DateControl = L.BusMainControl.controlBtns(function (BtnID) {
+      if(this._DateSlider !== undefined){
+        if(BtnID === "Next"){
+          this._DateSlider.SetSliderValue(true);
+        }
+        else if(BtnID === "Previous"){
+          this._DateSlider.SetSliderValue(false);
+        }
+        else if(BtnID === "PlayPasue"){
+
+          if(this._DateControl.CheckisPlaying() === true){
+            this._IntervalID = setInterval(function() {
+              this._DateSlider.SetSliderValue(true);
+            }.bind(this), 1000);
+          }
+          else if(this._DateControl.CheckisPlaying() === false){
+            clearInterval(this._IntervalID);
+          }
+
+        }
+      }
+    }.bind(this), Config.CapacityControl);
+
+    this._DateControl.AddWidget();
+
     //route sidebar
     this._SideBar = L.BusMainControl.sidebar(
       function (e) {
