@@ -10,6 +10,7 @@ L.BusMain.MainPageVars = {
   MainProcess: undefined
 };
 
+
 $(function() {
   L.BusMain.MainPageVars.BaseMap = L.map('map' , {
     zoomControl: false,
@@ -42,6 +43,7 @@ L.BusMain.MainProcessor = L.Class.extend({
     this._DateView = undefined;
     this._TotalView = undefined;
     this._RouteLegend = undefined;
+    this._ZoomControl = undefined;
 
     this._Date = {
       Year: '2014',
@@ -105,8 +107,10 @@ L.BusMain.MainProcessor = L.Class.extend({
     L.BusMain.MainPageVars.BaseMap.addControl(this._TotalView);
     this._TotalView.ChangeValue(this._Date , null);
 
+    this._ZoomControl = L.control.zoom({ position: 'bottomright' });
+    L.BusMain.MainPageVars.BaseMap.addControl(this._ZoomControl);
+
     this._RouteLegend = L.BusMainControl.routelegend();
-    //L.BusMain.MainPageVars.BaseMap.addControl(this._RouteLegend);
     this._RouteLegend.ChangeText(null);
 
     //Slider change value event
@@ -129,6 +133,32 @@ L.BusMain.MainProcessor = L.Class.extend({
 
     this._DateSlider.AddWidget();
 
+
+    //date control buttons
+    this._DateControl = L.BusMainControl.controlBtns(function (BtnID) {
+      if(this._DateSlider !== undefined){
+        if(BtnID === "Next"){
+          this._DateSlider.SetSliderValue(true);
+        }
+        else if(BtnID === "Previous"){
+          this._DateSlider.SetSliderValue(false);
+        }
+        else if(BtnID === "PlayPasue"){
+
+          if(this._DateControl.CheckisPlaying() === true){
+            this._IntervalID = setInterval(function() {
+              this._DateSlider.SetSliderValue(true);
+            }.bind(this), 1000);
+          }
+          else if(this._DateControl.CheckisPlaying() === false){
+            clearInterval(this._IntervalID);
+          }
+
+        }
+      }
+    }.bind(this), Config.CapacityControl);
+
+    this._DateControl.AddWidget();
 
     //route sidebar
     this._SideBar = L.BusMainControl.sidebar(
@@ -380,7 +410,7 @@ L.BusMain.RouteLayer = L.FeatureGroup.extend({
   GetRouteTags: function () {
     return this._RouteTags;
   },
-  
+
 
   Select: function (IsSelected , TargetDate) {
 

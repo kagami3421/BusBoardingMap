@@ -1,13 +1,37 @@
-
 //Date Slider
 .slider_main {
-    input[type=range] {
-        position: absolute;
-        left: 2%;
-        border: 1px hidden white;
-        width: 95%;
-        background-color: transparent;
-    }
+    position: absolute;
+    left: 2%;
+    border: 1px hidden white;
+    width: 95%;
+    background-color: transparent;
+}
+
+//Date Control
+.button_main {
+  display: inline-block;
+
+  background-color: #913D88;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  outline: none;
+
+  font-size: 16px;
+  text-align: center;
+  color: white;
+
+  cursor: pointer;
+}
+
+.button_main:hover {
+  background-color: #BF55EC;
+}
+
+.button_main:active {
+  background-color: #BF55EC;
+  transform: translateY(4px);
 }
 
 // Colour Legend
@@ -48,23 +72,20 @@
         }
     }
 }
-
-.fold-btn{
-  display: none;
-  width: 25px;
-  height: 25px;
-  background-color: #913D88;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
+.fold-btn {
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-color: #913D88;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
 }
-
-.fold-btn:hover{
-  cursor: pointer;
+.fold-btn:hover {
+    cursor: pointer;
 }
-
 @media screen and (max-width: 640px) {
-  .fold-btn{
-    display: block;
-  }
+    .fold-btn {
+        display: block;
+    }
 }

@@ -221,9 +221,33 @@ L.BusMainControl.DateSlider = L.Class.extend({
     }, this);
 
     this.container.appendChild(this._MainSlider);
+  },
 
-    //Prevent map also to be dragged when dragging slider.
-    //L.DomEvent.disableClickPropagation(this.container);
+  SetSliderValue : function (isAdd) {
+    if(isAdd === true){
+
+      if(this._MainSlider.value >= (((this._controlJson.To - this._controlJson.From) + 1) *  this._controlJson.Ranges.length)){
+        this._MainSlider.value = 1;
+      }
+      else {
+        this._MainSlider.value++;
+      }
+
+
+      //this._MainSlider.setAttribute( "value" , this._MainSlider.value++);
+    }
+    else if(isAdd === false){
+      if(this._MainSlider.value <= 1){
+        this._MainSlider.value = (((this._controlJson.To - this._controlJson.From) + 1) *  this._controlJson.Ranges.length);
+      }
+      else {
+        this._MainSlider.value--;
+      }
+
+      //this._MainSlider.setAttribute( "value" , this._MainSlider.value--);
+    }
+
+    this._callback(this._changeValue(this._MainSlider.value));
   },
 
   _changeValue : function (sliderValue){
@@ -343,5 +367,65 @@ L.BusMainControl.routeSelector = L.Class.extend({
     L.DomEvent.on(this._SideBarMaskBtn, "click", function (e) {
        this._ClearEvent();
     }, this);
+  }
+});
+
+L.BusMainControl.controlBtns = function (CallbackFunction , ControlRangeJson) {
+    return new L.BusMainControl.datePlayControl(CallbackFunction , ControlRangeJson);
+};
+
+L.BusMainControl.datePlayControl = L.Class.extend({
+  initialize: function(CallbackFunction , ControlRangeJson) {
+    //L.Util.setOptions(this, options);
+
+    this._controlJson = ControlRangeJson;
+    this._callback = CallbackFunction;
+    this._isPlaying = false;
+  },
+
+  CheckisPlaying : function() {
+    return this._isPlaying;
+  },
+
+  AddWidget: function() {
+    this.container = document.getElementById("control_location");
+
+    this._BtnCollections = L.DomUtil.create('div', 'button_collection');
+
+    this._PrevBtn = L.DomUtil.create('input', 'button_main');
+    this._PrevBtn.setAttribute( "type", "button" );
+    this._PrevBtn.setAttribute( "value", "Prev" );
+    this._PrevBtn.setAttribute( "id", "Previous" );
+
+    this._PlayBtn = L.DomUtil.create('input', 'button_main');
+    this._PlayBtn.setAttribute( "type", "button" );
+    this._PlayBtn.setAttribute( "value", "Play" );
+    this._PlayBtn.setAttribute( "id", "PlayPasue" );
+
+    this._NextBtn = L.DomUtil.create('input', 'button_main');
+    this._NextBtn.setAttribute( "type", "button" );
+    this._NextBtn.setAttribute( "value", "Next" );
+    this._NextBtn.setAttribute( "id", "Next" );
+
+    this._BtnCollections.appendChild(this._PrevBtn);
+    this._BtnCollections.appendChild(this._PlayBtn);
+    this._BtnCollections.appendChild(this._NextBtn);
+
+    L.DomEvent.on(this._BtnCollections, "click", function (e) {
+        if(e.target.id === "PlayPasue"){
+          if(this._isPlaying === false){
+            this._PlayBtn.setAttribute( "value", "Pause" );
+            this._isPlaying = true;
+          }
+          else {
+            this._PlayBtn.setAttribute( "value", "Play" );
+            this._isPlaying = false;
+          }
+        }
+
+        this._callback(e.target.id);
+    }, this);
+
+    this.container.appendChild(this._BtnCollections);
   }
 });
