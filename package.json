@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "bourbon-neat": "^1.7.4",
+    "gulp-uglifycss": "^1.0.6",
     "node-bourbon": "^4.2.7",
     "normalize.css": "^4.1.1"
   }
