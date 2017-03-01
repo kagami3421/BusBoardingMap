@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                       Forward : results[0],
                       Backward : results[1]
                     };
-                    
+
                     //grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Forward.json', JSON.stringify(results[0]));
                     //grunt.file.write('LocalData/Data/' + singleRoute.tags['ref:category'] + '/' + singleRoute.tags['ref:querycode'] + '/' + 'Backward.json', JSON.stringify(results[1]));
 
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
                     return _index < singleDirectionArray.length;
                 },
                 function(callback) {
-                    request(OverPassTaiwanUrl + OverpassQuery1 + singleDirectionArray[_index] + OverpassQuery2, function(error, response, body) {
+                    request(OverPassMainUrl + OverpassQuery1 + singleDirectionArray[_index] + OverpassQuery2, function(error, response, body) {
                         if (error) {
                             grunt.log.writeln('Download Error :' + error.message);
                         }

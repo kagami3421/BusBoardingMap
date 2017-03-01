@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     var OverPassTaiwanUrl = 'https://overpass.nchc.org.tw/api/interpreter?data=';
 
-    var OverPassMainUrl = 'https://overpass.nchc.org.tw/api/interpreter?data=';
+    var OverPassMainUrl = 'https://overpass-api.de/api/interpreter?data=';
     var OverpassQuery1 = '[out:json];relation["network"="';
     var OverpassQuery2 = '"]["route_master"="bus"];(._;>;);out body;';
 
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     var DownloadAllRoutesJson = function(arg, callback) {
       grunt.log.writeln('Downloading Route Data...');
 
-      request(OverPassTaiwanUrl + encodeURIComponent(OverpassQuery1 + arg.TargetNetwork + OverpassQuery2), function(error, response, body) {
+      request(OverPassMainUrl + encodeURIComponent(OverpassQuery1 + arg.TargetNetwork + OverpassQuery2), function(error, response, body) {
         if (error) {
           grunt.log.writeln('OverPass Error :' + error.message);
           callback(error, null);
